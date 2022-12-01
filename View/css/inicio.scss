@@ -1,0 +1,17 @@
+// -------------------- IMPORTS -------------------------// 
+
+@import "partials/_variables.scss";
+@import "partials/_header.scss";
+@import "partials/_reset.scss";
+@import "partials/_nav.scss";
+@import "partials/_fuentes.scss";
+
+// -------------------- LAYOUT -------------------------// 
+// (vista movil por default)
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 8% 2% 85% 5%;
+    height: 300vh;
+}
+
