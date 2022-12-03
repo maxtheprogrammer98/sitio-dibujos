@@ -4,7 +4,7 @@ header{
     grid-column: 1/2;
     grid-row: 1/2;
     grid-template-columns: 100%;
-    grid-template-rows: 90% 10%;
+    grid-template-rows: 80% 20%;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -12,6 +12,7 @@ header{
     background-position: left, right;
     background-repeat: no-repeat;
     background-size: 50% 100%;
+    font-family: fuente1;
 
     #header_logo{
         display: flex;
@@ -24,6 +25,12 @@ header{
 
         img{
             width: 225px;
+            cursor: pointer;
+        }
+
+        img:hover{
+            width: 235px;
+            transition: ease-out 0.5s;
         }
     }
 
@@ -37,6 +44,36 @@ header{
 @media only screen and (min-width: 768px){
     header{
         background-size: contain;
+
+        #header_opciones{
+            display: flex;
+            grid-column: 1/2;
+            grid-row: 2/3;
+            height: 100%;
+            width: 100%;
+            justify-content: end;
+            align-items: flex-start;
+            list-style: none;
+
+            li{
+                display: flex;
+                margin-right: 20px;
+
+                a{
+                    text-decoration: none;
+                    color: $fuente3;
+                    background: $celeste2;
+                    padding: 5px;
+                    border-radius: 5px;
+                    font-size: 0.8rem;
+                }
+                
+            }
+
+            li:hover{
+                text-decoration: underline;
+            }
+        }
     }
 }
 

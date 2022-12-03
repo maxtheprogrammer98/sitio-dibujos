@@ -4,7 +4,9 @@ let a = {
     botonMenu: document.querySelector("#menu"),
     login: document.querySelector("#login"),
     miCuenta: document.querySelector("#mi_cuenta"),
-    estado: false
+    estado: false,
+    toggleEffect: false,
+    mobileView: false
 }
 //---------- METODOS (funcionalidades)----------------//
 let m = {
@@ -13,6 +15,7 @@ let m = {
     },
 
     modificarMenu:function(){
+        // menu para dispositivos moviles:
         if (a.estado == false){
             //significa que el menu esta abierto
             m.cerrarMenu();
@@ -37,7 +40,9 @@ let m = {
         a.nav.classList.remove("nav_vertical_hidden");
         a.nav.classList.add("nav_vertical_visible");
         a.botonMenu.textContent = "Cerrar Menu";
-    }
+    },
+
+    
 
 }
 
