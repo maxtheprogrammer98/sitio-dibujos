@@ -5,13 +5,18 @@
 @import "partials/_reset.scss";
 @import "partials/_nav.scss";
 @import "partials/_fuentes.scss";
+@import "partials/_footer.scss";
 
 // -------------------- LAYOUT -------------------------// 
 // (vista movil por default)
 body{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 8% 2% 85% 5%;
+    grid-template-rows: 7% 2% 81% 10%;
     height: 300vh;
+}
+
+#inicio{
+    text-decoration: underline;
 }
 

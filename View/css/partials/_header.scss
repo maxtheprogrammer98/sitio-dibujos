@@ -43,7 +43,7 @@ header{
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px){
     header{
-        background-size: contain;
+        background-size: 50% 100%;
 
         #header_opciones{
             display: flex;
@@ -74,6 +74,13 @@ header{
                 text-decoration: underline;
             }
         }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    header{
+        background-size: contain;
     }
 }
 

@@ -5,7 +5,7 @@
     display: flex;
     grid-column: 1/2;
     grid-row: 2/3;
-    height: 100%;
+    height: 40px;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,8 @@
     flex-direction: column;
     grid-column: 1/2;
     grid-row: 2/3;
-    height: 400px;
+    width: 100%;
+    height: 300px;
     justify-content: space-evenly;
     align-items: center;
     background: $celeste2;
@@ -82,6 +83,8 @@
         width: 100%;
         justify-content: space-evenly;
         align-items: center;
+        padding: 0;
+        height: 40px;
 
         li{
             cursor: pointer;
@@ -111,6 +114,7 @@
     }
 
     .nav_vertical_visible{
-        display: none ;
+        display: flex;
+        flex-direction: row;
     }
 }

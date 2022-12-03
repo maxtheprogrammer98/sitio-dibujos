@@ -6,9 +6,11 @@ let a = {
     miCuenta: document.querySelector("#mi_cuenta"),
     estado: false,
     toggleEffect: false,
-    mobileView: false
+    mobileView: false,
+    sticky: nav.offsetTop
 }
 //---------- METODOS (funcionalidades)----------------//
+// metodo para cerrar / abrir menu (vista movil)
 let m = {
     eventoBoton:function(){
         a.botonMenu.addEventListener("click", m.modificarMenu);
@@ -42,8 +44,25 @@ let m = {
         a.botonMenu.textContent = "Cerrar Menu";
     },
 
-    
-
 }
+
+// funcion para crear efecto sticky:
+window.onscroll = function() {
+    efectoSticky();
+}
+
+function efectoSticky() {
+    if(window.pageYOffset >= a.sticky){
+        // cuando se scrolea hacia abajo
+        a.nav.style.position = "fixed";
+        console.log("fixed");
+    
+    } else {
+        // cuando se vuelve a la posicion inicial
+        a.nav.style.position = "relative";
+        console.log("relative");
+    }
+}
+
 
 m.eventoBoton();
