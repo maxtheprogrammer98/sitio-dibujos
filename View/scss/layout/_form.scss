@@ -1,0 +1,34 @@
+@use '../partials' as p;
+
+body{
+  background-color: p.$gris2;
+  // @include p.ajustar-imagen;
+}
+
+.form{
+  width: p.rem(350);
+  height: 80vh;
+  background-color: p.$celeste1;
+  margin:p.rem(80) auto 0;
+  border: 2px solid transparent;
+  border-radius: 8%;
+
+  &__container{
+    width:p.rem(330);
+    height: 85%;
+    background-color: #fff;
+    margin: p.rem(50) auto 0;
+    border-radius: 0 0 8% 8%;
+    display: grid;
+    gap: p.rem(20) 0;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+  }
+
+  
+  &__imagen{
+    width: p.rem(200);
+    display: block;
+    margin:p.rem(-120) auto 0;
+  }
+}

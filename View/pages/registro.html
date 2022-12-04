@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/formulario.css">
+  <title>Registrarse - Arte Realista</title>
+</head>
+<body>
+  <form class="form" method="POST" action="">
+    <div class="form__container">  
+      <div class="form__cabecera">
+        <img class="form__imagen" src="../Imagenes/icono-user.png" alt="Icono de Usuario">
+        <h2 class="form__titulo">Registrarse</h2>
+      </div>
+      <div class="form__label--nickname">
+        <label for="nick">Nickname</label>
+        <input type="text" name="nick" id="nick" required autofocus placeholder="Jose">
+      </div>
+      <div class="form__label--correo">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required autofocus placeholder="jose@gmail.com">
+      </div>
+      <div class="form__label--password">
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass" id="pass" required autofocus>
+      </div>
+      <div class="form__enviar">
+        <input type="Submit" value="Enviar">
+      </div>
+      <div class="form__cuenta">
+        <p>Ya tengo cuenta.</p>
+        <a href="login.html">Iniciar sesión</a>
+      </div>
+    </div>
+  </form>
+</body>
+</html>

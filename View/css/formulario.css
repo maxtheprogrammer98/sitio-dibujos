@@ -1,0 +1,75 @@
+/* Scss Document */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th, caption {
+  font-weight: normal;
+  text-align: left;
+}
+
+img, fieldset {
+  border: 0;
+}
+
+ol {
+  padding-left: 1.4em;
+  list-style: decimal;
+}
+
+ul {
+  padding-left: 1.4em;
+  list-style: square;
+}
+
+q:before, q:after {
+  content: "";
+}
+
+@font-face {
+  font-family: fuente1;
+  src: url("/View/fuentes/Astronomus.ttf");
+}
+@font-face {
+  font-family: fuente2;
+  src: url("/View/fuentes/conthrax-sb.ttf");
+}
+body {
+  background-color: grey;
+}
+
+.form {
+  width: 21.875rem;
+  height: 80vh;
+  background-color: #4693FF;
+  margin: 5rem auto 0;
+  border: 2px solid transparent;
+  border-radius: 8%;
+}
+.form__container {
+  width: 20.625rem;
+  height: 85%;
+  background-color: #fff;
+  margin: 3.125rem auto 0;
+  border-radius: 0 0 8% 8%;
+  display: grid;
+  gap: 1.25rem 0;
+  grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+.form__imagen {
+  width: 12.5rem;
+  display: block;
+  margin: -7.5rem auto 0;
+}
+
+/*# sourceMappingURL=formulario.css.map */
