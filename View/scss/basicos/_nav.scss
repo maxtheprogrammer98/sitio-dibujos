@@ -1,9 +1,18 @@
-@use 'variables' as v;
+@use '../partials/variables' as v;
 
 // ------------------- NAV -------------------- // 
 // ajustes generales
+#nav{
+    overflow: hidden !important;
+    z-index: 100;
+}
+
 #nav li{
     list-style: none;
+}
+
+#nav li:hover{
+    text-decoration: underline;
 }
 
 #nav li a {

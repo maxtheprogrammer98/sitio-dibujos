@@ -116,8 +116,17 @@ header #header_opciones {
     background-size: contain;
   }
 }
+#nav {
+  overflow: hidden !important;
+  z-index: 100;
+}
+
 #nav li {
   list-style: none;
+}
+
+#nav li:hover {
+  text-decoration: underline;
 }
 
 #nav li a {
@@ -286,4 +295,94 @@ body {
   text-decoration: underline;
 }
 
-/*# sourceMappingURL=index.css.map */
+section {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 2/4;
+  grid-column: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  height: 100%;
+  width: 100%;
+  padding-top: 25px;
+}
+section #presentacion {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: fuente1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../Imagenes/aguila-proceso.jpg");
+  background-size: auto 100%;
+  background-position: right;
+  background-blend-mode: darken;
+}
+section #presentacion h3 {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+section #presentacion p {
+  text-align: center;
+  line-height: 1.6rem;
+  width: 90%;
+}
+section #presentacion #ver_tuto {
+  font-family: fuente1;
+  font-size: 1.1rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
+  background: #4693FF;
+  color: white;
+}
+section #presentacion #ver_tuto:hover {
+  font-size: 1.15rem;
+  transition: 0.5s;
+}
+section #tutoriales_inicio {
+  background: #6FAEFE !important;
+}
+section #tutoriales_inicio h4 a {
+  color: white;
+}
+section #tutoriales_inicio p {
+  color: white;
+}
+section .descripciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: fuente1;
+}
+section .descripciones img {
+  width: 170px;
+}
+section .descripciones h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+section .descripciones h4 a {
+  color: #333333;
+  text-decoration: none;
+}
+section .descripciones p {
+  text-align: center;
+  width: 90%;
+  color: grey;
+}
+section .descripciones:hover img {
+  width: 180px;
+  transition: 0.5s ease-in-out;
+}/*# sourceMappingURL=index.css.map */
