@@ -1,6 +1,16 @@
 @use 'variables' as v;
 
 // ------------------- NAV -------------------- // 
+// ajustes generales
+#nav li{
+    list-style: none;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: v.$fuente3;
+}
+
 // estas clase se utiliza se accede desde un dispositivo movil
 .nav_vertical_hidden{
     display: flex;
@@ -14,15 +24,6 @@
     color: v.$fuente3;
     padding: 0;
     font-family: fuente1;
-
-    a{
-        text-decoration: none;
-        cursor: pointer;
-    }
-    
-    a:hover{
-        text-decoration: underline;
-    }
 
     .menu{
         display: flex;
@@ -48,22 +49,14 @@
     padding: 0;
     font-family: fuente1;
 
-    a{
-        list-style: none;
+    li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid v.$celeste1;
         height: 100%;
         width: 100%;
-        box-sizing: border-box;
-        border-bottom: 2px solid v.$celeste3;
-        cursor: pointer;
-        text-decoration: none !important;
-        color: v.$fuente3 !important;
     }
-
-    a:hover{
-        text-decoration: underline;
-    }
-
-
 }
 
 //--------------------------- MEDIA QUERIES -------------------------// 
@@ -79,10 +72,6 @@
         align-items: center;
         padding: 0;
         height: 40px;
-
-        a{
-            cursor: pointer;
-        }
 
         .menu{
             display: none;
