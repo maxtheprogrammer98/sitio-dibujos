@@ -1,3 +1,4 @@
+@use 'variables' as v;
 // ------------------- FOOTER ------------------- //
 // vista movil por default
 footer{
@@ -8,7 +9,7 @@ footer{
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
-    background-color: $celeste1;
+    background-color: v.$celeste1;
     background-image: url("/View/Imagenes/fondo-version-1.png");
     background-position: center;
     background-size: contain;
@@ -38,7 +39,7 @@ footer{
         align-self:flex-end;
         font-family: fuente1;
         text-align: center;
-        color: $fuente3;
+        color: v.$fuente3;
         font-size: 0.8rem;
 
         img{
