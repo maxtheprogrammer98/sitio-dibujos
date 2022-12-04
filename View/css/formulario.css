@@ -43,6 +43,244 @@ q:before, q:after {
   font-family: fuente2;
   src: url("/View/fuentes/conthrax-sb.ttf");
 }
+header {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  grid-template-columns: 100%;
+  grid-template-rows: 80% 20%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("/View/Imagenes/fondo-lado-izq.png"), url("/View/Imagenes/fondo-lado-der.png");
+  background-position: left, right;
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  font-family: fuente1;
+}
+header #header_logo {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+header #header_logo img {
+  width: 225px;
+  cursor: pointer;
+}
+header #header_logo img:hover {
+  width: 235px;
+  transition: ease-out 0.5s;
+}
+header #header_opciones {
+  display: none;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  header {
+    background-size: 50% 100%;
+  }
+  header #header_opciones {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 100%;
+    width: 100%;
+    justify-content: end;
+    align-items: flex-start;
+    list-style: none;
+  }
+  header #header_opciones li {
+    display: flex;
+    margin-right: 20px;
+  }
+  header #header_opciones li a {
+    text-decoration: none;
+    color: white;
+    background: #2877ED;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+  header #header_opciones li:hover {
+    text-decoration: underline;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  header {
+    background-size: contain;
+  }
+}
+.nav_vertical_hidden {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  height: 40px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #2877ED;
+  color: white;
+  padding: 0;
+  font-family: fuente1;
+}
+.nav_vertical_hidden a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav_vertical_hidden a:hover {
+  text-decoration: underline;
+}
+.nav_vertical_hidden .menu {
+  display: flex;
+  cursor: pointer;
+}
+.nav_vertical_hidden .item {
+  display: none;
+}
+
+.nav_vertical_visible {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 100%;
+  height: 300px;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #2877ED;
+  color: white;
+  padding: 0;
+  font-family: fuente1;
+}
+.nav_vertical_visible a {
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 2px solid #6FAEFE;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: white !important;
+}
+.nav_vertical_visible a:hover {
+  text-decoration: underline;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #nav {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    height: 40px;
+  }
+  #nav a {
+    cursor: pointer;
+  }
+  #nav .menu {
+    display: none;
+  }
+  #nav .item {
+    display: flex;
+  }
+  #nav #mi_cuenta {
+    display: none;
+  }
+  #nav #login {
+    display: none;
+  }
+  .nav_vertical_hidden {
+    display: none;
+  }
+  .nav_vertical_visible {
+    display: flex;
+    flex-direction: row;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  background-color: #4693FF;
+  background-image: url("/View/Imagenes/fondo-version-1.png");
+  background-position: center;
+  background-size: contain;
+  background-blend-mode: multiply;
+  padding-bottom: 10px;
+}
+footer #logo_footer {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+}
+footer #logo_footer img {
+  width: 175px;
+}
+footer #descripcion_footer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  font-family: fuente1;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+}
+footer #descripcion_footer img {
+  width: 40px;
+  margin-left: 10px;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  footer {
+    padding-bottom: 20px;
+  }
+  footer #logo_footer img {
+    width: 190px;
+  }
+  footer #descripcion_footer {
+    flex-wrap: wrap !important;
+    font-size: 1.5rem;
+  }
+  footer #descripcion_footer img {
+    width: 45px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  footer #logo_footer {
+    align-items: center;
+  }
+  footer #logo_footer img {
+    width: 200px;
+  }
+  footer #descripcion_footer {
+    flex-wrap: wrap !important;
+    font-size: 1.25rem;
+  }
+}
 body {
   background-image: url(../../Imagenes/fondo-version-1.png);
   background-size: cover;
@@ -165,5 +403,7 @@ body {
   transition: 0.5s all;
   text-decoration: underline;
 }
+
+/*# sourceMappingURL=formulario.css.map */
 
 /*# sourceMappingURL=formulario.css.map */

@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 //------------------------- HEADER -----------------------//
 header{
     display: grid;
@@ -61,8 +63,8 @@ header{
 
                 a{
                     text-decoration: none;
-                    color: $fuente3;
-                    background: $celeste2;
+                    color: v.$fuente3;
+                    background: v.$celeste2;
                     padding: 5px;
                     border-radius: 5px;
                     font-size: 0.8rem;

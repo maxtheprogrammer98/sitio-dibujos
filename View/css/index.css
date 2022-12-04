@@ -1,3 +1,48 @@
+/* Scss Document */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th, caption {
+  font-weight: normal;
+  text-align: left;
+}
+
+img, fieldset {
+  border: 0;
+}
+
+ol {
+  padding-left: 1.4em;
+  list-style: decimal;
+}
+
+ul {
+  padding-left: 1.4em;
+  list-style: square;
+}
+
+q:before, q:after {
+  content: "";
+}
+
+@font-face {
+  font-family: fuente1;
+  src: url("/View/fuentes/Astronomus.ttf");
+}
+@font-face {
+  font-family: fuente2;
+  src: url("/View/fuentes/conthrax-sb.ttf");
+}
 header {
   display: grid;
   grid-column: 1/2;
@@ -71,43 +116,6 @@ header #header_opciones {
     background-size: contain;
   }
 }
-/* Scss Document */
-html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  font-weight: normal;
-  box-sizing: border-box;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td, th, caption {
-  font-weight: normal;
-  text-align: left;
-}
-
-img, fieldset {
-  border: 0;
-}
-
-ol {
-  padding-left: 1.4em;
-  list-style: decimal;
-}
-
-ul {
-  padding-left: 1.4em;
-  list-style: square;
-}
-
-q:before, q:after {
-  content: "";
-}
-
 .nav_vertical_hidden {
   display: flex;
   grid-column: 1/2;
@@ -121,13 +129,11 @@ q:before, q:after {
   padding: 0;
   font-family: fuente1;
 }
-.nav_vertical_hidden li {
-  list-style: none;
-}
-.nav_vertical_hidden li a {
+.nav_vertical_hidden a {
   text-decoration: none;
+  cursor: pointer;
 }
-.nav_vertical_hidden li:hover {
+.nav_vertical_hidden a:hover {
   text-decoration: underline;
 }
 .nav_vertical_hidden .menu {
@@ -152,21 +158,17 @@ q:before, q:after {
   padding: 0;
   font-family: fuente1;
 }
-.nav_vertical_visible li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.nav_vertical_visible a {
   list-style: none;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
   border-bottom: 2px solid #6FAEFE;
   cursor: pointer;
+  text-decoration: none !important;
+  color: white !important;
 }
-.nav_vertical_visible li a {
-  text-decoration: none;
-}
-.nav_vertical_visible li:hover {
+.nav_vertical_visible a:hover {
   text-decoration: underline;
 }
 
@@ -183,7 +185,7 @@ q:before, q:after {
     padding: 0;
     height: 40px;
   }
-  #nav li {
+  #nav a {
     cursor: pointer;
   }
   #nav .menu {
@@ -205,14 +207,6 @@ q:before, q:after {
     display: flex;
     flex-direction: row;
   }
-}
-@font-face {
-  font-family: fuente1;
-  src: url("/View/fuentes/Astronomus.ttf");
-}
-@font-face {
-  font-family: fuente2;
-  src: url("/View/fuentes/conthrax-sb.ttf");
 }
 footer {
   display: flex;
@@ -298,4 +292,4 @@ body {
   text-decoration: underline;
 }
 
-/*# sourceMappingURL=inicio.css.map */
+/*# sourceMappingURL=index.css.map */

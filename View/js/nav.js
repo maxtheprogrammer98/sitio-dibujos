@@ -34,6 +34,7 @@ let m = {
         a.nav.classList.remove("nav_vertical_visible");
         a.nav.classList.add("nav_vertical_hidden");
         a.botonMenu.textContent = "Abrir Menu";
+        a.botonMenu.style.cursor = "pointer";
     },
 
     abrirMenu:function(){
@@ -42,6 +43,7 @@ let m = {
         a.nav.classList.remove("nav_vertical_hidden");
         a.nav.classList.add("nav_vertical_visible");
         a.botonMenu.textContent = "Cerrar Menu";
+        a.botonMenu.style.cursor = "pointer";
     },
 
 }
