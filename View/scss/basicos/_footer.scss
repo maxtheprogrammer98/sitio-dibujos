@@ -53,6 +53,27 @@ footer{
 }
 
 // ----------------------- MEDIA QUERIES ----------------------------//
+// horizontal phones
+@media only screen and (max-height: 575.98px) and (orientation: landscape){
+    footer{
+        #logo_footer{
+            img{
+                width: 125px !important;
+            }
+        }
+
+        #descripcion_footer{
+            p{
+                font-size: 0.8rem;
+            }
+
+            a img{
+                width:35px;
+            }
+        }
+    }
+}
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
