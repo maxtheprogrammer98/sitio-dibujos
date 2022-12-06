@@ -310,212 +310,26 @@ footer #descripcion_footer img {
 body {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 7% 2% 81% 10%;
-  height: 300vh;
+  grid-template-rows: 4.641% 1.326% 87.5% 6.633%;
+  height: 500vh;
 }
 
-#inicio {
+#galeria {
   text-decoration: underline;
 }
 
 section {
   display: grid;
-  grid-column: 1/2;
-  grid-row: 2/4;
-  grid-column: 100%;
-  grid-template-rows: 25% 75%;
-  height: 100%;
-  width: 100%;
-  padding-top: 25px;
-}
-section #presentacion {
-  display: flex;
-  flex-direction: column;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  height: 100%;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: fuente1;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-size: auto 100%;
-  background-position: center;
-  background-blend-mode: darken;
-  background-repeat: no-repeat;
-  -webkit-animation: fondo 5s infinite;
-          animation: fondo 5s infinite;
-}
-section #presentacion h3 {
-  font-size: 2rem;
-  text-decoration: underline;
-}
-section #presentacion p {
-  text-align: center;
-  line-height: 1.6rem;
-  width: 90%;
-}
-section #presentacion #ver_tuto {
-  font-family: fuente1;
-  font-size: 1.1rem;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
-  background: #4693FF;
-  color: white;
-}
-section #presentacion #ver_tuto:hover {
-  font-size: 1.15rem;
-  transition: 0.5s;
-}
-section #contenedor {
-  display: flex;
-  flex-direction: column;
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-section #contenedor .descripciones {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 33%;
-  width: 100%;
   overflow: hidden;
-  font-family: fuente1;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: 1fr;
+  grid-gap: 10px !important;
+  padding: 10px !important;
 }
-section #contenedor .descripciones img {
-  width: 170px;
-}
-section #contenedor .descripciones h4 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  text-decoration: underline;
-}
-section #contenedor .descripciones h4 a {
-  color: #333333;
-  text-decoration: none;
-}
-section #contenedor .descripciones p {
-  text-align: center;
-  width: 90%;
-  color: grey;
-}
-section #contenedor .descripciones:hover img {
-  width: 180px;
-  transition: 0.5s ease-in-out;
-}
-section #contenedor #tutoriales_inicio {
-  background: #6FAEFE !important;
-}
-section #contenedor #tutoriales_inicio h4 a {
-  color: white;
-}
-section #contenedor #tutoriales_inicio p {
-  color: white;
-}
-
-@-webkit-keyframes fondo {
-  0% {
-    background-image: url("../Imagenes/imagen-12.jpg");
-  }
-  50% {
-    background-image: url("../Imagenes/imagen-17.jpg");
-  }
-  100% {
-    background-image: url("../Imagenes/aguila-proceso.jpg");
-  }
-}
-
-@keyframes fondo {
-  0% {
-    background-image: url("../Imagenes/imagen-12.jpg");
-  }
-  50% {
-    background-image: url("../Imagenes/imagen-17.jpg");
-  }
-  100% {
-    background-image: url("../Imagenes/aguila-proceso.jpg");
-  }
-}
-@media only screen and (max-height: 575.98px) and (orientation: landscape) {
-  body {
-    grid-template-rows: 7% 2% 81% 10% !important;
-    height: 500vh !important;
-  }
-  section #presentacion {
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .descripciones img {
-    width: 125px !important;
-  }
-}
-/* Medium devices (portrait tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  body {
-    grid-template-rows: 7% 2% 76% 15%;
-    height: 200vh;
-  }
-}
-/* Large devices (horizontal tablets / laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  body {
-    grid-template-rows: 7% 2% 81% 10%;
-    height: 300vh;
-  }
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  body {
-    grid-template-rows: 7% 2% 81% 10%;
-    height: 200vh;
-  }
-  body section {
-    grid-template-rows: repeat(2, 1fr);
-  }
-  body section #presentacion h3 {
-    font-size: 3rem;
-  }
-  body section #presentacion p {
-    width: 70%;
-    font-size: 2rem;
-    line-height: 3.5rem;
-  }
-  body section #presentacion #ver_tuto {
-    font-size: 1.5rem;
-  }
-  body section #presentacion #ver_tuto:hover {
-    font-size: 1.6rem;
-  }
-  body section #contenedor {
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    background: lightgrey;
-  }
-  body section #contenedor .descripciones {
-    width: 30%;
-    height: 75%;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.3);
-  }
-  body section #contenedor #tutoriales_inicio {
-    background: white !important;
-  }
-  body section #contenedor #tutoriales_inicio h4 a {
-    color: #333333 !important;
-  }
-  body section #contenedor #tutoriales_inicio p {
-    color: grey;
-  }
-  body section #contenedor #tutoriales_inicio img {
-    content: url("../Imagenes/icono-tutoriales-alt.png");
-  }
-}/*# sourceMappingURL=index.css.map */
+section .item_galeria {
+  display: flex;
+  overflow: hidden;
+  border-radius: 5px;
+}/*# sourceMappingURL=galeria.css.map */

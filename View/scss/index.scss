@@ -44,10 +44,12 @@ section{
         font-family: fuente1;
         color: white;
         background-color: rgba($color: #000000, $alpha: .5);
-        background-image: url("../Imagenes/aguila-proceso.jpg");
+        //background-image: url("../Imagenes/aguila-proceso.jpg");
         background-size: auto 100%;
-        background-position: right;
+        background-position: center;
         background-blend-mode: darken;
+        background-repeat: no-repeat;
+        animation: fondo 5s infinite;
 
         h3{
             font-size: 2rem;
@@ -144,6 +146,21 @@ section{
     
 }
 
+// -------------------- ANIMACIONES -------------------------// 
+@keyframes fondo{
+    0%{
+        background-image: url("../Imagenes/imagen-12.jpg");
+    }
+
+    50%{
+        background-image: url("../Imagenes/imagen-17.jpg");
+    }
+
+    100%{
+        background-image: url("../Imagenes/aguila-proceso.jpg");
+    }
+}
+
 
 // -------------------- MEDIA QUERIES -------------------------// 
 // horizontal phones
@@ -200,8 +217,17 @@ section{
                 }
 
                 p{
+                    width: 70%;
+                    font-size: 2rem;
+                    line-height: 3.5rem;
+                }
+
+                #ver_tuto{
                     font-size: 1.5rem;
-                    line-height: 3rem;
+                }
+
+                #ver_tuto:hover{
+                    font-size: 1.6rem;
                 }
             }
 
