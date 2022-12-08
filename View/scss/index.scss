@@ -205,11 +205,11 @@ section{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     body{
-        grid-template-rows: 7% 2% 81% 10%;;
-        height: 200vh;
+        grid-template-rows: 7% 2% 76% 15%;;
+        height: 250vh;
 
         section{
-            grid-template-rows: repeat(2,1fr);
+            grid-template-rows: 45% 55%;
 
             #presentacion{
                 h3{

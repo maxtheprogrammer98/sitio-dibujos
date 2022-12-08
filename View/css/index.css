@@ -150,7 +150,7 @@ header #header_opciones {
   display: flex;
   grid-column: 1/2;
   grid-row: 2/3;
-  height: 40px;
+  height: 47px;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -196,12 +196,11 @@ header #header_opciones {
     display: flex;
     grid-column: 1/2;
     grid-row: 2/3;
-    height: 100%;
+    height: 47px;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
     padding: 0;
-    height: 40px;
   }
   #nav .menu {
     display: none;
@@ -471,11 +470,11 @@ section #contenedor #tutoriales_inicio p {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body {
-    grid-template-rows: 7% 2% 81% 10%;
-    height: 200vh;
+    grid-template-rows: 7% 2% 76% 15%;
+    height: 250vh;
   }
   body section {
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 45% 55%;
   }
   body section #presentacion h3 {
     font-size: 3rem;
