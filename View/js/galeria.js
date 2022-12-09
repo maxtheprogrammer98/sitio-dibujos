@@ -7,7 +7,10 @@ let at = {
     modal: null,
     ID: null,
     wrapperCerrar:null,
-    iconoCerrar: null
+    iconoCerrar: null,
+    botonAnt: null,
+    botonSig: null,
+    contador: null
 }
 
 // ------------------ OBJETO METODOS ------------------//
@@ -38,9 +41,16 @@ let me = {
     },
 
     crearModal:function(elem){
+        console.log(at.target.id);
         //variables con elementos DOM a agregar:
+        let imagen = at.target.outerHTML;
         let icono = "<img src='../Imagenes/cerrar-icon.png' alt='cerrar' id='icono_cerrar' >";
-
+        let contenido = `<div id="contenedor_modal"> ${imagen} </div>`;
+        let botones = `<div id='botones_modal'>
+                        <img src='../Imagenes/anterior-icono.png' alt='boton' id='boton_ant'>
+                        <img src='../Imagenes/sig-icono.png' alt='boton' id='boton_sig'>
+                       </div>`
+        
         elem.appendChild(document.createElement("div")).setAttribute("id", "modal");
         at.modal = document.querySelector("#modal");
 
@@ -50,6 +60,32 @@ let me = {
         at.wrapperCerrar.insertAdjacentHTML("afterbegin", icono);
         at.iconoCerrar = document.querySelector("#icono_cerrar");
         
+        at.modal.insertAdjacentHTML("beforeend",contenido);
+
+        at.modal.insertAdjacentHTML("beforeend", botones);
+        at.botonAnt = document.querySelector("#boton_ant");
+        at.botonSig = document.querySelector("#boton_sig");
+
+        at.botonAnt.addEventListener("click", me.imagenAnterior);
+        at.botonSig.addEventListener("click", me.imagenSiguiente);
+
+        at.iconoCerrar.addEventListener("click", me.cerrarModal);
+
+        
+    },
+
+    cerrarModal:function(){
+        at.body.removeChild(at.lightbox);
+    },
+
+    imagenAnterior:function(){
+        // contador = parseInt(at.ID.replace("i",""));
+        // contador -= 1
+        // at.imagenes.forEach(element => {
+        //     if (element.id == `i${contador}`){
+        //         at.target = element;
+        //     }
+        // });
     }
 }
 
