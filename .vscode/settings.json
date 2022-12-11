@@ -3,7 +3,7 @@
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": "/View/css",
+            "savePath": "/Template/css",
             "savePathReplacementPairs": null
         }
     ]
