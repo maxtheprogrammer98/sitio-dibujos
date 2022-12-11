@@ -1,0 +1,162 @@
+// -------------------- IMPORTS -------------------------// 
+@use "partials/variables" as v;
+@use "partials/reset";
+@use "partials/fuentes";
+@use "basicos/header";
+@use "basicos/nav";
+@use "basicos/footer";
+
+// -------------------- LAYOUT -------------------------// 
+// (vista movil por default)
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 2.32% 0.7% 93.73% 3.25%;
+    height: 1000vh;
+}
+
+#tutoriales{
+    text-decoration: underline;
+}
+
+// -------------------- SECTION -------------------------//
+section{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3% 97%;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-family: fuente1;
+    //background-color: v.$negro1;
+    
+    #buscador{
+        display: flex;
+        flex-direction: column;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        
+        label{
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: v.$fuente8;
+        }
+
+        #buscador_wrapper{
+            display: flex;
+            width: 100%;
+            height: 20%;
+            justify-content: center;
+            align-items: center;
+
+            input{
+                width: 70%;
+                height: 30px;
+                border-radius: 10px;
+            }
+
+            button{
+                background: none;
+                border: none !important;
+                font-size: 1.5rem;
+                cursor: hover;
+            }
+        }
+    }
+
+    #tutoriales_seccion{
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        grid-template-columns:repeat(auto-fill,minmax(300px, 1fr));
+        grid-template-rows: auto;
+        height: 100%;
+        width: 100%;
+        //background: v.$negro1;
+
+        .tutoriales_item{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 35% 65%;
+            height: 85%;
+            width: 87%;
+            align-self: center;
+            justify-self: center;
+            overflow: hidden;
+            border-radius: 10px;
+            box-sizing: border-box;
+            border: 8px solid v.$celeste1;
+            color: v.$fuente8;
+            box-shadow: 3px 3px 10px 2px rgba($color: #000000, $alpha: .5);
+
+
+            .portada_tutoriales{
+                display: flex;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                justify-content: center;
+                overflow: hidden;
+
+                img{
+                    width: 100%;
+                    height: fit-content;
+                }
+            }
+
+            .descripcion_tutoriales{
+                display: flex;
+                grid-column: 1/2;
+                grid-row: 2/3;
+                flex-direction: column;
+                justify-content:space-between;
+                align-items: center;
+
+                .titulo_tuto{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: v.$celeste1;
+                    height: 70px;
+                    width: 100%;
+                    color: v.$fuente3;
+
+                    h4{
+                        font-size: 1.9rem;
+                        text-decoration: underline;
+                    }
+                }
+
+                ul{
+                    
+                    li{
+                        padding-bottom: 20px;
+                        font-size: 1.25rem;
+                    }
+                }
+
+                .valoracion{
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 2rem;
+                }
+
+                .promedio_wrapper{
+                    font-size: 2.5rem;
+                    font-family: fuente2;
+                    padding-bottom: 20px;
+                }
+                
+            }
+        }
+
+        .tutoriales_item:hover{
+            transition: 0.5s ease-out;
+            height: 87%;
+            width: 89%;
+        }
+    }
+}
