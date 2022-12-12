@@ -5,6 +5,7 @@
 @use "basicos/header";
 @use "basicos/nav";
 @use "basicos/footer";
+@use "basicos/loader";
 
 // -------------------- LAYOUT -------------------------// 
 // (vista movil por default)
@@ -57,6 +58,8 @@ section{
                 width: 70%;
                 height: 30px;
                 border-radius: 10px;
+                color: v.$gris2;
+                font-family: fuente1;
             }
 
             button{
@@ -89,7 +92,7 @@ section{
             overflow: hidden;
             border-radius: 10px;
             box-sizing: border-box;
-            border: 8px solid v.$celeste1;
+            border: 8px solid v.$celeste2;
             color: v.$fuente8;
             box-shadow: 3px 3px 10px 2px rgba($color: #000000, $alpha: .5);
 
@@ -119,22 +122,32 @@ section{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background: v.$celeste1;
+                    background: v.$celeste2;
                     height: 70px;
                     width: 100%;
                     color: v.$fuente3;
 
                     h4{
                         font-size: 1.9rem;
-                        text-decoration: underline;
                     }
                 }
 
                 ul{
-                    
+                    list-style: none;
+                    margin-top: 10px;
+                    border-bottom:2px solid v.$gris3;
                     li{
+                        margin-left: -20px;
                         padding-bottom: 20px;
                         font-size: 1.25rem;
+
+                        strong{
+                            background:#a1a0a0;
+                            color: v.$fuente3;
+                            text-decoration: none;
+                            padding: 2px;
+                            border-radius: 5px;
+                            font-weight: normal;
                     }
                 }
 
