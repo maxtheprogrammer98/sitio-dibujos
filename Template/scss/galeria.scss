@@ -195,6 +195,18 @@ section{
     }
 }
 
+@keyframes modal_extra_large {
+    0%{
+        width: 42.5%;
+        height: 300px;
+    }
+
+    100%{
+        width: 85%;
+        height: 800px;
+    }
+}
+
 // -------------------- MEDIA QUERIES -------------------------// 
 // horizontal phones
 @media only screen and (max-height: 575.98px) and (orientation: landscape){
@@ -266,8 +278,18 @@ section{
         grid-template-rows: 7% 2% 76% 15%;;
         height: 250vh;
 
-        section{
-            margin-top: 10px;
+        #lightbox #modal{
+            height: 600px;
+        }
+    }
+}
+
+/* hyper large monitors (large laptops and desktops, 1920px and up) */
+@media only screen and (min-width: 1366px){
+    body{
+        #lightbox #modal{
+            height: 800px;
+            animation-name: modal_extra_large;
         }
     }
 }

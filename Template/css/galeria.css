@@ -561,6 +561,26 @@ section .item_galeria:hover {
     height: 600px;
   }
 }
+@-webkit-keyframes modal_extra_large {
+  0% {
+    width: 42.5%;
+    height: 300px;
+  }
+  100% {
+    width: 85%;
+    height: 800px;
+  }
+}
+@keyframes modal_extra_large {
+  0% {
+    width: 42.5%;
+    height: 300px;
+  }
+  100% {
+    width: 85%;
+    height: 800px;
+  }
+}
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
   body {
     grid-template-rows: 5% 1.5% 86% 7.5% !important;
@@ -624,7 +644,15 @@ section .item_galeria:hover {
     grid-template-rows: 7% 2% 76% 15%;
     height: 250vh;
   }
-  body section {
-    margin-top: 10px;
+  body #lightbox #modal {
+    height: 600px;
+  }
+}
+/* hyper large monitors (large laptops and desktops, 1920px and up) */
+@media only screen and (min-width: 1366px) {
+  body #lightbox #modal {
+    height: 800px;
+    -webkit-animation-name: modal_extra_large;
+            animation-name: modal_extra_large;
   }
 }/*# sourceMappingURL=galeria.css.map */
