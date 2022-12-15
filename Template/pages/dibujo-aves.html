@@ -5,8 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aves - Dibujo realista</title>
+    <link rel="stylesheet" href="../css/dibujo-aves.css">
 </head>
-<body>
-    
+<body onload='metod.finLoader()'>
+    <header>
+        <div id="header_logo">
+            <img src="../imagenes/logo-principal.svg" alt="logo">
+        </div>
+        <ul id="header_opciones">
+            <li> <a href="pages/registro.html" id="header_login"> Login / registro </a></li> <li>
+            <li> <a href="#" id="header_cuenta">  &#129489; Mi Cuenta </a></li> <li>
+        </ul>
+    </header>
+
+    <nav id="nav" class="nav_vertical_hidden">
+        <li id="menu" class="menu">
+            <a> Abrir Menu</a>
+        </li> 
+
+        <li id="inicio" class="item">
+            <a href="../index.html"> Inicio </a>
+        </li> 
+
+        <li id="galeria" class="item">
+            <a href="galeria.html">Galeria </a>
+        </li>
+
+        <li id="tutoriales" class="item">
+            <a href="tutoriales.html"> Tutoriales </a>
+        </li>
+
+        <li id="login" class="item">
+            <a href="pages/registro.html"> Login / registro</a>
+        </li>
+
+        <li id="mi_cuenta" class="item">
+            <a href="#"> Mi Cuenta </a> 
+        </li>
+    </nav>
+    <section>
+        <div id="portada">
+            <h1 id="titulo_portada"> DIBUJO DE AVES </h1>
+            <!-- <ul id="tags">
+                <li>Animales</li>
+                <li>Media</li>
+                <li>Pasteles</li>
+            </ul> -->
+        </div>
+
+        <div id="informacion">
+            <div id="materiales">
+                <h3>Materiales Necesarios:</h3>
+                <ul>
+                    <li> <b>Papel de alto gramaje:</b> para que resista muchas capas de carboncillo.</li>
+                    <li> <b>Lapiz de carboncillo:</b> para realizar detalles (preferentemente de dureza media / dura).</li>
+                    <li> <b>Carboncillo en barra:</b> para realizar las capas base.</li>
+                    <li> <b>Lapiz pastel blanco:</b> será utilizado para remarcar partes donde hay mayor iluminación y parte del pelaje.</li>
+                    <li> <b>Borrador:</b> cualquier goma o borrador que tengas disponible.</li>
+                    <li> <b>Servilleta:</b> esto sera usado para difuminar el carboncillo. </li>
+                </ul>
+            </div>
+            <div id="paso1" class="pasos">
+                <h3> PASO 1: Boceto</h3>
+                <img src="../Imagenes/paso1-aves.jpg" alt="refe-paso1">
+                <p>En esta etapa inicial se busca lograr <b>la estructura base del dibujo</b> y las proporciones
+                    correctas, para esto como primera acción se utilizan <b>figuras geometricas</b> simples como
+                    se muestra en la imagen de referencia, esto brinda una buena base para ubicar las otras partes
+                    de la figura.
+                    En este paso se realizan trazos simples y suaves, los detalles serán realizados mas adelante.
+                </p>
+            </div>
+
+            <div id="paso2" class="pasos">
+                <h3> PASO 2: Capas base</h3>
+                <img src="../Imagenes/paso2-aves.jpg" alt="refe-paso2">
+                <p> En este paso lo que se busca lograr son las <b>capas base</b>, es decir los tonos principales de la imagen.
+                    Utilizando los carboncillos en barra y la servilleta para difuminar.
+                    para esto hay que prestar atención a los niveles de luz y sombra de la figura, para lograr las tonalidades correctas.
+                    una practica util en este caso es hacer una <b>paleta de colores</b> en una pedazo de hoja aperte, como se muestra en la imagen de referencia.
+                    <b>Importante:</b> en caso de aplicar varias capas sobre una misma parte se debe comenzar por los tonos y colores MAS OSCUROS.
+                </p>
+            </div>
+
+            <div id="paso3" class="pasos">
+                <h3> PASO 2: TEXTURA Y DETALLES</h3>
+                <img src="../Imagenes/paso3-aves.jpg" alt="refe-paso3">
+                <p> En esta ultima etapa nos vamos a centrar en dar textura y los detalles, aqui vamos a utilizar los lapices de carboncillo 
+                    ya que permiten dar trazos mas precisos.
+                    Para esto es muy importante analizar la <b>composición del pelaje</b>, particularmente caracteriscas como las siguientes:
+                    largo, ondulación y grosor.
+                    Como ayuda puedes realizar en una hoja aparte una muestra de una parte del pelaje, para tener una idea mas clara de su composición.
+                    Esta etapa siempre es la que mas tiempo demanda, es necesario tomarse esta parte con mucha paciencia.
+                </p>
+            </div>
+        </div>
+
+        <div id="botones">
+            <!-- aca van a ir los botones de guardar cambios y clasificacion -->
+        </div>
+        
+    </section>
+
+    <footer>
+        <div id="logo_footer">
+            <img src="../imagenes/logo-principal-blanco.svg" alt="logo">
+        </div>
+        <div id="descripcion_footer">
+            <p>si deseas contactarte conmigo puedes hacerlo a traves de mis redes</p>
+            <br>
+            <a href="https://www.instagram.com/mnnastrai_art/"><img src="../imagenes/insta-icon.svg" alt="logo instagram"></a>
+            <a href="#"><img src="../imagenes/face-icon.svg" alt="logo facebook"></a>
+            <a href="mailto:mnnastrai24@gmail.com"><img src="../imagenes/mail-icon.svg" alt="logo mail"></a>
+            <a href="https://github.com/maxtheprogrammer98"><img src="../imagenes/github-icon.svg" alt="logo github"></a>
+        </div>
+    </footer>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/loader.js"></script>
 </body>
 </html>

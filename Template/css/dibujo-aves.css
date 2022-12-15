@@ -356,303 +356,73 @@ footer #descripcion_footer img {
 body {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 2.32% 0.7% 93.73% 3.25%;
+  grid-template-rows: 2.32% 0.5% 93.73% 3.25%;
   height: 1000vh;
 }
 
-#galeria {
+#tutoriales {
   text-decoration: underline;
 }
 
 section {
   display: grid;
-  overflow: hidden;
+  grid-template-columns: 100%;
+  grid-template-rows: 7% 88% 5%;
   grid-column: 1/2;
   grid-row: 3/4;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-rows: auto;
-  grid-gap: 15px !important;
-  box-sizing: border-box;
-  padding: 15px;
   background: black;
-  margin-top: -5px;
 }
-section .item_galeria {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  justify-self: center;
-  align-self: center;
-  overflow: hidden;
-  background: #333333;
-}
-section .item_galeria img {
-  height: 150%;
-  width: auto;
-}
-section .item_galeria:hover {
-  filter: brightness(130%);
-  transition: 1s ease-in-out;
-  cursor: pointer;
-}
-
-#lightbox {
-  display: flex;
-  position: relative;
-  grid-column: 1/2;
-  grid-row: 1/5;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 300;
-  justify-content: center;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-#modal {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 15% 85%;
-  height: 500px;
-  width: 85%;
-  background: white;
-  z-index: 400;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.6);
-  -webkit-animation-name: modal_mobile;
-          animation-name: modal_mobile;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-}
-#modal #wrapper_cerrar {
+section #portada {
   display: flex;
   grid-column: 1/2;
   grid-row: 1/2;
-  height: 100%;
-  width: 100%;
-  justify-content: flex-end;
-  align-items: center;
-}
-#modal #wrapper_cerrar img {
-  width: 60px;
-  margin-right: 10px;
-  z-index: 500;
-  cursor: pointer;
-}
-#modal #contenedor_modal {
-  display: flex;
-  grid-column: 1/2;
-  grid-row: 1/3;
-  height: 100%;
-  width: 100%;
   justify-content: center;
-  background: white;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../Imagenes/aguila-proceso.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-blend-mode: multiply;
+  font-family: fuente1;
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
 }
-#modal #contenedor_modal img {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  align-self: center;
-}
-#modal #botones_modal {
+section #informacion {
   display: flex;
+  flex-direction: column;
+  justify-self: center;
+  overflow: hidden;
   grid-column: 1/2;
   grid-row: 2/3;
-  height: 100%;
   width: 90%;
-  justify-self: center;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 20px;
+  border-radius: 20px;
+  background: white;
+  font-family: fuente1;
+  line-height: 1.5rem;
+  color: #333333;
 }
-#modal #botones_modal img {
-  width: 25px;
-  z-index: 600;
-  filter: opacity(70%);
-  cursor: pointer;
+section #informacion h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  line-height: 2rem;
+  text-decoration: underline;
 }
-#modal #botones_modal img:hover {
-  filter: opacity(100%);
-  transition: 0.5s ease-in-out;
+section #informacion #materiales {
+  margin-top: 20px;
 }
-
-@-webkit-keyframes modal_mobile {
-  0% {
-    width: 42.5%;
-    height: 250px;
-  }
-  100% {
-    width: 85%;
-    height: 500px;
-  }
+section #informacion div {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 50px;
 }
-
-@keyframes modal_mobile {
-  0% {
-    width: 42.5%;
-    height: 250px;
-  }
-  100% {
-    width: 85%;
-    height: 500px;
-  }
+section #informacion div img {
+  width: 290px;
 }
-@-webkit-keyframes modal_mobile_horizontal {
-  0% {
-    width: 42.5%;
-    height: 125px;
-  }
-  100% {
-    width: 85%;
-    height: 250px;
-  }
-}
-@keyframes modal_mobile_horizontal {
-  0% {
-    width: 42.5%;
-    height: 125px;
-  }
-  100% {
-    width: 85%;
-    height: 250px;
-  }
-}
-@-webkit-keyframes modal_medium {
-  0% {
-    width: 42.5%;
-    height: 500px;
-  }
-  100% {
-    width: 85%;
-    height: 1000px;
-  }
-}
-@keyframes modal_medium {
-  0% {
-    width: 42.5%;
-    height: 500px;
-  }
-  100% {
-    width: 85%;
-    height: 1000px;
-  }
-}
-@-webkit-keyframes modal_large {
-  0% {
-    width: 42.5%;
-    height: 300px;
-  }
-  100% {
-    width: 85%;
-    height: 600px;
-  }
-}
-@keyframes modal_large {
-  0% {
-    width: 42.5%;
-    height: 300px;
-  }
-  100% {
-    width: 85%;
-    height: 600px;
-  }
-}
-@-webkit-keyframes modal_extra_large {
-  0% {
-    width: 42.5%;
-    height: 300px;
-  }
-  100% {
-    width: 85%;
-    height: 800px;
-  }
-}
-@keyframes modal_extra_large {
-  0% {
-    width: 42.5%;
-    height: 300px;
-  }
-  100% {
-    width: 85%;
-    height: 800px;
-  }
-}
-@media only screen and (max-height: 575.98px) and (orientation: landscape) {
-  body {
-    grid-template-rows: 5% 1.5% 86% 7.5% !important;
-    height: 750vh !important;
-  }
-  body #lightbox #modal {
-    height: 250px;
-    -webkit-animation-name: modal_mobile_horizontal;
-            animation-name: modal_mobile_horizontal;
-  }
-  body #lightbox #modal #wrapper_cerrar img {
-    margin-top: 15px;
-    width: 45px;
-  }
-  body #lightbox #modal #contenedor_modal img {
-    height: 100% !important;
-    width: auto !important;
-  }
-}
-/* Medium devices (portrait tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (orientation: portrait) {
-  body {
-    grid-template-rows: 7% 2% 76% 15%;
-    height: 200vh;
-  }
-  body #lightbox #modal {
-    height: 1000px;
-    -webkit-animation-name: modal_medium;
-            animation-name: modal_medium;
-  }
-  body #lightbox #modal #wrapper_cerrar {
-    align-items: flex-start;
-    padding-top: 20px;
-  }
-  body #lightbox #modal #wrapper_cerrar img {
-    width: 75px;
-  }
-}
-/* Large devices (horizontal tablets / laptops/ desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  body {
-    grid-template-rows: 7% 2% 81% 10%;
-    height: 300vh;
-  }
-  body #lightbox #modal {
-    height: 600px;
-    -webkit-animation-name: modal_large;
-            animation-name: modal_large;
-  }
-  body #lightbox #modal #botones_modal {
-    width: 95% !important;
-  }
-  body #lightbox #modal #contenedor_modal img {
-    height: 100%;
-    width: auto;
-  }
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  body {
-    grid-template-rows: 7% 2% 76% 15%;
-    height: 250vh;
-  }
-  body #lightbox #modal {
-    height: 600px;
-  }
-}
-/* hyper large monitors (large laptops and desktops, 1920px and up) */
-@media only screen and (min-width: 1366px) {
-  body #lightbox #modal {
-    height: 800px;
-    -webkit-animation-name: modal_extra_large;
-            animation-name: modal_extra_large;
-  }
-}/*# sourceMappingURL=galeria.css.map */
+section #botones {
+  display: none;
+}/*# sourceMappingURL=dibujo-aves.css.map */

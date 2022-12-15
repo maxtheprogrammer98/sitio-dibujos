@@ -1,0 +1,94 @@
+// -------------------- IMPORTS -------------------------// 
+@use "partials/variables" as v;
+@use "partials/reset";
+@use "partials/fuentes";
+@use "basicos/header";
+@use "basicos/nav";
+@use "basicos/footer";
+@use "basicos/loader";
+
+// -------------------- LAYOUT -------------------------// 
+// (vista movil por default)
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 2.32% 0.5% 93.73% 3.25%;
+    height: 1000vh;
+}
+
+#tutoriales{
+    text-decoration: underline;
+}
+
+// -------------------- SECTION -------------------------// 
+section{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 7% 88% 5%;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background: black;
+
+    #portada{
+        display: flex;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        justify-content: center;
+        align-items: center;
+        background-color: v.$transparente;
+        background-image: url("../Imagenes/aguila-proceso.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-blend-mode: multiply;
+        font-family: fuente1;
+        color: v.$fuente3;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    #informacion{
+        display: flex;
+        flex-direction: column;
+        justify-self:center;
+        overflow: hidden;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 90%;
+        margin-top: 20px;
+        border-radius: 20px;
+        background: white;
+        font-family: fuente1;
+        line-height: 1.5rem;
+        color: v.$fuente1;
+
+        h3{
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            line-height: 2rem;
+            text-decoration: underline;
+        }
+
+        #materiales{
+            margin-top: 20px;
+        }
+
+        div{
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 50px;
+            img{
+                width: 290px;
+            }
+        }
+        
+        
+    }
+
+    #botones{
+        display: none;
+    }
+}
+
