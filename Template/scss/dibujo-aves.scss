@@ -12,8 +12,8 @@
 body{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 2.32% 0.5% 93.73% 3.25%;
-    height: 1000vh;
+    grid-template-rows: 160px 30px auto 300px;
+    height: 700vh;
 }
 
 #tutoriales{
@@ -24,10 +24,10 @@ body{
 section{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 7% 88% 5%;
+    grid-template-rows: 9% 86% 5%;
     grid-column: 1/2;
     grid-row: 3/4;
-    background: black;
+    background: v.$gris1;
 
     #portada{
         display: flex;
@@ -36,15 +36,15 @@ section{
         justify-content: center;
         align-items: center;
         background-color: v.$transparente;
-        background-image: url("../Imagenes/aguila-proceso.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: right;
+        background-position: center;
         background-blend-mode: multiply;
         font-family: fuente1;
         color: v.$fuente3;
         font-size: 3.5rem;
         text-align: center;
+        animation: fondo 6s infinite ease-in-out;
     }
 
     #informacion{
@@ -61,9 +61,10 @@ section{
         font-family: fuente1;
         line-height: 1.5rem;
         color: v.$fuente1;
+        box-shadow: 2px 2px 10px 1px black;
 
         h3{
-            font-size: 2rem;
+            font-size: 1.75rem;
             text-align: center;
             margin-bottom: 20px;
             margin-top: 10px;
@@ -72,23 +73,132 @@ section{
         }
 
         #materiales{
-            margin-top: 20px;
+            padding-top: 30px;
+            ul li b{
+                text-decoration: underline;
+            }
         }
 
         div{
             padding-left: 20px;
             padding-right: 20px;
-            margin-bottom: 50px;
-            img{
-                width: 290px;
+            //padding-bottom: 35px;
+            //padding-top: 35px;
+            //border-bottom: 2px solid v.$gris3;
+            border-width: 90%;
+
+            figure{
+                display: flex;
+                justify-content: center;
+                img{
+                    width: 120px;
+                }
             }
+
+            .referencia{
+                width: 290px;
+                box-shadow: 1px 1px 7px 3px v.$transparente;
+                margin-bottom: 20px;
+            }
+
+            p{
+                margin-bottom: 40px;
+            }
+
+            hr{
+                border-radius: 10px;
+                border: 3px solid v.$gris3;
+            }
+        }
+
+        #paso3{
+            border-bottom: none;
         }
         
         
     }
 
     #botones{
-        display: none;
+        display: flex;
+        flex-direction: column;
+        grid-column: 1/2;
+        grid-row: 3/4;
+        justify-content: space-evenly;
+        align-items: center;
+
+        #completado{
+            height: 60px;
+            width: 70%;
+            border-radius: 10px;
+            border: none;
+            font-family: fuente1;
+            font-size: 1.2rem;
+            box-shadow: 2px 2px 10px 3px v.$transparente;
+        }
+
+        #completado:hover{
+            background:rgb(0, 187, 66);
+            color: v.$fuente3;
+            transition: 0.5s ease-in-out;
+        }
+
+        #completado:active{
+            background: rgb(0, 187, 66);
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            margin: 0 auto;
+            height: 60px;
+        }
+        
+        form p {
+            text-align: center;
+        }
+        
+        form label {
+            font-size: 3rem;
+        }
+        
+        input[type="radio"] {
+            display: none;
+        }
+        
+        label {
+            color: grey;
+        }
+        
+        .clasificacion {
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+        
+        label:hover,
+        label:hover ~ label {
+            color: orange;
+        }
+        
+        input[type="radio"]:checked ~ label {
+            color: orange;
+        }
+    }
+}
+
+// -------------------- ANIMACIONES -------------------------// 
+@keyframes fondo{
+    0%{
+        background-image: url("../Imagenes/aguila-proceso.jpg");
+    }
+
+    50%{
+        background-image: url("../Imagenes/imagen-12.jpg");
+    }
+
+    100%{
+        background-image: url("../Imagenes/imagen-17-alt.jpg");
     }
 }
 
