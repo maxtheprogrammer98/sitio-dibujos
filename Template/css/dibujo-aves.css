@@ -367,7 +367,7 @@ body {
 section {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 9% 86% 5%;
+  grid-template-rows: 9% auto 5%;
   grid-column: 1/2;
   grid-row: 3/4;
   background: #333333;
@@ -378,17 +378,17 @@ section #portada {
   grid-row: 1/2;
   justify-content: center;
   align-items: center;
+  background-image: url("../Imagenes/banner-1.jpg");
   background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
   background-blend-mode: multiply;
   font-family: fuente1;
   color: white;
   font-size: 3.5rem;
   text-align: center;
-  -webkit-animation: fondo 6s infinite ease-in-out;
-          animation: fondo 6s infinite ease-in-out;
+  -webkit-animation: movimiento 10s infinite ease-in-out;
+          animation: movimiento 10s infinite ease-in-out;
 }
 section #informacion {
   display: flex;
@@ -417,6 +417,9 @@ section #informacion h3 {
 section #informacion #materiales {
   padding-top: 30px;
 }
+section #informacion #materiales ul {
+  padding-bottom: 30px;
+}
 section #informacion #materiales ul li b {
   text-decoration: underline;
 }
@@ -430,9 +433,14 @@ section #informacion div figure {
   justify-content: center;
 }
 section #informacion div figure img {
-  width: 120px;
+  width: 100px;
 }
-section #informacion div .referencia {
+section #informacion div .contenedor_refe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section #informacion div .contenedor_refe .referencia {
   width: 290px;
   box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
@@ -447,6 +455,15 @@ section #informacion div hr {
 section #informacion #paso3 {
   border-bottom: none;
 }
+section #informacion #nota {
+  display: flex;
+  align-self: center;
+  width: 80%;
+  background: lightgrey;
+  border-radius: 10px;
+  padding: 10px;
+  color: #333333;
+}
 section #botones {
   display: flex;
   flex-direction: column;
@@ -457,7 +474,7 @@ section #botones {
 }
 section #botones #completado {
   height: 60px;
-  width: 70%;
+  width: 220px;
   border-radius: 10px;
   border: none;
   font-family: fuente1;
@@ -525,5 +542,110 @@ section #botones input[type=radio]:checked ~ label {
   }
   100% {
     background-image: url("../Imagenes/imagen-17-alt.jpg");
+  }
+}
+@-webkit-keyframes movimiento {
+  0% {
+    background-position: left center;
+  }
+  25% {
+    background-position: center center;
+  }
+  50% {
+    background-position: right center;
+  }
+  75% {
+    background-position: center center;
+  }
+  100% {
+    background-position: left center;
+  }
+}
+@keyframes movimiento {
+  0% {
+    background-position: left center;
+  }
+  25% {
+    background-position: center center;
+  }
+  50% {
+    background-position: right center;
+  }
+  75% {
+    background-position: center center;
+  }
+  100% {
+    background-position: left center;
+  }
+}
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  body {
+    grid-template-rows: 110px 30px auto 180px;
+    height: 1150vh;
+  }
+  body section {
+    grid-template-rows: 9% auto 7%;
+  }
+}
+/* Medium devices (portrait tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  body {
+    grid-template-rows: 175px 30px auto 350px;
+    height: 600vh;
+  }
+  body #informacion div {
+    margin-top: 50px;
+  }
+  body #informacion div figure .iconos {
+    width: 150px;
+  }
+  body #informacion div ul {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  body #informacion div p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  body #informacion div .contenedor_refe .referencia {
+    width: 525px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+}
+/* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    grid-template-rows: 175px 30px auto 350px;
+    height: 850vh;
+  }
+  body #portada {
+    font-size: 5rem;
+  }
+  body #informacion div h3 {
+    font-size: 2.5rem;
+  }
+  body #informacion div figure .iconos {
+    width: 150px;
+  }
+  body #informacion div .contenedor_refe .referencia {
+    width: 600px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  body #informacion div p, body #informacion div ul {
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    grid-template-rows: 175px 30px auto 350px;
+    height: 650vh;
   }
 }/*# sourceMappingURL=dibujo-aves.css.map */
