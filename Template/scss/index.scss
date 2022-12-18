@@ -71,12 +71,13 @@ section{
             border: none;
             cursor: pointer;
             box-shadow: 2px 2px 8px 2px rgba($color: #000000, $alpha: .5);
-            background: v.$celeste1;
+            background: v.$azul2;
             color: v.$fuente3;
         }
 
         #ver_tuto:hover{
             font-size: 1.15rem;
+            background: v.$verde1;
             transition: 0.5s;
         }
     }
@@ -100,6 +101,10 @@ section{
             width: 100%;
             overflow: hidden;
             font-family: fuente1;
+            background-image: url("../Imagenes/fondo-alt-4.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
     
             img{
                 width: 170px;
@@ -132,7 +137,7 @@ section{
 
         // ajustes particulares
         #tutoriales_inicio{
-            background: v.$celeste3 !important;
+            background-image: url("../Imagenes/fondo-alt-3.jpg");
 
             h4 a{
                 color: v.$fuente3;    
@@ -244,12 +249,12 @@ section{
                     width: 30%;
                     height: 75%;
                     border-radius: 10px;
-                    background: v.$fondoClaro1;
+                    background-image: url("../Imagenes/fondo-alt-4.jpg");
                     box-shadow: 3px 3px 10px 5px rgba($color: #000000, $alpha: .3);
                 }
 
                 #tutoriales_inicio{
-                    background: v.$fondoClaro1 !important;
+                    background-image: url("../Imagenes/fondo-alt-4.jpg");
                     
                     h4 a{
                         color: v.$gris1 !important;

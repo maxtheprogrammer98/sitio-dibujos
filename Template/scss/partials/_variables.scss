@@ -1,6 +1,7 @@
 //---------- VARIABLES ------------//
 
 // colores de relleno & fondo: 
+// paleta A
 $celeste1:#4693FF;
 $celeste2: #2877ED;
 $celeste3: #6FAEFE;
@@ -10,6 +11,12 @@ $gris3: lightgrey;
 $fondoClaro1: white;
 $negro1: black;
 $transparente: rgba(0,0,0,.5);
+// paleta B
+$azul1:#0062C7;
+$azul2: #0071CD;
+$verde1: #01BBBE;
+$verde2: #01BBBE;
+$degradado:linear-gradient(180deg, rgba(0,113,205,1) 55%, rgba(1,187,176,0.8883928571428571) 100%);
 
 // colores fuente
 $fuente1: #333333;
