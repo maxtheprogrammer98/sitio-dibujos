@@ -103,6 +103,7 @@ section{
                     width: 290px;
                     box-shadow: 1px 1px 7px 3px v.$transparente;
                     margin-bottom: 20px;
+                    cursor: pointer;
                 }
             }
 
@@ -123,11 +124,14 @@ section{
         #nota{
             display: flex;
             align-self: center;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             width: 80%;
             background: v.$gris3;
             border-radius: 10px;
-            padding: 10px;
             color: v.$fuente1;
+            margin-bottom: 30px;
         }
         
     }
@@ -148,6 +152,7 @@ section{
             font-family: fuente1;
             font-size: 1.2rem;
             box-shadow: 2px 2px 10px 3px v.$transparente;
+            cursor: pointer;
         }
 
         #completado:hover{
@@ -323,61 +328,62 @@ section{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px){
     body{
-        grid-template-rows: 175px 30px auto 350px;
-        height: 650vh;
+        grid-template-rows: 175px 30px auto 300px;
+        height: 400vh;
 
-    //     #informacion .pasos{
-    //         display: grid;
-    //         grid-template-columns: 30% 70%;
-    //         grid-template-rows: 25% 75%;
-    //         overflow: hidden;
+        #informacion #materiales{
+            margin-bottom: 100px;
+            ul{
+                margin-top: 50px;
+                font-size: 1.25rem;
+            }
+        }
 
-    //         figure{
-    //             grid-column: 1/2;
-    //             grid-row: 1/2;
-    //             justify-self: right;
-    //             align-self: center;
-    //             width: 150px;
-    //             height: auto;
-    //             background: v.$celeste2;
-    //             width: 100%;
-    //             height: 100%;
-    //             margin: 0;
-    //             padding: 0;
-                
-    //             .iconos{
-    //                 height: 150px;
-    //                 width: auto;
-    //             }
-    //         }
+        #informacion .pasos{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 20% 80%;
+            justify-self: center;
+            align-self: center;
+            width: 90%;
+            overflow: hidden;
+            border: 5px solid v.$azul2;
+            border-radius: 15px;
+            padding: 0 !important;
+            margin-bottom: 75px;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 10px 3px v.$transparente;
+            background-image: url("../Imagenes/fondo-alt-4.jpg");
+            background-size: cover;
+            background-position: center;
 
-    //         h3{
-    //             grid-column: 2/3;
-    //             grid-row: 1/2;
-    //             justify-self: left;
-    //             align-self: center;
-    //             background: v.$celeste2;
-    //             width: 100%;
-    //             height: 100%;
-    //             margin: 0;
-    //             padding: 0;
-    //             color: v.$fuente3;
-    //         }
+            .pasos_header{
+                display: flex;
+                grid-column: 1/3;
+                grid-row: 1/2;
+                height: 100%;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                background: v.$azul2;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                color: v.$fuente3;
+                figure img {width: 110px;}
+            }
 
-    //         .contenedor_refe{
-    //             grid-column: 1/2;
-    //             grid-row: 2/3;
-    //             .referencia{
-    //                 width: 300px;
-    //             }
-    //         }
-
-    //         p{
-    //             justify-items: center;
-    //             align-self: center;
-    //         }
-    //     }
-
+            .pasos_contenido{
+                display: flex;
+                flex-direction: row;
+                grid-column: 1/3;
+                grid-row: 2/3;
+                justify-content: space-evenly;
+                align-items: center;
+                overflow: hidden;
+                p{font-size: 1.2rem;}
+                img{width: 400px;}
+            }
+        }
         
     }   
 }
