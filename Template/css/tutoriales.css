@@ -154,7 +154,7 @@ header #header_opciones {
   width: 100%;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, rgb(0, 113, 205) 55%, rgba(1, 187, 176, 0.8883928571) 100%);
+  background: linear-gradient(180deg, rgb(0, 113, 205) 51%, rgba(1, 190, 255, 0.8883928571) 94%);
   color: white;
   padding: 0;
   font-family: fuente1;
@@ -176,7 +176,7 @@ header #header_opciones {
   height: 400px;
   justify-content: space-evenly;
   align-items: center;
-  background: linear-gradient(180deg, rgb(0, 113, 205) 55%, rgba(1, 187, 176, 0.8883928571) 100%);
+  background: linear-gradient(180deg, rgb(0, 113, 205) 51%, rgba(1, 190, 255, 0.8883928571) 94%);
   color: white;
   padding: 0;
   font-family: fuente1;
@@ -432,7 +432,7 @@ section #tutoriales_seccion .tutoriales_item {
   overflow: hidden;
   border-radius: 10px;
   box-sizing: border-box;
-  border: 8px solid #6FAEFE;
+  border: 8px solid #0071CD;
   color: #497262;
   box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
 }
@@ -463,7 +463,7 @@ section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tut
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: #6FAEFE;
+  background: #0071CD;
   height: 70px;
   width: 100%;
   color: white;
@@ -511,11 +511,11 @@ section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_w
 }
 section #tutoriales_seccion .tutoriales_item:hover {
   transition: 0.5s ease-in-out;
-  border: 8px solid #2877ED;
+  border: 8px solid #01BBBE;
 }
 section #tutoriales_seccion .tutoriales_item:hover .descripcion_tutoriales .titulo_tuto {
   transition: 0.5s ease-in-out;
-  background: #2877ED;
+  background: #01BBBE;
 }
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {

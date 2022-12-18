@@ -154,7 +154,7 @@ header #header_opciones {
   width: 100%;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, rgb(0, 113, 205) 55%, rgba(1, 187, 176, 0.8883928571) 100%);
+  background: linear-gradient(180deg, rgb(0, 113, 205) 51%, rgba(1, 190, 255, 0.8883928571) 94%);
   color: white;
   padding: 0;
   font-family: fuente1;
@@ -176,7 +176,7 @@ header #header_opciones {
   height: 400px;
   justify-content: space-evenly;
   align-items: center;
-  background: linear-gradient(180deg, rgb(0, 113, 205) 55%, rgba(1, 187, 176, 0.8883928571) 100%);
+  background: linear-gradient(180deg, rgb(0, 113, 205) 51%, rgba(1, 190, 255, 0.8883928571) 94%);
   color: white;
   padding: 0;
   font-family: fuente1;
