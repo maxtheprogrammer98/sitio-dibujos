@@ -6,6 +6,7 @@
 @use "basicos/nav";
 @use "basicos/footer";
 @use "basicos/loader";
+@use "basicos/lightbox";
 
 // -------------------- LAYOUT -------------------------// 
 // (vista movil por default)
@@ -33,18 +34,25 @@ section{
         display: flex;
         grid-column: 1/2;
         grid-row: 1/2;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         background-image: url("../Imagenes/banner-1.jpg");
         background-color: v.$transparente;
         background-size: cover;
         background-repeat: no-repeat;
         background-blend-mode: multiply;
+        background-position: center center ;
         font-family: fuente1;
         color: v.$fuente3;
         font-size: 3.5rem;
         text-align: center;
-        animation: movimiento 10s infinite ease-in-out;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        img{
+            width: 50px;
+            cursor: pointer;
+        }
     }
 
     #informacion{
@@ -198,6 +206,7 @@ section{
         label:hover,
         label:hover ~ label {
             color: orange;
+            cursor: pointer;
         }
         
         input[type="radio"]:checked ~ label {

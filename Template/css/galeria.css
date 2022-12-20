@@ -352,51 +352,6 @@ footer #descripcion_footer img {
     padding-top: 350px !important;
   }
 }
-body {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 2.32% 0.7% 93.73% 3.25%;
-  height: 1000vh;
-}
-
-#galeria {
-  text-decoration: underline;
-}
-
-section {
-  display: grid;
-  overflow: hidden;
-  grid-column: 1/2;
-  grid-row: 3/4;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-rows: auto;
-  grid-gap: 15px !important;
-  box-sizing: border-box;
-  padding: 15px;
-  background: black;
-  margin-top: -5px;
-}
-section .item_galeria {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  justify-self: center;
-  align-self: center;
-  overflow: hidden;
-  background: #333333;
-}
-section .item_galeria img {
-  height: 150%;
-  width: auto;
-}
-section .item_galeria:hover {
-  filter: brightness(130%);
-  transition: 1s ease-in-out;
-  cursor: pointer;
-}
-
 #lightbox {
   display: flex;
   position: relative;
@@ -469,9 +424,9 @@ section .item_galeria:hover {
   align-items: center;
 }
 #modal #botones_modal img {
-  width: 25px;
+  width: 50px;
   z-index: 600;
-  filter: opacity(70%);
+  filter: opacity(50%);
   cursor: pointer;
 }
 #modal #botones_modal img:hover {
@@ -581,10 +536,6 @@ section .item_galeria:hover {
   }
 }
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
-  body {
-    grid-template-rows: 5% 1.5% 86% 7.5% !important;
-    height: 750vh !important;
-  }
   body #lightbox #modal {
     height: 250px;
     -webkit-animation-name: modal_mobile_horizontal;
@@ -601,10 +552,6 @@ section .item_galeria:hover {
 }
 /* Medium devices (portrait tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (orientation: portrait) {
-  body {
-    grid-template-rows: 7% 2% 76% 15%;
-    height: 200vh;
-  }
   body #lightbox #modal {
     height: 1000px;
     -webkit-animation-name: modal_medium;
@@ -616,6 +563,93 @@ section .item_galeria:hover {
   }
   body #lightbox #modal #wrapper_cerrar img {
     width: 75px;
+  }
+}
+/* Large devices (horizontal tablets / laptops/ desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body #lightbox #modal {
+    height: 600px;
+    -webkit-animation-name: modal_large;
+            animation-name: modal_large;
+  }
+  body #lightbox #modal #botones_modal {
+    width: 95% !important;
+  }
+  body #lightbox #modal #contenedor_modal img {
+    height: 100%;
+    width: auto;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body #lightbox #modal {
+    height: 600px;
+  }
+}
+/* hyper large monitors (large laptops and desktops, 1920px and up) */
+@media only screen and (min-width: 1366px) {
+  body #lightbox #modal {
+    height: 800px;
+    -webkit-animation-name: modal_extra_large;
+            animation-name: modal_extra_large;
+  }
+}
+body {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 2.32% 0.7% 93.73% 3.25%;
+  height: 1000vh;
+}
+
+#galeria {
+  text-decoration: underline;
+}
+
+section {
+  display: grid;
+  overflow: hidden;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 15px !important;
+  box-sizing: border-box;
+  padding: 15px;
+  background: black;
+  margin-top: -5px;
+}
+section .item_galeria {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  overflow: hidden;
+  background: #333333;
+}
+section .item_galeria img {
+  height: 150%;
+  width: auto;
+}
+section .item_galeria:hover {
+  filter: brightness(130%);
+  transition: 1s ease-in-out;
+  cursor: pointer;
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  body {
+    grid-template-rows: 5% 1.5% 86% 7.5% !important;
+    height: 750vh !important;
+  }
+}
+/* Medium devices (portrait tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  body {
+    grid-template-rows: 7% 2% 76% 15%;
+    height: 200vh;
   }
 }
 /* Large devices (horizontal tablets / laptops/ desktops, 992px and up) */
@@ -642,16 +676,5 @@ section .item_galeria:hover {
   body {
     grid-template-rows: 7% 2% 76% 15%;
     height: 250vh;
-  }
-  body #lightbox #modal {
-    height: 600px;
-  }
-}
-/* hyper large monitors (large laptops and desktops, 1920px and up) */
-@media only screen and (min-width: 1366px) {
-  body #lightbox #modal {
-    height: 800px;
-    -webkit-animation-name: modal_extra_large;
-            animation-name: modal_extra_large;
   }
 }/*# sourceMappingURL=galeria.css.map */
