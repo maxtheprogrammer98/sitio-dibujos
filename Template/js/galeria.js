@@ -35,7 +35,7 @@ let me = {
         at.target = img.target;
         at.ID = img.target.id;
         at.contador = parseInt(at.ID.replace("i",""));
-        at.topScrollPosition = window.pageYOffset
+        at.topScrollPosition = window.scrollY;
         me.crearLightbox();
     },
 
@@ -59,7 +59,7 @@ let me = {
         let botones = `<div id='botones_modal'>
                         <img src='../Imagenes/anterior-icono.png' alt='boton' id='boton_ant'>
                         <img src='../Imagenes/sig-icono.png' alt='boton' id='boton_sig'>
-                       </div>`
+                       </div>`;
         
         // se agrega modal via appendchild:
         elem.appendChild(document.createElement("div")).setAttribute("id", "modal");
