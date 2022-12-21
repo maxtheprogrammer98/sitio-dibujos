@@ -43,6 +43,10 @@ q:before, q:after {
   font-family: fuente2;
   src: url("/Template/fuentes/conthrax-sb.ttf");
 }
+@font-face {
+  font-family: fuente3;
+  src: url("/Template/fuentes/Indian Personal Use.ttf");
+}
 header {
   display: grid;
   grid-column: 1/2;

@@ -1,10 +1,8 @@
-// ELEMTOS DOM:
-let botonAnterior = document.querySelector("#img_previa");
-let botonSiguiente = document.querySelector("#img_siguiente");
-let portada = document.querySelector("#portada");
+// ELEMENTOS DOM:
+let botonAnterior = document.querySelector("#presentacion #img_anterior");
+let botonSiguiente = document.querySelector("#presentacion #img_siguiente");
+let portada = document.querySelector("#presentacion");
 let contador = 0;
-let estrellas = document.querySelectorAll(".estrellas");
-let contenedorBotones = document.querySelector("#botones");
 
 // FUNCIONES PORTADA:
 botonAnterior.addEventListener("click",function(){
@@ -33,10 +31,4 @@ botonSiguiente.addEventListener("click",function(){
     }
 })
 
-// FUNCION BOTONES (mensaje de agradecimiento despues de calificar):
-estrellas.forEach(estrella => {
-    estrella.addEventListener("click", function(){
-        let mensaje = `<p id='mensaje'> Gracias por calificar!</p>`;
-        contenedorBotones.insertAdjacentHTML("beforeend", mensaje);
-    })
-});
+

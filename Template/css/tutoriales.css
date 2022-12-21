@@ -43,6 +43,10 @@ q:before, q:after {
   font-family: fuente2;
   src: url("/Template/fuentes/conthrax-sb.ttf");
 }
+@font-face {
+  font-family: fuente3;
+  src: url("/Template/fuentes/Indian Personal Use.ttf");
+}
 header {
   display: grid;
   grid-column: 1/2;
@@ -505,9 +509,11 @@ section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .valoracion
   font-size: 2rem;
 }
 section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_wrapper {
-  font-size: 2.5rem;
-  font-family: fuente2;
   padding-bottom: 20px;
+  font-size: 2.5rem;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_wrapper .promedio {
+  font-family: fuente2;
 }
 section #tutoriales_seccion .tutoriales_item:hover {
   transition: 0.5s ease-in-out;

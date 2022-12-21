@@ -35,7 +35,7 @@ section{
 
     #presentacion{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         grid-column: 1/2;
         grid-row: 1/2;
         height: 100%;
@@ -45,41 +45,63 @@ section{
         font-family: fuente1;
         color: white;
         background-color: rgba($color: #000000, $alpha: .5);
-        //background-image: url("../Imagenes/aguila-proceso.jpg");
-        background-size: auto 100%;
-        background-position: center;
+        background-image: url("../Imagenes/portada.jpg");
+        background-size: cover;
         background-blend-mode: darken;
         background-repeat: no-repeat;
-        animation: fondo 5s infinite;
 
-        h3{
-            font-size: 2rem;
-            text-decoration: underline;
+        #texto_presentacion{
+            display: flex;
+            flex-direction: column;
+            height: 95%;
+            width: 80%;
+            justify-content: space-evenly;
+            align-items: center;
+            justify-self: center;
+            align-self: center;
+
+            h3{
+                font-size: 3rem;
+                //text-decoration: underline;
+                font-family: fuente3;
+            }
+    
+            p{
+                text-align: center;
+                width: 90%;
+            }
+    
+            #ver_tuto{
+                font-family: fuente1;
+                font-size: 1.1rem;
+                padding: 10px;
+                border-radius: 10px;
+                border: none;
+                cursor: pointer;
+                box-shadow: 2px 2px 8px 2px rgba($color: #000000, $alpha: .5);
+                background: v.$azul2;
+                color: v.$fuente3;
+            }
+    
+            #ver_tuto:hover{
+                font-size: 1.15rem;
+                background: v.$verde1;
+                transition: 0.5s;
+            }
         }
-
-        p{
-            text-align: center;
-            line-height: 1.6rem;
-            width: 90%;
-        }
-
-        #ver_tuto{
-            font-family: fuente1;
-            font-size: 1.1rem;
-            padding: 10px;
-            border-radius: 10px;
-            border: none;
+        
+        img{
+            margin: 10px;
+            width: 35px;
             cursor: pointer;
-            box-shadow: 2px 2px 8px 2px rgba($color: #000000, $alpha: .5);
-            background: v.$azul2;
-            color: v.$fuente3;
+            filter: grayscale(100%);
         }
 
-        #ver_tuto:hover{
-            font-size: 1.15rem;
-            background: v.$verde1;
+        img:hover{
+            filter: grayscale(0%);
             transition: 0.5s;
         }
+        
     }
 
     // ---------- DESCRIPCION FUNCIONES ---------//
@@ -167,7 +189,6 @@ section{
     }
 }
 
-
 // -------------------- MEDIA QUERIES -------------------------// 
 // horizontal phones
 @media only screen and (max-height: 575.98px) and (orientation: landscape){
@@ -205,6 +226,35 @@ section{
     body{
         grid-template-rows: 7% 2% 81% 10%;
         height: 300vh;
+
+        section{
+            #presentacion{
+                #texto_presentacion{
+                    h3{
+                        font-size: 6rem;
+                    }
+
+                    p{
+                        line-height: 70px;
+                    }
+
+                    #ver_tuto{
+                        font-size: 1.5rem;
+                    }
+
+                    #ver_tuto:hover{
+                        font-size: 1.6rem;
+                    }
+                }
+
+                img{
+                    margin: 0 !important;
+                    width: 50px;
+                }
+
+
+            }
+        }
     }
 }
 

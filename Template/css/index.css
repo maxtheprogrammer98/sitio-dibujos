@@ -43,6 +43,10 @@ q:before, q:after {
   font-family: fuente2;
   src: url("/Template/fuentes/conthrax-sb.ttf");
 }
+@font-face {
+  font-family: fuente3;
+  src: url("/Template/fuentes/Indian Personal Use.ttf");
+}
 header {
   display: grid;
   grid-column: 1/2;
@@ -375,7 +379,7 @@ section {
 }
 section #presentacion {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   grid-column: 1/2;
   grid-row: 1/2;
   height: 100%;
@@ -385,23 +389,30 @@ section #presentacion {
   font-family: fuente1;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  background-size: auto 100%;
-  background-position: center;
+  background-image: url("../Imagenes/portada.jpg");
+  background-size: cover;
   background-blend-mode: darken;
   background-repeat: no-repeat;
-  -webkit-animation: fondo 5s infinite;
-          animation: fondo 5s infinite;
 }
-section #presentacion h3 {
-  font-size: 2rem;
-  text-decoration: underline;
+section #presentacion #texto_presentacion {
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+  width: 80%;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
 }
-section #presentacion p {
+section #presentacion #texto_presentacion h3 {
+  font-size: 3rem;
+  font-family: fuente3;
+}
+section #presentacion #texto_presentacion p {
   text-align: center;
-  line-height: 1.6rem;
   width: 90%;
 }
-section #presentacion #ver_tuto {
+section #presentacion #texto_presentacion #ver_tuto {
   font-family: fuente1;
   font-size: 1.1rem;
   padding: 10px;
@@ -412,9 +423,19 @@ section #presentacion #ver_tuto {
   background: #0071CD;
   color: white;
 }
-section #presentacion #ver_tuto:hover {
+section #presentacion #texto_presentacion #ver_tuto:hover {
   font-size: 1.15rem;
   background: #01BBBE;
+  transition: 0.5s;
+}
+section #presentacion img {
+  margin: 10px;
+  width: 35px;
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+section #presentacion img:hover {
+  filter: grayscale(0%);
   transition: 0.5s;
 }
 section #contenedor {
@@ -516,6 +537,22 @@ section #contenedor #tutoriales_inicio p {
   body {
     grid-template-rows: 7% 2% 81% 10%;
     height: 300vh;
+  }
+  body section #presentacion #texto_presentacion h3 {
+    font-size: 6rem;
+  }
+  body section #presentacion #texto_presentacion p {
+    line-height: 70px;
+  }
+  body section #presentacion #texto_presentacion #ver_tuto {
+    font-size: 1.5rem;
+  }
+  body section #presentacion #texto_presentacion #ver_tuto:hover {
+    font-size: 1.6rem;
+  }
+  body section #presentacion img {
+    margin: 0 !important;
+    width: 50px;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */

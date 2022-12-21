@@ -180,9 +180,11 @@ section{
                 }
 
                 .promedio_wrapper{
-                    font-size: 2.5rem;
-                    font-family: fuente2;
                     padding-bottom: 20px;
+                    font-size: 2.5rem;
+                    .promedio{
+                        font-family: fuente2;
+                    }
                 }
                 
             }
