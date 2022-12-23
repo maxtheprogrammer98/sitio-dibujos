@@ -4,34 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/formulario.css">
+  <link rel="stylesheet" href="../css/login.css">
   <title>Login - Arte Realista</title>
 </head>
 <body>
   <form class="form" method="POST" action="">
     <div class="form__container">
+
       <div class="form__cabecera">
        <img class="form__imagen" src="../Imagenes/icono-user.png" alt="Icono de Usuario">
        <h2 class="form__titulo">Iniciar sesión</h2>
       </div>
-      <div class="form__label--correo">
-        <label class="form__label--subtitulo" for="email">Email</label><br>
-        <input class="form__label--input" type="email" name="email" id="email" required autofocus placeholder="jose@gmail.com"><br>
+
+      <div class="form__label">
+        <div class="form__label--correo">
+          <label class="form__label--subtitulo" for="email">Email</label>
+          <input class="form__label--input" type="email" name="email" id="email" required autofocus placeholder="correo@correo.com"><br>
+        </div>
+        <div class="form__label--password">
+          <label class="form__label--subtitulo" for="pass">Contraseña</label>
+          <input class="form__label--input" type="password" name="pass" id="pass" required autofocus placeholder="Password"><br>
+        </div>
       </div>
-      <div class="form__label--password">
-        <label class="form__label--subtitulo" for="pass">Contraseña</label><br>
-        <input class="form__label--input" type="password" name="pass" id="pass" required autofocus placeholder="Password"><br>
+
+      <div class="form__grupo--btn">
+        <button class="form__grupo--enviar" type="Submit">Ingresar</button>
       </div>
-      <div class="form__enviar">
-        <input class="form__enviar--button" type="Submit" value="Ingresar">
-      </div>
-      <div class="form__olvidar">
-        <a class="form__olvidar--link" href="#">¿Olvidaste la Contraseña?</a>
-      </div>
+      
       <div class="form__cuenta">
+        <a class="form__cuenta--olvidar" href="#">¿Olvidaste la Contraseña?</a>
         <p class="form__cuenta--texto">¿No tienes cuenta?</p>
         <a class="form__cuenta--link" href="registro.html">Registrate</a>
       </div>
+
     </div>
   </form>
 </body>
