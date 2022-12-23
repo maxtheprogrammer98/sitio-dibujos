@@ -1,0 +1,361 @@
+// -------------------- IMPORTS -------------------------// 
+@use "partials/variables" as v;
+@use "partials/reset";
+@use "partials/fuentes";
+@use "basicos/header";
+@use "basicos/nav";
+@use "basicos/footer";
+@use "basicos/loader";
+
+// -------------------- LAYOUT -------------------------// 
+// (vista movil por default)
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 160px 30px auto 300px;
+    height: 1000vh;
+}
+
+#tutoriales{
+    text-decoration: underline;
+}
+
+// -------------------- SECTION -------------------------//
+section{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3% 97%;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-family: fuente1;
+    background-image: url("../Imagenes/fondo-alt-7.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    #buscador{
+        display: flex;
+        flex-direction: column;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        
+        label{
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: v.$fuente8;
+        }
+
+        #buscador_wrapper{
+            display: flex;
+            width: 100%;
+            height: 20%;
+            justify-content: center;
+            align-items: center;
+
+            input{
+                width: 70%;
+                height: 30px;
+                border-radius: 10px;
+                color: v.$gris2;
+                font-family: fuente1;
+            }
+
+            button{
+                background: none;
+                border: none !important;
+                font-size: 1.5rem;
+                cursor: pointer;
+                filter: opacity(60%);
+            }
+
+            button:hover{
+                transition: 0.5s;
+                filter: opacity(100%);
+            }
+        }
+    }
+
+    #tutoriales_seccion{
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        grid-template-columns:repeat(auto-fill,minmax(300px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(300px,700px));
+        height: 100%;
+        width: 100%;
+        //background: v.$negro1;
+
+        .tutoriales_item{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 35% 65%;
+            height: 85%;
+            width: 87%;
+            align-self: center;
+            justify-self: center;
+            overflow: hidden;
+            border-radius: 10px;
+            box-sizing: border-box;
+            border: 8px solid v.$azul2;
+            color: v.$fuente8;
+            box-shadow: 3px 3px 10px 2px rgba($color: #000000, $alpha: .5);
+            background: v.$fondoClaro1;
+
+
+            .portada_tutoriales{
+                display: flex;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                background: black;
+
+                img{
+                    width: 100%;
+                    height: fit-content;
+                }
+            }
+
+            .descripcion_tutoriales{
+                display: flex;
+                grid-column: 1/2;
+                grid-row: 2/3;
+                flex-direction: column;
+                justify-content:space-between;
+                align-items: center;
+
+                .titulo_tuto{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    background: v.$azul2;
+                    height: 70px;
+                    width: 100%;
+                    color: v.$fuente3;
+
+                    img{
+                        display: none;
+                        height: 30px;
+                    }
+
+                    h4{
+                        font-size: 1.2rem;
+                        text-align: center;
+
+                        a{
+                            color: v.$fuente3;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                ul{
+                    list-style: none;
+                    list-style-position: inside;
+                    margin-top: 10px;
+                    border-bottom:2px solid v.$gris3;
+
+                    li{
+                        margin-left: -20px;
+                        padding-bottom: 20px;
+                        font-size: 1.1rem;
+
+                        strong{
+                            background:#a1a0a0;
+                            color: v.$fuente3;
+                            text-decoration: none;
+                            padding: 2px;
+                            border-radius: 5px;
+                            font-weight: normal;
+                        }
+                    }
+                }
+
+                .valoracion{
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 2rem;
+                }
+
+                .promedio_wrapper{
+                    padding-bottom: 20px;
+                    font-size: 2.5rem;
+                    .promedio{
+                        font-family: fuente2 !important;
+                    }
+                }
+                
+            }
+        }
+
+        .tutoriales_item:hover{
+            transition: 0.5s ease-in-out;
+            border: 8px solid v.$verde1;
+            .descripcion_tutoriales .titulo_tuto{
+                transition: 0.5s ease-in-out;
+                background: v.$verde1;
+            }
+        }
+    }
+}
+
+//-------------------------- MEDIA QUERIES ---------------------------//
+// horizontal phones
+@media only screen and (max-height: 575.98px) and (orientation: landscape){
+    body{
+        grid-template-rows: 110px 30px auto 180px;
+        height: 1000vh !important;
+
+        section{
+            grid-template-rows: 5% 95%;
+
+            #buscador{
+                margin-top: 10px;
+                label{
+                    font-size: 1.1rem;
+                }
+
+                input{
+                    width: 50%;
+                }
+            }
+
+            #tutoriales_seccion{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(auto-fill,minmax(250px,1fr));
+
+                .tutoriales_item{
+                    display: flex;
+                    
+                    .portada_tutoriales{
+                        height: 100%;
+                        width: 30%;
+                        justify-self: flex-start;
+                        justify-content: center;
+                        border-right: 5px solid v.$celeste2;
+
+                        img{
+                           height: 150%;
+                           width: auto;
+                        }
+                    }
+
+                    .descripcion_tutoriales{
+                        display: grid;
+                        height: 100%;
+                        width: 70%;
+                        justify-self: flex-end;
+                        grid-template-columns: 70% 30%;
+                        grid-template-rows: 10% 90%;
+
+                        .titulo_tuto{
+                            grid-column: 1/3;
+                            grid-row: 1/2;
+                            align-items: center;
+                            padding-top: 10px;
+                        }
+
+                        ul{
+                            grid-column: 1/2;
+                            grid-row: 2/3;
+                            border-bottom: none;
+                            margin-left: 15px;
+                            line-height: 0.8rem;
+                        }
+
+                        .valoracion, .promedio_wrapper{
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+                        }
+
+                        .valoracion{
+                            display: flex;
+                            height: 50%;
+                            width: 100%;
+                            align-self: flex-start;
+                            align-items: flex-end;
+                        }
+
+                        .promedio_wrapper{
+                            display: flex;
+                            width: 100%;
+                            height: 50%;
+                            align-self: flex-end;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+            
+    }
+
+}
+
+/* Medium devices (portrait tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (orientation: portrait){
+    body{
+        grid-template-rows: 175px 30px auto 350px;
+        height: 300vh;
+    }
+}
+
+/* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+    body{
+        grid-template-rows: 175px 30px auto 350px;
+        height: 300vh;
+
+        section{
+            grid-template-rows: 5% 95%;
+
+            #buscador{
+                label{
+                    font-size: 1rem;
+                }
+
+                #campo_buscar{
+                    width: 20%;
+                    border: v.$gris2 solid 2px;
+                }
+
+            }
+        }
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+    body{
+        grid-template-rows: 175px 30px auto 300px;
+        height: 400vh;
+
+        section #tutoriales_seccion{
+            grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+        }
+
+        section #buscador{
+            padding-top: 20px;
+            label{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+/* hyper large monitors (large laptops and desktops, 1920px and up) */
+@media only screen and (min-width: 1366px){
+    body{
+        grid-template-rows: 175px 30px auto 300px;
+        height: 300vh;
+    }
+}

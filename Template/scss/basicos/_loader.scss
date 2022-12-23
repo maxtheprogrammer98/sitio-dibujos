@@ -1,0 +1,40 @@
+// ---------------- CLASES PARA JS ------------------- // 
+
+.lightbox_loader{
+    display:flex;
+    position: absolute;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgba($color: #000000, $alpha: 0.5);
+    z-index: 100;
+    padding-top: 500px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+  // ---------------- MEDIA QUERIES ------------------- // 
+
+  /* Medium & large devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .lightbox_loader{
+    padding-top: 350px !important;
+  }
+}
+

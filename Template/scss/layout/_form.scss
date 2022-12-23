@@ -1,0 +1,141 @@
+@use '../partials' as p;
+
+body{
+  background-image:url(../../Imagenes/fondo-version-1.png);
+  @include p.ajustar-imagen;
+}
+
+.form{
+  width: p.rem(350);
+  height: auto;
+  background-color: p.$celeste2;
+  margin:p.rem(80) auto p.rem(10);
+  border: 2px solid transparent;
+  border-radius: p.rem(20);
+
+  &__container{
+    width:p.rem(320);
+    height: 85%;
+    background-color: #fff;
+    margin: p.rem(50) auto p.rem(20);
+    border-radius: 0 0 p.rem(20) p.rem(20);
+    display: grid;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    gap: p.rem(10);
+  }
+
+  
+  &__imagen{
+    width: p.rem(200);
+    display: block;
+    margin:p.rem(-120) auto 0;
+  }
+
+  &__titulo{
+    font-size: p.rem(28);
+    text-align: center;
+    margin-top: p.rem(20);
+  }
+
+  &__label{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    
+    &--subtitulo{
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      font-size: p.rem(22);
+    }
+
+    &--input{
+      background: none;
+      color: #585656;
+      font-size: 18px;
+      padding:p.rem(10) p.rem(10) p.rem(5);
+      display: block;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid p.$celeste1;
+    }
+
+    &--input:focus{
+      outline: none;
+      color: #5e5d5d;
+    }
+  }
+
+  &__enviar{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--button{
+      background: p.$celeste2;
+      border: none;
+      width: 100%;
+      color: #fff;
+      height: p.rem(40);
+      font-size:p.rem(18);
+      cursor: pointer;
+      transition: .5s all;
+    }
+
+    &--button:hover{
+      width: 95%;
+      background-color:p.$celeste1;
+      font-size:p.rem(16);
+      height: p.rem(35);
+      border: 1px solid #000;
+      transition: .5s all;
+    }
+  }
+
+  &__cuenta{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+
+    &--texto{
+      font-size: p.rem(18);
+    }
+
+    &--link{
+      font-size: p.rem(18);
+      text-decoration: none;
+      color: p.$celeste2;
+      transition: .5s all;
+    }
+
+    &--link:hover{
+      color: p.$celeste3;
+      transition: .5s all;
+    }
+  }
+
+
+  &__olvidar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--link{
+      font-size: p.rem(18);
+      text-decoration: none;
+      color: p.$celeste2;
+      transition: .5s all;
+    }
+
+    &--link:hover{
+      font-size: p.rem(16);
+      color: p.$celeste3;
+      transition: .5s all;
+      text-decoration: underline;
+    }
+  }
+}

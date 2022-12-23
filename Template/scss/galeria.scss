@@ -1,0 +1,111 @@
+// -------------------- IMPORTS -------------------------// 
+@use "partials/variables" as v;
+@use "partials/reset";
+@use "partials/fuentes";
+@use "basicos/header";
+@use "basicos/nav";
+@use "basicos/footer";
+@use "basicos/loader";
+@use "basicos/lightbox";
+
+// -------------------- LAYOUT -------------------------// 
+// (vista movil por default)
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 160px 30px auto 300px;
+    height: 1000vh;
+}
+
+#galeria{
+    text-decoration: underline;
+}
+
+// -------------------- SECTION -------------------------// 
+
+section{
+    display: grid;
+    overflow: hidden;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 15px !important;
+    box-sizing: border-box;
+    padding: 15px;
+    background: black;
+    margin-top: -5px;
+
+    .item_galeria{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        align-self: center;
+        overflow: hidden;
+        background: v.$gris1;
+
+        img{
+            height: 150%;
+            width: auto;
+        }
+    }
+
+    .item_galeria:hover{
+        filter: brightness(130%);
+        transition: 1s ease-in-out;
+        cursor: pointer;
+    }
+
+}
+
+
+// -------------------- MEDIA QUERIES -------------------------// 
+// horizontal phones
+@media only screen and (max-height: 575.98px) and (orientation: landscape){
+    body{
+        grid-template-rows: 110px 30px auto 180px;
+        height: 750vh !important;
+    }
+}
+
+/* Medium devices (portrait tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (orientation: portrait){
+    body{
+        grid-template-rows: 175px 30px auto 350px;
+        height: 200vh;
+    }
+}
+
+/* Large devices (horizontal tablets / laptops/ desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+    body{
+        grid-template-rows: 175px 50px auto 350px;
+        height: 300vh;
+
+        #lightbox #modal{
+            height: 600px;
+            animation-name:modal_large;
+
+            #botones_modal{
+                width: 95% !important;
+            }
+
+            #contenedor_modal img{
+                height: 100%;
+                width:auto;
+            }
+        }
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+    body{
+        grid-template-rows: 175px 50px auto 300px;
+        height: 250vh;
+    }
+}
+

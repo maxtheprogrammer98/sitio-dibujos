@@ -1,0 +1,971 @@
+/* Scss Document */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th, caption {
+  font-weight: normal;
+  text-align: left;
+}
+
+img, fieldset {
+  border: 0;
+}
+
+ol {
+  padding-left: 1.4em;
+  list-style: decimal;
+}
+
+ul {
+  padding-left: 1.4em;
+  list-style: square;
+}
+
+q:before, q:after {
+  content: "";
+}
+
+@font-face {
+  font-family: fuente1;
+  src: url("/Template/fuentes/Astronomus.ttf");
+}
+@font-face {
+  font-family: fuente2;
+  src: url("/Template/fuentes/conthrax-sb.ttf");
+}
+@font-face {
+  font-family: fuente3;
+  src: url("/Template/fuentes/Indian Personal Use.ttf");
+}
+@font-face {
+  font-family: fuente4;
+  src: url("/Template/fuentes/BebasNeue-Regular.ttf");
+}
+header {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  grid-template-columns: 100%;
+  grid-template-rows: 80% 20%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("/Template/Imagenes/fondo-lado-izq.png"), url("/Template/Imagenes/fondo-lado-der.png");
+  background-position: left, right;
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  font-family: fuente1;
+}
+header #header_logo {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+header #header_logo img {
+  width: 225px;
+  cursor: pointer;
+}
+header #header_logo img:hover {
+  width: 235px;
+  transition: ease-out 0.5s;
+}
+header #header_opciones {
+  display: none;
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  header {
+    grid-template-rows: 60% 40%;
+  }
+  header #header_logo img {
+    width: 150px !important;
+  }
+  header #header_opciones li {
+    margin-right: 10px !important;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  header {
+    background-size: 50% 100%;
+  }
+  header #header_opciones {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 100%;
+    width: 100%;
+    justify-content: end;
+    align-items: flex-start;
+    list-style: none;
+  }
+  header #header_opciones li {
+    display: flex;
+    margin-right: 20px;
+  }
+  header #header_opciones li a {
+    text-decoration: none;
+    color: white;
+    background: #2877ED;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+  header #header_opciones li:hover {
+    text-decoration: underline;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  header {
+    background-size: contain;
+    grid-template-rows: 70% 30%;
+  }
+}
+#nav {
+  overflow: hidden !important;
+  z-index: 100;
+}
+
+#nav li {
+  list-style: none;
+}
+
+#nav li:hover {
+  text-decoration: underline;
+}
+
+#nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav_vertical_hidden {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  height: 47px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgb(0, 113, 205) 51%, rgba(1, 190, 255, 0.8883928571) 94%);
+  color: white;
+  padding: 0;
+  font-family: fuente1;
+}
+.nav_vertical_hidden .menu {
+  display: flex;
+  cursor: pointer;
+}
+.nav_vertical_hidden .item {
+  display: none;
+}
+
+.nav_vertical_visible {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 100%;
+  height: 400px;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(180deg, rgb(0, 113, 205) 51%, rgba(1, 190, 255, 0.8883928571) 94%);
+  color: white;
+  padding: 0;
+  font-family: fuente1;
+}
+.nav_vertical_visible li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #nav {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 47px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+  }
+  #nav .menu {
+    display: none;
+  }
+  #nav .item {
+    display: flex;
+  }
+  #nav #mi_cuenta {
+    display: none;
+  }
+  #nav #login {
+    display: none;
+  }
+  .nav_vertical_hidden {
+    display: none;
+  }
+  .nav_vertical_visible {
+    display: flex;
+    flex-direction: row;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  background-color: #4693FF;
+  background-image: url("/Template/Imagenes/fondo-alt-2b.jpg");
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 10px;
+}
+footer #logo_footer {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+}
+footer #logo_footer img {
+  width: 175px;
+}
+footer #descripcion_footer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  font-family: fuente1;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+}
+footer #descripcion_footer img {
+  width: 40px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  footer #logo_footer img {
+    width: 125px !important;
+  }
+  footer #descripcion_footer p {
+    font-size: 0.8rem;
+  }
+  footer #descripcion_footer a img {
+    width: 35px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  footer {
+    padding-bottom: 20px;
+  }
+  footer #logo_footer img {
+    width: 190px;
+  }
+  footer #descripcion_footer {
+    flex-wrap: wrap !important;
+    font-size: 1.5rem;
+  }
+  footer #descripcion_footer img {
+    width: 45px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  footer #logo_footer {
+    align-items: center;
+  }
+  footer #logo_footer img {
+    width: 200px;
+  }
+  footer #descripcion_footer {
+    flex-wrap: wrap !important;
+    font-size: 1.25rem;
+  }
+}
+.lightbox_loader {
+  display: flex;
+  position: absolute;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  padding-top: 500px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Medium & large devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .lightbox_loader {
+    padding-top: 350px !important;
+  }
+}
+#lightbox {
+  display: flex;
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/5;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 300;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#modal {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 85%;
+  height: 500px;
+  width: 85%;
+  background: white;
+  z-index: 400;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.6);
+  -webkit-animation-name: modal_mobile;
+          animation-name: modal_mobile;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+#modal #wrapper_cerrar {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+#modal #wrapper_cerrar img {
+  width: 60px;
+  margin-right: 10px;
+  z-index: 500;
+  cursor: pointer;
+}
+#modal #contenedor_modal {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  background: white;
+}
+#modal #contenedor_modal img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: center;
+}
+#modal #botones_modal {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  height: 100%;
+  width: 90%;
+  justify-self: center;
+  justify-content: space-between;
+  align-items: center;
+}
+#modal #botones_modal img {
+  width: 50px;
+  z-index: 600;
+  filter: opacity(50%);
+  cursor: pointer;
+}
+#modal #botones_modal img:hover {
+  filter: opacity(100%);
+  transition: 0.5s ease-in-out;
+}
+
+@-webkit-keyframes modal_mobile {
+  0% {
+    width: 42.5%;
+    height: 250px;
+  }
+  100% {
+    width: 85%;
+    height: 500px;
+  }
+}
+
+@keyframes modal_mobile {
+  0% {
+    width: 42.5%;
+    height: 250px;
+  }
+  100% {
+    width: 85%;
+    height: 500px;
+  }
+}
+@-webkit-keyframes modal_mobile_horizontal {
+  0% {
+    width: 42.5%;
+    height: 125px;
+  }
+  100% {
+    width: 85%;
+    height: 250px;
+  }
+}
+@keyframes modal_mobile_horizontal {
+  0% {
+    width: 42.5%;
+    height: 125px;
+  }
+  100% {
+    width: 85%;
+    height: 250px;
+  }
+}
+@-webkit-keyframes modal_medium {
+  0% {
+    width: 42.5%;
+    height: 500px;
+  }
+  100% {
+    width: 85%;
+    height: 1000px;
+  }
+}
+@keyframes modal_medium {
+  0% {
+    width: 42.5%;
+    height: 500px;
+  }
+  100% {
+    width: 85%;
+    height: 1000px;
+  }
+}
+@-webkit-keyframes modal_large {
+  0% {
+    width: 42.5%;
+    height: 300px;
+  }
+  100% {
+    width: 85%;
+    height: 600px;
+  }
+}
+@keyframes modal_large {
+  0% {
+    width: 42.5%;
+    height: 300px;
+  }
+  100% {
+    width: 85%;
+    height: 600px;
+  }
+}
+@-webkit-keyframes modal_extra_large {
+  0% {
+    width: 42.5%;
+    height: 300px;
+  }
+  100% {
+    width: 85%;
+    height: 800px;
+  }
+}
+@keyframes modal_extra_large {
+  0% {
+    width: 42.5%;
+    height: 300px;
+  }
+  100% {
+    width: 85%;
+    height: 800px;
+  }
+}
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  body #lightbox #modal {
+    height: 250px;
+    -webkit-animation-name: modal_mobile_horizontal;
+            animation-name: modal_mobile_horizontal;
+  }
+  body #lightbox #modal #wrapper_cerrar img {
+    margin-top: 15px;
+    width: 45px;
+  }
+  body #lightbox #modal #contenedor_modal img {
+    height: 100% !important;
+    width: auto !important;
+  }
+}
+/* Medium devices (portrait tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  body #lightbox #modal {
+    height: 1000px;
+    -webkit-animation-name: modal_medium;
+            animation-name: modal_medium;
+  }
+  body #lightbox #modal #wrapper_cerrar {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  body #lightbox #modal #wrapper_cerrar img {
+    width: 75px;
+  }
+}
+/* Large devices (horizontal tablets / laptops/ desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body #lightbox #modal {
+    height: 600px;
+    -webkit-animation-name: modal_large;
+            animation-name: modal_large;
+  }
+  body #lightbox #modal #botones_modal {
+    width: 95% !important;
+  }
+  body #lightbox #modal #contenedor_modal img {
+    height: 100%;
+    width: auto;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body #lightbox #modal {
+    height: 600px;
+  }
+}
+/* hyper large monitors (large laptops and desktops, 1920px and up) */
+@media only screen and (min-width: 1366px) {
+  body #lightbox #modal {
+    height: 800px;
+    -webkit-animation-name: modal_extra_large;
+            animation-name: modal_extra_large;
+  }
+}
+body {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 160px 30px auto 300px;
+  height: 700vh;
+}
+
+#tutoriales {
+  text-decoration: underline;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 9% auto 5%;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background: #333333;
+}
+section #portada {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../Imagenes/banner-1.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-position: center center;
+  font-family: fuente1;
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+section #portada img {
+  width: 50px;
+  cursor: pointer;
+}
+section #informacion {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  overflow: hidden;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 90%;
+  margin-top: 20px;
+  border-radius: 20px;
+  background: white;
+  font-family: fuente1;
+  line-height: 1.5rem;
+  color: #333333;
+  box-shadow: 2px 2px 10px 1px black;
+}
+section #informacion h3 {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  line-height: 2rem;
+  text-decoration: underline;
+}
+section #informacion #materiales {
+  padding-top: 30px;
+}
+section #informacion #materiales ul {
+  padding-bottom: 30px;
+}
+section #informacion #materiales ul li b {
+  text-decoration: underline;
+}
+section #informacion div {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-width: 90%;
+}
+section #informacion div figure {
+  display: flex;
+  justify-content: center;
+}
+section #informacion div figure img {
+  width: 100px;
+}
+section #informacion div .contenedor_refe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section #informacion div .contenedor_refe .referencia {
+  width: 290px;
+  box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+section #informacion div p {
+  margin-bottom: 40px;
+}
+section #informacion div hr {
+  border-radius: 10px;
+  border: 3px solid lightgrey;
+}
+section #informacion #paso3 {
+  border-bottom: none;
+}
+section #informacion #nota {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  background: lightgrey;
+  border-radius: 10px;
+  color: #333333;
+  margin-bottom: 30px;
+}
+section #botones {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-content: space-evenly;
+  align-items: center;
+}
+section #botones #mensaje {
+  color: white;
+  font-family: fuente1;
+}
+section #botones #completado {
+  height: 60px;
+  width: 220px;
+  border-radius: 10px;
+  border: none;
+  font-family: fuente1;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+section #botones #completado:hover {
+  background: rgb(0, 187, 66);
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+section #botones #completado:active {
+  background: rgb(0, 187, 66);
+}
+section #botones form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  height: 60px;
+}
+section #botones form p {
+  text-align: center;
+}
+section #botones form label {
+  font-size: 3rem;
+}
+section #botones input[type=radio] {
+  display: none;
+}
+section #botones label {
+  color: grey;
+}
+section #botones .clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+section #botones label:hover,
+section #botones label:hover ~ label {
+  color: orange;
+  cursor: pointer;
+}
+section #botones input[type=radio]:checked ~ label {
+  color: orange;
+}
+
+@-webkit-keyframes fondo {
+  0% {
+    background-image: url("../Imagenes/aguila-proceso.jpg");
+  }
+  50% {
+    background-image: url("../Imagenes/imagen-12.jpg");
+  }
+  100% {
+    background-image: url("../Imagenes/imagen-17-alt.jpg");
+  }
+}
+
+@keyframes fondo {
+  0% {
+    background-image: url("../Imagenes/aguila-proceso.jpg");
+  }
+  50% {
+    background-image: url("../Imagenes/imagen-12.jpg");
+  }
+  100% {
+    background-image: url("../Imagenes/imagen-17-alt.jpg");
+  }
+}
+@-webkit-keyframes movimiento {
+  0% {
+    background-position: left center;
+  }
+  25% {
+    background-position: center center;
+  }
+  50% {
+    background-position: right center;
+  }
+  75% {
+    background-position: center center;
+  }
+  100% {
+    background-position: left center;
+  }
+}
+@keyframes movimiento {
+  0% {
+    background-position: left center;
+  }
+  25% {
+    background-position: center center;
+  }
+  50% {
+    background-position: right center;
+  }
+  75% {
+    background-position: center center;
+  }
+  100% {
+    background-position: left center;
+  }
+}
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  body {
+    grid-template-rows: 110px 30px auto 180px;
+    height: 1150vh;
+  }
+  body section {
+    grid-template-rows: 9% auto 7%;
+  }
+}
+/* Medium devices (portrait tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  body {
+    grid-template-rows: 175px 30px auto 350px;
+    height: 600vh;
+  }
+  body #informacion div {
+    margin-top: 50px;
+  }
+  body #informacion div figure .iconos {
+    width: 150px;
+  }
+  body #informacion div ul {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  body #informacion div p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  body #informacion div .contenedor_refe .referencia {
+    width: 525px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+}
+/* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    grid-template-rows: 175px 30px auto 350px;
+    height: 850vh;
+  }
+  body #portada {
+    font-size: 5rem;
+  }
+  body #informacion div h3 {
+    font-size: 2.5rem;
+  }
+  body #informacion div figure .iconos {
+    width: 150px;
+  }
+  body #informacion div .contenedor_refe .referencia {
+    width: 600px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  body #informacion div p, body #informacion div ul {
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    grid-template-rows: 175px 30px auto 300px;
+    height: 400vh;
+  }
+  body #informacion #materiales {
+    margin-bottom: 100px;
+  }
+  body #informacion #materiales ul {
+    margin-top: 50px;
+    font-size: 1.25rem;
+  }
+  body #informacion .pasos {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 20% 80%;
+    justify-self: center;
+    align-self: center;
+    width: 90%;
+    overflow: hidden;
+    border: 5px solid #0071CD;
+    border-radius: 15px;
+    padding: 0 !important;
+    margin-bottom: 75px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
+    background-image: url("../Imagenes/fondo-alt-4.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  body #informacion .pasos .pasos_header {
+    display: flex;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #0071CD;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: white;
+  }
+  body #informacion .pasos .pasos_header figure img {
+    width: 110px;
+  }
+  body #informacion .pasos .pasos_contenido {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+  }
+  body #informacion .pasos .pasos_contenido p {
+    font-size: 1.2rem;
+  }
+  body #informacion .pasos .pasos_contenido img {
+    width: 400px;
+  }
+}/*# sourceMappingURL=dibujo-aves.css.map */

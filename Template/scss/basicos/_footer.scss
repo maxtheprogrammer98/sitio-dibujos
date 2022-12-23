@@ -1,0 +1,120 @@
+@use '../partials/variables' as v;
+
+// ------------------- FOOTER ------------------- //
+// vista movil por default
+footer{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    background-color: v.$celeste1;
+    background-image: url("/Template/Imagenes/fondo-alt-2b.jpg");
+    background-position: center;
+    background-size: cover;
+    //background-blend-mode:soft-light;
+    padding-bottom: 10px;
+
+    #logo_footer{
+        display: flex;
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-start;
+
+        img{
+            width: 175px;
+        }
+    }
+
+    #descripcion_footer{
+        display: flex;
+        flex-wrap: wrap;
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        align-self:flex-end;
+        font-family: fuente1;
+        text-align: center;
+        color: v.$fuente3;
+        font-size: 0.8rem;
+
+        img{
+            width: 40px;
+            margin-left: 10px;
+        }
+    }
+
+
+}
+
+// ----------------------- MEDIA QUERIES ----------------------------//
+// horizontal phones
+@media only screen and (max-height: 575.98px) and (orientation: landscape){
+    footer{
+        #logo_footer{
+            img{
+                width: 125px !important;
+            }
+        }
+
+        #descripcion_footer{
+            p{
+                font-size: 0.8rem;
+            }
+
+            a img{
+                width:35px;
+            }
+        }
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    footer{
+        padding-bottom: 20px;
+
+        #logo_footer{
+
+            img{
+                width: 190px;
+            }
+            
+        }
+
+        #descripcion_footer{
+            flex-wrap: wrap !important;
+            font-size: 1.5rem;
+
+            img{
+                width: 45px;
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    footer{
+
+        #logo_footer{
+
+            align-items: center;
+
+            img{
+                width: 200px;
+            }
+        }
+
+        #descripcion_footer{
+            flex-wrap: wrap !important;
+            font-size: 1.25rem;
+        }
+    }
+}

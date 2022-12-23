@@ -1,0 +1,658 @@
+/* Scss Document */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th, caption {
+  font-weight: normal;
+  text-align: left;
+}
+
+img, fieldset {
+  border: 0;
+}
+
+ol {
+  padding-left: 1.4em;
+  list-style: decimal;
+}
+
+ul {
+  padding-left: 1.4em;
+  list-style: square;
+}
+
+q:before, q:after {
+  content: "";
+}
+
+@font-face {
+  font-family: fuente1;
+  src: url("/Template/fuentes/Astronomus.ttf");
+}
+@font-face {
+  font-family: fuente2;
+  src: url("/Template/fuentes/conthrax-sb.ttf");
+}
+@font-face {
+  font-family: fuente3;
+  src: url("/Template/fuentes/Indian Personal Use.ttf");
+}
+@font-face {
+  font-family: fuente4;
+  src: url("/Template/fuentes/BebasNeue-Regular.ttf");
+}
+header {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  grid-template-columns: 100%;
+  grid-template-rows: 80% 20%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("/Template/Imagenes/fondo-lado-izq.png"), url("/Template/Imagenes/fondo-lado-der.png");
+  background-position: left, right;
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  font-family: fuente1;
+}
+header #header_logo {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+header #header_logo img {
+  width: 225px;
+  cursor: pointer;
+}
+header #header_logo img:hover {
+  width: 235px;
+  transition: ease-out 0.5s;
+}
+header #header_opciones {
+  display: none;
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  header {
+    grid-template-rows: 60% 40%;
+  }
+  header #header_logo img {
+    width: 150px !important;
+  }
+  header #header_opciones li {
+    margin-right: 10px !important;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  header {
+    background-size: 50% 100%;
+  }
+  header #header_opciones {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 100%;
+    width: 100%;
+    justify-content: end;
+    align-items: flex-start;
+    list-style: none;
+  }
+  header #header_opciones li {
+    display: flex;
+    margin-right: 20px;
+  }
+  header #header_opciones li a {
+    text-decoration: none;
+    color: white;
+    background: #2877ED;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+  header #header_opciones li:hover {
+    text-decoration: underline;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  header {
+    background-size: contain;
+    grid-template-rows: 70% 30%;
+  }
+}
+#nav {
+  overflow: hidden !important;
+  z-index: 100;
+}
+
+#nav li {
+  list-style: none;
+}
+
+#nav li:hover {
+  text-decoration: underline;
+}
+
+#nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav_vertical_hidden {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  height: 47px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgb(0, 113, 205) 51%, rgba(1, 190, 255, 0.8883928571) 94%);
+  color: white;
+  padding: 0;
+  font-family: fuente1;
+}
+.nav_vertical_hidden .menu {
+  display: flex;
+  cursor: pointer;
+}
+.nav_vertical_hidden .item {
+  display: none;
+}
+
+.nav_vertical_visible {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 100%;
+  height: 400px;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(180deg, rgb(0, 113, 205) 51%, rgba(1, 190, 255, 0.8883928571) 94%);
+  color: white;
+  padding: 0;
+  font-family: fuente1;
+}
+.nav_vertical_visible li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #nav {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 47px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+  }
+  #nav .menu {
+    display: none;
+  }
+  #nav .item {
+    display: flex;
+  }
+  #nav #mi_cuenta {
+    display: none;
+  }
+  #nav #login {
+    display: none;
+  }
+  .nav_vertical_hidden {
+    display: none;
+  }
+  .nav_vertical_visible {
+    display: flex;
+    flex-direction: row;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  background-color: #4693FF;
+  background-image: url("/Template/Imagenes/fondo-alt-2b.jpg");
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 10px;
+}
+footer #logo_footer {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+}
+footer #logo_footer img {
+  width: 175px;
+}
+footer #descripcion_footer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  font-family: fuente1;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+}
+footer #descripcion_footer img {
+  width: 40px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  footer #logo_footer img {
+    width: 125px !important;
+  }
+  footer #descripcion_footer p {
+    font-size: 0.8rem;
+  }
+  footer #descripcion_footer a img {
+    width: 35px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  footer {
+    padding-bottom: 20px;
+  }
+  footer #logo_footer img {
+    width: 190px;
+  }
+  footer #descripcion_footer {
+    flex-wrap: wrap !important;
+    font-size: 1.5rem;
+  }
+  footer #descripcion_footer img {
+    width: 45px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  footer #logo_footer {
+    align-items: center;
+  }
+  footer #logo_footer img {
+    width: 200px;
+  }
+  footer #descripcion_footer {
+    flex-wrap: wrap !important;
+    font-size: 1.25rem;
+  }
+}
+.lightbox_loader {
+  display: flex;
+  position: absolute;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  padding-top: 500px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Medium & large devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .lightbox_loader {
+    padding-top: 350px !important;
+  }
+}
+body {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 160px 30px auto 300px;
+  height: 1000vh;
+}
+
+#tutoriales {
+  text-decoration: underline;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 3% 97%;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  font-family: fuente1;
+  background-image: url("../Imagenes/fondo-alt-7.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section #buscador {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+section #buscador label {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #497262;
+}
+section #buscador #buscador_wrapper {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+}
+section #buscador #buscador_wrapper input {
+  width: 70%;
+  height: 30px;
+  border-radius: 10px;
+  color: grey;
+  font-family: fuente1;
+}
+section #buscador #buscador_wrapper button {
+  background: none;
+  border: none !important;
+  font-size: 1.5rem;
+  cursor: pointer;
+  filter: opacity(60%);
+}
+section #buscador #buscador_wrapper button:hover {
+  transition: 0.5s;
+  filter: opacity(100%);
+}
+section #tutoriales_seccion {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(300px, 700px));
+  height: 100%;
+  width: 100%;
+}
+section #tutoriales_seccion .tutoriales_item {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 35% 65%;
+  height: 85%;
+  width: 87%;
+  align-self: center;
+  justify-self: center;
+  overflow: hidden;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 8px solid #0071CD;
+  color: #497262;
+  box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+  background: white;
+}
+section #tutoriales_seccion .tutoriales_item .portada_tutoriales {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: black;
+}
+section #tutoriales_seccion .tutoriales_item .portada_tutoriales img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tuto {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #0071CD;
+  height: 70px;
+  width: 100%;
+  color: white;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tuto img {
+  display: none;
+  height: 30px;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tuto h4 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tuto h4 a {
+  color: white;
+  text-decoration: none;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales ul {
+  list-style: none;
+  list-style-position: inside;
+  margin-top: 10px;
+  border-bottom: 2px solid lightgrey;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales ul li {
+  margin-left: -20px;
+  padding-bottom: 20px;
+  font-size: 1.1rem;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales ul li strong {
+  background: #a1a0a0;
+  color: white;
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 5px;
+  font-weight: normal;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .valoracion {
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_wrapper {
+  padding-bottom: 20px;
+  font-size: 2.5rem;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_wrapper .promedio {
+  font-family: fuente2 !important;
+}
+section #tutoriales_seccion .tutoriales_item:hover {
+  transition: 0.5s ease-in-out;
+  border: 8px solid #01BBBE;
+}
+section #tutoriales_seccion .tutoriales_item:hover .descripcion_tutoriales .titulo_tuto {
+  transition: 0.5s ease-in-out;
+  background: #01BBBE;
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  body {
+    grid-template-rows: 110px 30px auto 180px;
+    height: 1000vh !important;
+  }
+  body section {
+    grid-template-rows: 5% 95%;
+  }
+  body section #buscador {
+    margin-top: 10px;
+  }
+  body section #buscador label {
+    font-size: 1.1rem;
+  }
+  body section #buscador input {
+    width: 50%;
+  }
+  body section #tutoriales_seccion {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  body section #tutoriales_seccion .tutoriales_item {
+    display: flex;
+  }
+  body section #tutoriales_seccion .tutoriales_item .portada_tutoriales {
+    height: 100%;
+    width: 30%;
+    justify-self: flex-start;
+    justify-content: center;
+    border-right: 5px solid #2877ED;
+  }
+  body section #tutoriales_seccion .tutoriales_item .portada_tutoriales img {
+    height: 150%;
+    width: auto;
+  }
+  body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales {
+    display: grid;
+    height: 100%;
+    width: 70%;
+    justify-self: flex-end;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 10% 90%;
+  }
+  body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tuto {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    align-items: center;
+    padding-top: 10px;
+  }
+  body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales ul {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border-bottom: none;
+    margin-left: 15px;
+    line-height: 0.8rem;
+  }
+  body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .valoracion, body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_wrapper {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .valoracion {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    align-self: flex-start;
+    align-items: flex-end;
+  }
+  body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_wrapper {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* Medium devices (portrait tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  body {
+    grid-template-rows: 175px 30px auto 350px;
+    height: 300vh;
+  }
+}
+/* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    grid-template-rows: 175px 30px auto 350px;
+    height: 300vh;
+  }
+  body section {
+    grid-template-rows: 5% 95%;
+  }
+  body section #buscador label {
+    font-size: 1rem;
+  }
+  body section #buscador #campo_buscar {
+    width: 20%;
+    border: grey solid 2px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    grid-template-rows: 175px 30px auto 300px;
+    height: 400vh;
+  }
+  body section #tutoriales_seccion {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+  body section #buscador {
+    padding-top: 20px;
+  }
+  body section #buscador label {
+    margin-bottom: 20px;
+  }
+}
+/* hyper large monitors (large laptops and desktops, 1920px and up) */
+@media only screen and (min-width: 1366px) {
+  body {
+    grid-template-rows: 175px 30px auto 300px;
+    height: 300vh;
+  }
+}/*# sourceMappingURL=tutoriales.css.map */
