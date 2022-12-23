@@ -47,6 +47,10 @@ q:before, q:after {
   font-family: fuente3;
   src: url("/Template/fuentes/Indian Personal Use.ttf");
 }
+@font-face {
+  font-family: fuente4;
+  src: url("/Template/fuentes/BebasNeue-Regular.ttf");
+}
 header {
   display: grid;
   grid-column: 1/2;
@@ -359,7 +363,7 @@ footer #descripcion_footer img {
 body {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 7% 2% 81% 10%;
+  grid-template-rows: 160px 30px auto 300px;
   height: 300vh;
 }
 
@@ -388,6 +392,7 @@ section #presentacion {
   align-items: center;
   font-family: fuente1;
   color: white;
+  background-position: center;
   background-color: rgba(0, 0, 0, 0.5);
   background-image: url("../Imagenes/portada.jpg");
   background-size: cover;
@@ -404,9 +409,10 @@ section #presentacion #texto_presentacion {
   justify-self: center;
   align-self: center;
 }
-section #presentacion #texto_presentacion h3 {
-  font-size: 3rem;
-  font-family: fuente3;
+section #presentacion #texto_presentacion #titulo_presentacion {
+  width: 100%;
+  filter: none !important;
+  cursor: auto;
 }
 section #presentacion #texto_presentacion p {
   text-align: center;
@@ -514,12 +520,11 @@ section #contenedor #tutoriales_inicio p {
 }
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
   body {
-    grid-template-rows: 7% 2% 81% 10% !important;
+    grid-template-rows: 110px 30px auto 180px !important;
     height: 500vh !important;
   }
-  section #presentacion {
-    background-repeat: no-repeat;
-    background-position: center;
+  section #presentacion #texto_presentacion {
+    width: 50%;
   }
   .descripciones img {
     width: 125px !important;
@@ -528,18 +533,18 @@ section #contenedor #tutoriales_inicio p {
 /* Medium devices (portrait tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   body {
-    grid-template-rows: 7% 2% 76% 15%;
+    grid-template-rows: 175px 30px auto 350px;
     height: 200vh;
   }
 }
 /* Large devices (horizontal tablets / laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   body {
-    grid-template-rows: 7% 2% 81% 10%;
+    grid-template-rows: 175px 30px auto 350px;
     height: 300vh;
   }
-  body section #presentacion #texto_presentacion h3 {
-    font-size: 6rem;
+  body section #presentacion #texto_presentacion #titulo_presentacion {
+    width: 55%;
   }
   body section #presentacion #texto_presentacion p {
     line-height: 70px;
@@ -558,7 +563,7 @@ section #contenedor #tutoriales_inicio p {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body {
-    grid-template-rows: 7% 2% 76% 15%;
+    grid-template-rows: 175px 30px auto 300px;
     height: 250vh;
   }
   body section {
