@@ -54,11 +54,11 @@ let me = {
     crearModal:function(elem){
         //variables con elementos DOM a agregar:
         let imagen = at.target.outerHTML;
-        let icono = "<img src='../Imagenes/cerrar-icon.png' alt='cerrar' id='icono_cerrar' >";
+        let icono = "<img src='../Imagenes/close-icon.png' alt='cerrar' id='icono_cerrar' >";
         let contenido = `<div id="contenedor_modal"> ${imagen} </div>`;
         let botones = `<div id='botones_modal'>
-                        <img src='../Imagenes/anterior-icono.png' alt='boton' id='boton_ant'>
-                        <img src='../Imagenes/sig-icono.png' alt='boton' id='boton_sig'>
+                        <img src='../Imagenes/anterior-icono-2.png' alt='boton' id='boton_ant'>
+                        <img src='../Imagenes/sig-icono-2.png' alt='boton' id='boton_sig'>
                        </div>`;
         
         // se agrega modal via appendchild:

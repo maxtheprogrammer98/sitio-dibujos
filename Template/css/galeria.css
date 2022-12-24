@@ -404,6 +404,11 @@ footer #descripcion_footer img {
   margin-right: 10px;
   z-index: 500;
   cursor: pointer;
+  filter: opacity(60%);
+}
+#modal #wrapper_cerrar img:hover {
+  filter: opacity(100%);
+  transition: 0.5s;
 }
 #modal #contenedor_modal {
   display: flex;

@@ -41,7 +41,7 @@ section{
         background-size: cover;
         background-repeat: no-repeat;
         background-blend-mode: multiply;
-        background-position: center center ;
+        background-position: center center;
         font-family: fuente1;
         color: v.$fuente3;
         font-size: 3.5rem;
@@ -174,9 +174,9 @@ section{
             transition: 0.5s ease-in-out;
         }
 
-        #completado:active{
-            background: rgb(0, 187, 66);
-        }
+        // #completado:active{
+        //     background: rgb(0, 187, 66) !important;
+        // }
 
         form{
             display: flex;

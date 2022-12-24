@@ -38,7 +38,7 @@ let modal = {
         dom.modal = document.querySelector("#modal");
         // variables para agregar el contenido via "insertadjacentHTML"
         let cerrar_wrapper = `<div id="wrapper_cerrar">
-                                <img src='../Imagenes/cerrar-icon.png' alt='cerrar' id='icono_cerrar' >
+                                <img src='../Imagenes/close-icon.png' alt='cerrar' id='icono_cerrar' >
                               </div>`;
         let contenido = `<div id="contenedor_modal">
                              ${dom.target.outerHTML}

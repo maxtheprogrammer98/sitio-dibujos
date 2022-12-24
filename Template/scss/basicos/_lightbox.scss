@@ -44,6 +44,12 @@
             margin-right: 10px;
             z-index: 500;
             cursor: pointer;
+            filter: opacity(60%);
+        }
+
+        img:hover{
+            filter: opacity(100%);
+            transition: 0.5s;
         }
     }
 
