@@ -2,7 +2,8 @@
 let d = {
     tutoriales: document.querySelectorAll(".tutoriales_item"),
     buscador: document.querySelector("#campo_buscar"),
-    botonBuscar: document.querySelector("#boton_buscar")
+    botonBuscar: document.querySelector("#boton_buscar"),
+    section: document.querySelector("section")
 }
 // ----------------- FUNCIONES ---------------------//
 let f = {

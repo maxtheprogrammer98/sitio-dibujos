@@ -540,7 +540,7 @@ section #contenedor #tutoriales_inicio p {
 /* Large devices (horizontal tablets / laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   body {
-    grid-template-rows: 175px 30px auto 350px;
+    grid-template-rows: 150px 30px auto 350px;
     height: 300vh;
   }
   body section #presentacion #texto_presentacion #titulo_presentacion {
@@ -563,7 +563,6 @@ section #contenedor #tutoriales_inicio p {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body {
-    grid-template-rows: 175px 30px auto 300px;
     height: 250vh;
   }
   body section {

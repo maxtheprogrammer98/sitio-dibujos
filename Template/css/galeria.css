@@ -531,7 +531,7 @@ footer #descripcion_footer img {
 @-webkit-keyframes modal_extra_large {
   0% {
     width: 42.5%;
-    height: 300px;
+    height: 400px;
   }
   100% {
     width: 85%;
@@ -541,7 +541,7 @@ footer #descripcion_footer img {
 @keyframes modal_extra_large {
   0% {
     width: 42.5%;
-    height: 300px;
+    height: 400px;
   }
   100% {
     width: 85%;
@@ -596,13 +596,15 @@ footer #descripcion_footer img {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body #lightbox #modal {
-    height: 600px;
+    height: 700px;
+    -webkit-animation-name: modal_large;
+            animation-name: modal_large;
   }
 }
 /* hyper large monitors (large laptops and desktops, 1920px and up) */
 @media only screen and (min-width: 1366px) {
   body #lightbox #modal {
-    height: 800px;
+    height: 800px !important;
     -webkit-animation-name: modal_extra_large;
             animation-name: modal_extra_large;
   }
@@ -659,7 +661,7 @@ section .item_galeria:hover {
   }
 }
 /* Medium devices (portrait tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) {
   body {
     grid-template-rows: 175px 30px auto 350px;
     height: 200vh;
@@ -668,7 +670,7 @@ section .item_galeria:hover {
 /* Large devices (horizontal tablets / laptops/ desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   body {
-    grid-template-rows: 175px 50px auto 350px;
+    grid-template-rows: 150px 50px auto 350px;
     height: 300vh;
   }
   body #lightbox #modal {
@@ -687,7 +689,6 @@ section .item_galeria:hover {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body {
-    grid-template-rows: 175px 50px auto 300px;
     height: 250vh;
   }
 }/*# sourceMappingURL=galeria.css.map */

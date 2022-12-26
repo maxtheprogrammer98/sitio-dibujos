@@ -531,7 +531,7 @@ footer #descripcion_footer img {
 @-webkit-keyframes modal_extra_large {
   0% {
     width: 42.5%;
-    height: 300px;
+    height: 400px;
   }
   100% {
     width: 85%;
@@ -541,7 +541,7 @@ footer #descripcion_footer img {
 @keyframes modal_extra_large {
   0% {
     width: 42.5%;
-    height: 300px;
+    height: 400px;
   }
   100% {
     width: 85%;
@@ -596,13 +596,15 @@ footer #descripcion_footer img {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body #lightbox #modal {
-    height: 600px;
+    height: 700px;
+    -webkit-animation-name: modal_large;
+            animation-name: modal_large;
   }
 }
 /* hyper large monitors (large laptops and desktops, 1920px and up) */
 @media only screen and (min-width: 1366px) {
   body #lightbox #modal {
-    height: 800px;
+    height: 800px !important;
     -webkit-animation-name: modal_extra_large;
             animation-name: modal_extra_large;
   }
@@ -611,7 +613,8 @@ body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 160px 30px auto 300px;
-  height: 700vh;
+  height: 750vh;
+  transition: all 0.5s;
 }
 
 #tutoriales {
@@ -673,11 +676,24 @@ section #informacion h3 {
   line-height: 2rem;
   text-decoration: underline;
 }
+section #informacion #indice {
+  margin-top: 20px;
+}
+section #informacion #indice ul {
+  margin-bottom: 20px;
+}
+section #informacion #indice ul li:hover {
+  transition: 0.5s;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
 section #informacion #materiales {
   padding-top: 30px;
 }
 section #informacion #materiales ul {
   padding-bottom: 30px;
+  font-size: 0.9rem;
 }
 section #informacion #materiales ul li b {
   text-decoration: underline;
@@ -700,12 +716,13 @@ section #informacion div .contenedor_refe {
   align-items: center;
 }
 section #informacion div .contenedor_refe .referencia {
-  width: 290px;
+  width: 250px;
   box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
   cursor: pointer;
 }
 section #informacion div p {
+  font-size: 0.9rem;
   margin-bottom: 40px;
 }
 section #informacion div hr {
@@ -714,6 +731,7 @@ section #informacion div hr {
 }
 section #informacion #paso3 {
   border-bottom: none;
+  margin-bottom: -30px;
 }
 section #informacion #nota {
   display: flex;
@@ -721,11 +739,13 @@ section #informacion #nota {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 80%;
+  width: 70%;
   background: lightgrey;
   border-radius: 10px;
   color: #333333;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 section #botones {
   display: flex;
@@ -860,7 +880,7 @@ section #botones input[type=radio]:checked ~ label {
     height: 600vh;
   }
   body #informacion div {
-    margin-top: 50px;
+    margin-top: 40px;
   }
   body #informacion div figure .iconos {
     width: 150px;
@@ -884,7 +904,7 @@ section #botones input[type=radio]:checked ~ label {
 /* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   body {
-    grid-template-rows: 175px 30px auto 350px;
+    grid-template-rows: 150px 30px auto 350px;
     height: 850vh;
   }
   body #portada {
@@ -911,17 +931,16 @@ section #botones input[type=radio]:checked ~ label {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body {
-    grid-template-rows: 175px 30px auto 300px;
     height: 400vh;
   }
-  body #informacion #materiales {
+  body section #informacion #materiales {
     margin-bottom: 100px;
   }
-  body #informacion #materiales ul {
+  body section #informacion #materiales ul {
     margin-top: 50px;
     font-size: 1.25rem;
   }
-  body #informacion .pasos {
+  body section #informacion .pasos {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: 20% 80%;
@@ -939,7 +958,7 @@ section #botones input[type=radio]:checked ~ label {
     background-size: cover;
     background-position: center;
   }
-  body #informacion .pasos .pasos_header {
+  body section #informacion .pasos .pasos_header {
     display: flex;
     grid-column: 1/3;
     grid-row: 1/2;
@@ -952,10 +971,10 @@ section #botones input[type=radio]:checked ~ label {
     border-top-left-radius: 5px;
     color: white;
   }
-  body #informacion .pasos .pasos_header figure img {
+  body section #informacion .pasos .pasos_header figure img {
     width: 110px;
   }
-  body #informacion .pasos .pasos_contenido {
+  body section #informacion .pasos .pasos_contenido {
     display: flex;
     flex-direction: row;
     grid-column: 1/3;
@@ -964,10 +983,11 @@ section #botones input[type=radio]:checked ~ label {
     align-items: center;
     overflow: hidden;
   }
-  body #informacion .pasos .pasos_contenido p {
+  body section #informacion .pasos .pasos_contenido p {
     font-size: 1.2rem;
+    line-height: 2rem;
   }
-  body #informacion .pasos .pasos_contenido img {
+  body section #informacion .pasos .pasos_contenido img {
     width: 400px;
   }
-}/*# sourceMappingURL=dibujo-aves.css.map */
+}/*# sourceMappingURL=pagina-tutoriales-a.css.map */
