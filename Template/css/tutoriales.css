@@ -364,7 +364,7 @@ body {
 section {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 3% 97%;
+  grid-template-rows: 150px auto !important;
   grid-column: 1/2;
   grid-row: 3/4;
   font-family: fuente1;
@@ -382,12 +382,18 @@ section #buscador {
   width: 100%;
   justify-content: center;
   align-items: center;
+  background-color: lightgrey;
+  background-image: url("../Imagenes/fondo-version-4-izq.png"), url("../Imagenes/fondo-version-4-der.png");
+  background-size: 25% 100%;
+  background-position: left, right;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
 }
 section #buscador label {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-bottom: 10px;
-  color: #497262;
+  color: grey;
 }
 section #buscador #buscador_wrapper {
   display: flex;
@@ -400,17 +406,23 @@ section #buscador #buscador_wrapper input {
   width: 70%;
   height: 30px;
   border-radius: 10px;
-  color: grey;
+  color: #8e8e8e;
   font-family: fuente1;
-}
-section #buscador #buscador_wrapper button {
-  background: none;
   border: none !important;
-  font-size: 1.5rem;
+  padding-left: 10px;
+}
+section #buscador #buscador_wrapper input:focus {
+  transition: 0.5s;
+  outline: none;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.5);
+}
+section #buscador #buscador_wrapper #boton_buscar {
+  margin-left: 10px;
+  width: 35px;
   cursor: pointer;
   filter: opacity(60%);
 }
-section #buscador #buscador_wrapper button:hover {
+section #buscador #buscador_wrapper #boton_buscar:hover {
   transition: 0.5s;
   filter: opacity(100%);
 }
@@ -438,6 +450,10 @@ section #tutoriales_seccion .tutoriales_item {
   color: #497262;
   box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
   background: white;
+  background-image: url("../Imagenes/acuarela-izq.png"), url("../Imagenes/acuarela-der.png");
+  background-position: bottom left, bottom right;
+  background-size: 6rem auto;
+  background-repeat: no-repeat;
 }
 section #tutoriales_seccion .tutoriales_item .portada_tutoriales {
   display: flex;
@@ -514,20 +530,20 @@ section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_w
 }
 section #tutoriales_seccion .tutoriales_item:hover {
   transition: 0.5s ease-in-out;
-  border: 8px solid #01BBBE;
+  border: 8px solid #4693FF;
 }
 section #tutoriales_seccion .tutoriales_item:hover .descripcion_tutoriales .titulo_tuto {
   transition: 0.5s ease-in-out;
-  background: #01BBBE;
+  background: #4693FF;
 }
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
   body {
-    grid-template-rows: 110px 30px auto 180px;
-    height: 1000vh !important;
+    grid-template-rows: 110px 30px auto 180px !important;
+    height: 300vh !important;
   }
   body section {
-    grid-template-rows: 5% 95%;
+    grid-template-rows: 150px auto;
   }
   body section #buscador {
     margin-top: 10px;
@@ -598,7 +614,7 @@ section #tutoriales_seccion .tutoriales_item:hover .descripcion_tutoriales .titu
   }
 }
 /* Medium devices (portrait tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) {
   body {
     grid-template-rows: 175px 30px auto 350px;
     height: 300vh;
@@ -607,14 +623,17 @@ section #tutoriales_seccion .tutoriales_item:hover .descripcion_tutoriales .titu
 /* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   body {
-    grid-template-rows: 175px 30px auto 350px;
+    grid-template-rows: 150px 30px auto 350px !important;
     height: 300vh;
   }
   body section {
     grid-template-rows: 5% 95%;
   }
+  body section #buscador {
+    background-size: auto 500%;
+  }
   body section #buscador label {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   body section #buscador #campo_buscar {
     width: 20%;
@@ -624,7 +643,6 @@ section #tutoriales_seccion .tutoriales_item:hover .descripcion_tutoriales .titu
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body {
-    grid-template-rows: 175px 30px auto 300px;
     height: 400vh;
   }
   body section #tutoriales_seccion {
@@ -640,7 +658,6 @@ section #tutoriales_seccion .tutoriales_item:hover .descripcion_tutoriales .titu
 /* hyper large monitors (large laptops and desktops, 1920px and up) */
 @media only screen and (min-width: 1366px) {
   body {
-    grid-template-rows: 175px 30px auto 300px;
     height: 300vh;
   }
 }

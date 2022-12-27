@@ -24,7 +24,7 @@ body{
 section{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 3% 97%;
+    grid-template-rows: 150px auto !important;
     grid-column: 1/2;
     grid-row: 3/4;
     font-family: fuente1;
@@ -42,12 +42,19 @@ section{
         width: 100%;
         justify-content: center;
         align-items: center;
+        background-color: v.$gris3;
+        background-image: url("../Imagenes/fondo-version-4-izq.png"), url("../Imagenes/fondo-version-4-der.png");
+        background-size: 25% 100%;
+        background-position: left, right;
+        background-blend-mode:multiply;
+        background-repeat:no-repeat;
+        
         
         label{
             text-align: center;
-            font-size: 1.3rem;
+            font-size: 1rem;
             margin-bottom: 10px;
-            color: v.$fuente8;
+            color: v.$gris2;
         }
 
         #buscador_wrapper{
@@ -61,19 +68,26 @@ section{
                 width: 70%;
                 height: 30px;
                 border-radius: 10px;
-                color: v.$gris2;
+                color:#8e8e8e;
                 font-family: fuente1;
+                border: none !important;
+                padding-left: 10px;
             }
 
-            button{
-                background: none;
-                border: none !important;
-                font-size: 1.5rem;
+            input:focus{
+                transition: 0.5s;
+                outline: none;
+                box-shadow: 1px 1px 5px 2px v.$transparente;
+            }
+
+            #boton_buscar{
+                margin-left: 10px;
+                width: 35px;
                 cursor: pointer;
                 filter: opacity(60%);
             }
 
-            button:hover{
+            #boton_buscar:hover{
                 transition: 0.5s;
                 filter: opacity(100%);
             }
@@ -105,7 +119,10 @@ section{
             color: v.$fuente8;
             box-shadow: 3px 3px 10px 2px rgba($color: #000000, $alpha: .5);
             background: v.$fondoClaro1;
-
+            background-image: url("../Imagenes/acuarela-izq.png"), url("../Imagenes/acuarela-der.png");
+            background-position: bottom left, bottom right;
+            background-size: 6rem auto;
+            background-repeat: no-repeat;
 
             .portada_tutoriales{
                 display: flex;
@@ -196,10 +213,10 @@ section{
 
         .tutoriales_item:hover{
             transition: 0.5s ease-in-out;
-            border: 8px solid v.$verde1;
+            border: 8px solid v.$celeste1;
             .descripcion_tutoriales .titulo_tuto{
                 transition: 0.5s ease-in-out;
-                background: v.$verde1;
+                background: v.$celeste1;
             }
         }
     }
@@ -209,11 +226,11 @@ section{
 // horizontal phones
 @media only screen and (max-height: 575.98px) and (orientation: landscape){
     body{
-        grid-template-rows: 110px 30px auto 180px;
-        height: 1000vh !important;
+        grid-template-rows: 110px 30px auto 180px !important;
+        height: 300vh !important;
 
         section{
-            grid-template-rows: 5% 95%;
+            grid-template-rows: 150px auto;
 
             #buscador{
                 margin-top: 10px;
@@ -302,7 +319,7 @@ section{
 }
 
 /* Medium devices (portrait tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (orientation: portrait){
+@media only screen and (min-width: 768px){
     body{
         grid-template-rows: 175px 30px auto 350px;
         height: 300vh;
@@ -312,15 +329,16 @@ section{
 /* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
 @media only screen and (min-width: 992px){
     body{
-        grid-template-rows: 175px 30px auto 350px;
+        grid-template-rows: 150px 30px auto 350px !important;
         height: 300vh;
 
         section{
             grid-template-rows: 5% 95%;
 
             #buscador{
+                background-size: auto 500%;
                 label{
-                    font-size: 1rem;
+                    font-size: 1.25rem;
                 }
 
                 #campo_buscar{
@@ -336,7 +354,7 @@ section{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px){
     body{
-        grid-template-rows: 175px 30px auto 300px;
+        //grid-template-rows: 150px 30px auto 300px !important;
         height: 400vh;
 
         section #tutoriales_seccion{
@@ -355,7 +373,7 @@ section{
 /* hyper large monitors (large laptops and desktops, 1920px and up) */
 @media only screen and (min-width: 1366px){
     body{
-        grid-template-rows: 175px 30px auto 300px;
+        //grid-template-rows: 175px 30px auto 300px;
         height: 300vh;
     }
 }

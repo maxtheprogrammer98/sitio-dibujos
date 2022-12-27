@@ -171,8 +171,6 @@ section{
             }
         }
     }
-
-    
 }
 
 // -------------------- ANIMACIONES -------------------------// 
@@ -189,7 +187,6 @@ section{
         background-image: url("../Imagenes/aguila-proceso.jpg");
     }
 }
-
 // -------------------- MEDIA QUERIES -------------------------// 
 // horizontal phones
 @media only screen and (max-height: 575.98px) and (orientation: landscape){
@@ -226,7 +223,7 @@ section{
 /* Large devices (horizontal tablets / laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     body{
-        grid-template-rows: 175px 30px auto 350px;
+        grid-template-rows: 150px 30px auto 350px;
         height: 300vh;
 
         section{
@@ -263,7 +260,7 @@ section{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     body{
-        grid-template-rows: 175px 30px auto 300px;
+        //grid-template-rows: 175px 30px auto 300px;
         height: 250vh;
 
         section{

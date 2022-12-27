@@ -14,7 +14,8 @@ body{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 160px 30px auto 300px;
-    height: 700vh;
+    height: 750vh;
+    transition: all 0.5s;
 }
 
 #tutoriales{
@@ -41,7 +42,7 @@ section{
         background-size: cover;
         background-repeat: no-repeat;
         background-blend-mode: multiply;
-        background-position: center center ;
+        background-position: center center;
         font-family: fuente1;
         color: v.$fuente3;
         font-size: 3.5rem;
@@ -80,10 +81,24 @@ section{
             text-decoration: underline;
         }
 
+        #indice{
+            margin-top: 20px;
+            ul{
+                margin-bottom: 20px;
+                li:hover{
+                    transition: 0.5s;
+                    color: blue;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+
         #materiales{
             padding-top: 30px;
             ul{
                 padding-bottom: 30px;
+                font-size: 0.9rem;
                 li b{
                     text-decoration: underline;
                 }
@@ -108,7 +123,7 @@ section{
                 justify-content: center;
                 align-items: center;
                 .referencia{
-                    width: 290px;
+                    width: 250px;
                     box-shadow: 1px 1px 7px 3px v.$transparente;
                     margin-bottom: 20px;
                     cursor: pointer;
@@ -116,6 +131,7 @@ section{
             }
 
             p{
+                font-size: 0.9rem;
                 margin-bottom: 40px;
             }
 
@@ -125,8 +141,10 @@ section{
             }
         }
 
+        // ajuste particular
         #paso3{
             border-bottom: none;
+            margin-bottom: -30px;
         }
 
         #nota{
@@ -135,11 +153,13 @@ section{
             justify-content: center;
             align-items: center;
             text-align: center;
-            width: 80%;
+            width: 70%;
             background: v.$gris3;
             border-radius: 10px;
             color: v.$fuente1;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
+            margin-top: 20px;
+            padding-top: 20px;
         }
         
     }
@@ -174,9 +194,9 @@ section{
             transition: 0.5s ease-in-out;
         }
 
-        #completado:active{
-            background: rgb(0, 187, 66);
-        }
+        // #completado:active{
+        //     background: rgb(0, 187, 66) !important;
+        // }
 
         form{
             display: flex;
@@ -278,7 +298,7 @@ section{
 
         #informacion{
             div{
-                margin-top: 50px;
+                margin-top: 40px;
                 figure .iconos{
                     width: 150px;
                 }
@@ -307,7 +327,7 @@ section{
 /* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
 @media only screen and (min-width: 992px){
     body{
-        grid-template-rows: 175px 30px auto 350px;
+        grid-template-rows: 150px 30px auto 350px;
         height: 850vh;
 
         #portada{
@@ -342,10 +362,10 @@ section{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px){
     body{
-        grid-template-rows: 175px 30px auto 300px;
+        //grid-template-rows: 150px 30px auto 300px;
         height: 400vh;
 
-        #informacion #materiales{
+        section #informacion #materiales{
             margin-bottom: 100px;
             ul{
                 margin-top: 50px;
@@ -353,7 +373,7 @@ section{
             }
         }
 
-        #informacion .pasos{
+        section #informacion .pasos{
             display: grid;
             grid-template-columns: 30% 70%;
             grid-template-rows: 20% 80%;
@@ -383,7 +403,7 @@ section{
                 border-top-right-radius: 5px;
                 border-top-left-radius: 5px;
                 color: v.$fuente3;
-                figure img {width: 110px;}
+                figure img {width:110px;}
             }
 
             .pasos_contenido{
@@ -394,7 +414,10 @@ section{
                 justify-content: space-evenly;
                 align-items: center;
                 overflow: hidden;
-                p{font-size: 1.2rem;}
+                p{
+                    font-size: 1.2rem;
+                    line-height: 2rem;
+                }
                 img{width: 400px;}
             }
         }

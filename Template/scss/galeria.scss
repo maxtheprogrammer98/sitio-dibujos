@@ -72,7 +72,7 @@ section{
 }
 
 /* Medium devices (portrait tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (orientation: portrait){
+@media only screen and (min-width: 768px){
     body{
         grid-template-rows: 175px 30px auto 350px;
         height: 200vh;
@@ -82,7 +82,7 @@ section{
 /* Large devices (horizontal tablets / laptops/ desktops, 992px and up) */
 @media only screen and (min-width: 992px){
     body{
-        grid-template-rows: 175px 50px auto 350px;
+        grid-template-rows: 150px 50px auto 350px;
         height: 300vh;
 
         #lightbox #modal{
@@ -104,7 +104,7 @@ section{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px){
     body{
-        grid-template-rows: 175px 50px auto 300px;
+        //grid-template-rows: 175px 50px auto 300px;
         height: 250vh;
     }
 }
