@@ -4,8 +4,13 @@ const materiales = document.querySelector("#indice1");
 const paso1 = document.querySelector("#indice2");
 const paso2 = document.querySelector("#indice3");
 const paso3 = document.querySelector("#indice4");
+const seccionMateriales = document.querySelector("#materiales");
+const seccionPaso1 = document.querySelector("#paso1");
+const seccionPaso2 = document.querySelector("#paso2");
+const seccionPaso3 = document.querySelector("#paso3");
 let resolucion = window.innerWidth;
 let target = null;
+let topDistance = null;
 
 // FUNCIONALIDADES (lleva al usuario a la sección clickeada)
 function AsignarEventos(){
@@ -24,28 +29,28 @@ function desplazar(){
     switch (target) {
         case materiales:
             window.scrollTo({
-                top: 1000,
+                top: seccionMateriales.offsetTop - 50,
                 behavior: "smooth"
             });
             break;
 
         case paso1:
             window.scrollTo({
-                top: 1700,
+                top: seccionPaso1.offsetTop - 50,
                 behavior: "smooth"
             });
             break;
 
         case paso2:
             window.scrollTo({
-                top: 2700,
+                top: seccionPaso2.offsetTop - 50,
                 behavior: "smooth"
             });
             break;
 
         case paso3:
             window.scrollTo({
-                top: 3700,
+                top: seccionPaso3.offsetTop - 50,
                 behavior: "smooth"
             });
             break;

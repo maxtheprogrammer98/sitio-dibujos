@@ -1,0 +1,79 @@
+// -------------------- IMPORTS -------------------------// 
+@use "../partials/variables" as v;
+@use "../partials/reset";
+@use "../partials/fuentes";
+
+#botones{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-content: space-evenly;
+    align-items: center;
+
+    #mensaje{
+        color: v.$fuente3;
+        font-family: fuente1;
+    }
+
+    #completado{
+        height: 60px;
+        width: 220px;
+        border-radius: 10px;
+        border: none;
+        font-family: fuente1;
+        font-size: 1.2rem;
+        box-shadow: 2px 2px 10px 3px v.$transparente;
+        cursor: pointer;
+    }
+
+    #completado:hover{
+        background:rgb(0, 187, 66);
+        color: v.$fuente3;
+        transition: 0.5s ease-in-out;
+    }
+
+    // #completado:active{
+    //     background: rgb(0, 187, 66) !important;
+    // }
+
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        margin: 0 auto;
+        height: 60px;
+    }
+    
+    form p {
+        text-align: center;
+    }
+    
+    form label {
+        font-size: 3rem;
+    }
+    
+    input[type="radio"] {
+        display: none;
+    }
+    
+    label {
+        color: grey;
+    }
+    
+    .clasificacion {
+        direction: rtl;
+        unicode-bidi: bidi-override;
+    }
+    
+    label:hover,
+    label:hover ~ label {
+        color: orange;
+        cursor: pointer;
+    }
+    
+    input[type="radio"]:checked ~ label {
+        color: orange;
+    }
+}

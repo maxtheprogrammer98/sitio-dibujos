@@ -360,11 +360,321 @@ footer #descripcion_footer img {
     padding-top: 350px !important;
   }
 }
+#lightbox {
+  display: flex;
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/5;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 300;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#modal {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 85%;
+  height: 500px;
+  width: 85%;
+  background: white;
+  z-index: 400;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.6);
+  -webkit-animation-name: modal_mobile;
+          animation-name: modal_mobile;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+#modal #wrapper_cerrar {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+#modal #wrapper_cerrar img {
+  width: 60px;
+  margin-right: 10px;
+  z-index: 500;
+  cursor: pointer;
+  filter: opacity(60%);
+}
+#modal #wrapper_cerrar img:hover {
+  filter: opacity(100%);
+  transition: 0.5s;
+}
+#modal #contenedor_modal {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  background: white;
+}
+#modal #contenedor_modal img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: center;
+}
+#modal #botones_modal {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  height: 100%;
+  width: 90%;
+  justify-self: center;
+  justify-content: space-between;
+  align-items: center;
+}
+#modal #botones_modal img {
+  width: 50px;
+  z-index: 600;
+  filter: opacity(50%);
+  cursor: pointer;
+}
+#modal #botones_modal img:hover {
+  filter: opacity(100%);
+  transition: 0.5s ease-in-out;
+}
+
+@-webkit-keyframes modal_mobile {
+  0% {
+    width: 42.5%;
+    height: 250px;
+  }
+  100% {
+    width: 85%;
+    height: 500px;
+  }
+}
+
+@keyframes modal_mobile {
+  0% {
+    width: 42.5%;
+    height: 250px;
+  }
+  100% {
+    width: 85%;
+    height: 500px;
+  }
+}
+@-webkit-keyframes modal_mobile_horizontal {
+  0% {
+    width: 42.5%;
+    height: 125px;
+  }
+  100% {
+    width: 85%;
+    height: 250px;
+  }
+}
+@keyframes modal_mobile_horizontal {
+  0% {
+    width: 42.5%;
+    height: 125px;
+  }
+  100% {
+    width: 85%;
+    height: 250px;
+  }
+}
+@-webkit-keyframes modal_medium {
+  0% {
+    width: 42.5%;
+    height: 500px;
+  }
+  100% {
+    width: 85%;
+    height: 1000px;
+  }
+}
+@keyframes modal_medium {
+  0% {
+    width: 42.5%;
+    height: 500px;
+  }
+  100% {
+    width: 85%;
+    height: 1000px;
+  }
+}
+@-webkit-keyframes modal_large {
+  0% {
+    width: 42.5%;
+    height: 300px;
+  }
+  100% {
+    width: 85%;
+    height: 600px;
+  }
+}
+@keyframes modal_large {
+  0% {
+    width: 42.5%;
+    height: 300px;
+  }
+  100% {
+    width: 85%;
+    height: 600px;
+  }
+}
+@-webkit-keyframes modal_extra_large {
+  0% {
+    width: 42.5%;
+    height: 400px;
+  }
+  100% {
+    width: 85%;
+    height: 800px;
+  }
+}
+@keyframes modal_extra_large {
+  0% {
+    width: 42.5%;
+    height: 400px;
+  }
+  100% {
+    width: 85%;
+    height: 800px;
+  }
+}
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  body #lightbox #modal {
+    height: 250px;
+    -webkit-animation-name: modal_mobile_horizontal;
+            animation-name: modal_mobile_horizontal;
+  }
+  body #lightbox #modal #wrapper_cerrar img {
+    margin-top: 15px;
+    width: 45px;
+  }
+  body #lightbox #modal #contenedor_modal img {
+    height: 100% !important;
+    width: auto !important;
+  }
+}
+/* Medium devices (portrait tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  body #lightbox #modal {
+    height: 1000px;
+    -webkit-animation-name: modal_medium;
+            animation-name: modal_medium;
+  }
+  body #lightbox #modal #wrapper_cerrar {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  body #lightbox #modal #wrapper_cerrar img {
+    width: 75px;
+  }
+}
+/* Large devices (horizontal tablets / laptops/ desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body #lightbox #modal {
+    height: 600px;
+    -webkit-animation-name: modal_large;
+            animation-name: modal_large;
+  }
+  body #lightbox #modal #botones_modal {
+    width: 95% !important;
+  }
+  body #lightbox #modal #contenedor_modal img {
+    height: 100%;
+    width: auto;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body #lightbox #modal {
+    height: 700px;
+    -webkit-animation-name: modal_large;
+            animation-name: modal_large;
+  }
+}
+/* hyper large monitors (large laptops and desktops, 1920px and up) */
+@media only screen and (min-width: 1366px) {
+  body #lightbox #modal {
+    height: 800px !important;
+    -webkit-animation-name: modal_extra_large;
+            animation-name: modal_extra_large;
+  }
+}
+#botones {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#botones #mensaje {
+  color: white;
+  font-family: fuente1;
+}
+#botones #completado {
+  height: 60px;
+  width: 220px;
+  border-radius: 10px;
+  border: none;
+  font-family: fuente1;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+#botones #completado:hover {
+  background: rgb(0, 187, 66);
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+#botones form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  height: 60px;
+}
+#botones form p {
+  text-align: center;
+}
+#botones form label {
+  font-size: 3rem;
+}
+#botones input[type=radio] {
+  display: none;
+}
+#botones label {
+  color: grey;
+}
+#botones .clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+#botones label:hover,
+#botones label:hover ~ label {
+  color: orange;
+  cursor: pointer;
+}
+#botones input[type=radio]:checked ~ label {
+  color: orange;
+}
+
 body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 160px 30px auto 300px;
-  height: 1000vh;
+  height: 300vh;
+  transition: all 0.5s;
 }
 
 #tutoriales {
@@ -372,304 +682,65 @@ body {
 }
 
 section {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 150px auto !important;
+  display: flex;
+  flex-direction: column;
   grid-column: 1/2;
   grid-row: 3/4;
-  font-family: fuente1;
-  background-image: url("../Imagenes/fondo-alt-7.jpg");
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-section #buscador {
-  display: flex;
-  flex-direction: column;
-  grid-column: 1/2;
-  grid-row: 1/2;
+  background: #333333;
   height: 100%;
   width: 100%;
   justify-content: center;
-  align-items: center;
-  background-color: lightgrey;
-  background-image: url("../Imagenes/fondo-version-4-izq.png"), url("../Imagenes/fondo-version-4-der.png");
-  background-size: 25% 100%;
-  background-position: left, right;
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
+  padding-top: 50px;
 }
-section #buscador label {
-  text-align: center;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: grey;
-}
-section #buscador #buscador_wrapper {
-  display: flex;
-  width: 100%;
-  height: 20%;
-  justify-content: center;
-  align-items: center;
-}
-section #buscador #buscador_wrapper input {
-  width: 70%;
-  height: 30px;
-  border-radius: 10px;
-  color: #8e8e8e;
-  font-family: fuente1;
-  border: none !important;
-  padding-left: 10px;
-}
-section #buscador #buscador_wrapper input:focus {
-  transition: 0.5s;
-  outline: none;
-  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.5);
-}
-section #buscador #buscador_wrapper #boton_buscar {
-  margin-left: 10px;
-  width: 35px;
-  cursor: pointer;
-  filter: opacity(60%);
-}
-section #buscador #buscador_wrapper #boton_buscar:hover {
-  transition: 0.5s;
-  filter: opacity(100%);
-}
-section #tutoriales_seccion {
-  display: grid;
-  grid-column: 1/2;
-  grid-row: 2/3;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(300px, 700px));
-  height: 100%;
-  width: 100%;
-}
-section #tutoriales_seccion .tutoriales_item {
+section #contenido {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 35% 65%;
+  grid-auto-rows: 40% 50% 10%;
   height: 85%;
-  width: 87%;
-  align-self: center;
-  justify-self: center;
-  overflow: hidden;
-  border-radius: 10px;
-  box-sizing: border-box;
-  border: 8px solid #0071CD;
-  color: #497262;
-  box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+  width: 90%;
   background: white;
-  background-image: url("../Imagenes/acuarela-izq.png"), url("../Imagenes/acuarela-der.png");
-  background-position: bottom left, bottom right;
-  background-size: 6rem auto;
+  justify-self: flex-start;
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-image: url("../Imagenes/fondo-alt-7.jpg");
+  background-position: bottom;
   background-repeat: no-repeat;
+  background-size: cover;
+  font-family: fuente1;
 }
-section #tutoriales_seccion .tutoriales_item .portada_tutoriales {
+section #contenido #portada {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   grid-column: 1/2;
   grid-row: 1/2;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background: black;
+  margin-top: 30px;
 }
-section #tutoriales_seccion .tutoriales_item .portada_tutoriales img {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales {
-  display: flex;
-  grid-column: 1/2;
-  grid-row: 2/3;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tuto {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background: #0071CD;
-  height: 70px;
-  width: 100%;
-  color: white;
-}
-section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tuto img {
-  display: none;
-  height: 30px;
-}
-section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tuto h4 {
-  font-size: 1.2rem;
+section #contenido #portada h3 {
+  font-size: 1.75rem;
+  text-decoration: underline;
   text-align: center;
 }
-section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tuto h4 a {
-  color: white;
-  text-decoration: none;
+section #contenido #portada img {
+  width: 85%;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
 }
-section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales ul {
-  list-style: none;
-  list-style-position: inside;
-  margin-top: 10px;
-  border-bottom: 2px solid lightgrey;
-}
-section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales ul li {
-  margin-left: -20px;
-  padding-bottom: 20px;
-  font-size: 1.1rem;
-}
-section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales ul li strong {
-  background: #a1a0a0;
-  color: white;
-  text-decoration: none;
-  padding: 2px;
-  border-radius: 5px;
-  font-weight: normal;
-}
-section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .valoracion {
+section #contenido #materiales {
   display: flex;
-  flex-direction: row;
-  font-size: 2rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 2/3;
 }
-section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_wrapper {
-  padding-bottom: 20px;
-  font-size: 2.5rem;
+section #contenido #materiales img {
+  width: 200px;
 }
-section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_wrapper .promedio {
-  font-family: fuente2 !important;
-}
-section #tutoriales_seccion .tutoriales_item:hover {
-  transition: 0.5s ease-in-out;
-  border: 8px solid #4693FF;
-}
-section #tutoriales_seccion .tutoriales_item:hover .descripcion_tutoriales .titulo_tuto {
-  transition: 0.5s ease-in-out;
-  background: #4693FF;
-}
-
-@media only screen and (max-height: 575.98px) and (orientation: landscape) {
-  body {
-    grid-template-rows: 110px 30px auto 180px !important;
-    height: 300vh !important;
-  }
-  body section {
-    grid-template-rows: 150px auto;
-  }
-  body section #buscador {
-    margin-top: 10px;
-  }
-  body section #buscador label {
-    font-size: 1.1rem;
-  }
-  body section #buscador input {
-    width: 50%;
-  }
-  body section #tutoriales_seccion {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
-  }
-  body section #tutoriales_seccion .tutoriales_item {
-    display: flex;
-  }
-  body section #tutoriales_seccion .tutoriales_item .portada_tutoriales {
-    height: 100%;
-    width: 30%;
-    justify-self: flex-start;
-    justify-content: center;
-    border-right: 5px solid #2877ED;
-  }
-  body section #tutoriales_seccion .tutoriales_item .portada_tutoriales img {
-    height: 150%;
-    width: auto;
-  }
-  body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales {
-    display: grid;
-    height: 100%;
-    width: 70%;
-    justify-self: flex-end;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 10% 90%;
-  }
-  body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tuto {
-    grid-column: 1/3;
-    grid-row: 1/2;
-    align-items: center;
-    padding-top: 10px;
-  }
-  body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales ul {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    border-bottom: none;
-    margin-left: 15px;
-    line-height: 0.8rem;
-  }
-  body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .valoracion, body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_wrapper {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .valoracion {
-    display: flex;
-    height: 50%;
-    width: 100%;
-    align-self: flex-start;
-    align-items: flex-end;
-  }
-  body section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_wrapper {
-    display: flex;
-    width: 100%;
-    height: 50%;
-    align-self: flex-end;
-    justify-content: center;
-    align-items: center;
-  }
-}
-/* Medium devices (portrait tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  body {
-    grid-template-rows: 175px 30px auto 350px;
-    height: 300vh;
-  }
-}
-/* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  body {
-    grid-template-rows: 150px 30px auto 350px !important;
-    height: 300vh;
-  }
-  body section {
-    grid-template-rows: 5% 95%;
-  }
-  body section #buscador {
-    background-size: auto 500%;
-  }
-  body section #buscador label {
-    font-size: 1.25rem;
-  }
-  body section #buscador #campo_buscar {
-    width: 20%;
-    border: grey solid 2px;
-  }
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  body {
-    height: 400vh;
-  }
-  body section #tutoriales_seccion {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  }
-  body section #buscador {
-    padding-top: 20px;
-  }
-  body section #buscador label {
-    margin-bottom: 20px;
-  }
-}
-/* hyper large monitors (large laptops and desktops, 1920px and up) */
-@media only screen and (min-width: 1366px) {
-  body {
-    height: 300vh;
-  }
-}/*# sourceMappingURL=tutoriales.css.map */
+section #botones {
+  display: flex;
+  height: 15%;
+  justify-self: end;
+}/*# sourceMappingURL=fundamentos-retrato.css.map */
