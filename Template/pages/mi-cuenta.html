@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/registro.css">
-  <title>Registrarse - Arte Realista</title>
+  <link rel="stylesheet" href="../css/mi-cuenta.css">
+  <title>Mi Cuenta</title>
 </head>
 <body>
 <!--MENU-->
@@ -32,7 +32,7 @@
     <b style="--i:4;--clr:#0a56c2;">Login</b>
   </li>
   <li class="menu__list" style="--i:5;--clr:#c32aa3;">
-    <a class="menu__list--link" href="mi-cuenta.html"><ion-icon name="person-outline"></ion-icon></a>
+    <a class="menu__list--link" href="#"><ion-icon name="person-outline"></ion-icon></a>
     <b style="--i:5;--clr:#c32aa3;">Mi Cuenta</b>
   </li>
 </div>
@@ -44,14 +44,14 @@
 
       <div class="form__cabecera">
         <img class="form__imagen" src="../Imagenes/icono-user.png" alt="Icono de Usuario">
-        <h2 class="form__titulo">Registrarse</h2>
+        <h2 class="form__titulo">Mi Cuenta</h2>
       </div>
 
       <div class="form__label">
         <div class="form__label--grupo" id="grupo__nickname">
           <label class="form__label--subtitulo" for="nick">Nickname</label>
           <div class="form__label--input">
-            <input class="form__label--entrada" type="text" name="nick" id="nick" required autofocus placeholder="Your Nickname">
+            <input class="form__label--entrada" type="text" name="nick" id="nick" autofocus placeholder="Cambiar nickname">
             <i class="form__label--estado fas fa-times-circle"></i>
           </div>
           <p class="form__label--error">El Nickname debe tener entre 4 a 16 caracteres y solo incluir letras, numeros y guiones.</p>
@@ -60,7 +60,7 @@
         <div class="form__label--grupo" id="grupo__email">
           <label class="form__label--subtitulo" for="email">Email</label>
           <div class="form__label--input">
-            <input class="form__label--entrada" type="email" name="email" id="email" required autofocus placeholder="example@example.com">
+            <input class="form__label--entrada" type="email" name="email" id="email"  autofocus placeholder="Cambiar email">
             <i class="form__label--estado fas fa-times-circle"></i>
           </div>
           <p class="form__label--error">El email solo puede contener letras, numeros, guiones y puntos.</p>
@@ -69,18 +69,12 @@
         <div class="form__label--grupo" id="grupo__password">
           <label class="form__label--subtitulo" for="pass">Contraseña</label>
           <div class="form__label--input">
-            <input class="form__label--entrada" type="password" name="pass" id="pass" required autofocus placeholder="Password">
+            <input class="form__label--entrada" type="password" name="pass" id="pass"  autofocus placeholder="Cambiar password">
             <i class="form__label--estado fas fa-times-circle"></i>
           </div>
           <p class="form__label--error">La Contraseña debe tener entre 8 y 16 caracteres y contener al menos una letra minuscula, una mayuscula, un numero y un caracter especial.</p>
         </div>
         
-        <div class="form__grupo--terminos">
-          <label class="form__label--condiciones">
-            <input class="form__label--checkbox" type="checkbox" name="terminos" id="terminos">
-            <a href="#">Acepto los Terminos y Condiciones.</a>
-          </label>
-        </div>
       </div>
 
       <div class="form__mensaje" id="form__mensaje">
@@ -88,20 +82,15 @@
       </div>
         
       <div class="form__grupo--btn">
-        <button class="form__grupo--enviar" type="Submit">Registrarse</button>
-        <p class="form__mensaje--exito" id="form__mensaje--exito">Registrado Exitosamente!</p>
-      </div>
-
-      <div class="form__cuenta">
-        <p class="form__cuenta--texto">Ya tengo cuenta.</p>
-        <a class="form__cuenta--link" href="login.html">Iniciar sesión</a>
+        <button class="form__grupo--enviar" type="Submit">Actualizar Datos</button>
+        <p class="form__mensaje--exito" id="form__mensaje--exito">Cambiado Exitosamente!</p>
       </div>
 
     </div>
   </form>
 
 <!--SCRIPTS-->
-<script src="../js/formulario.js"></script>
+<script src="../js/mi-cuenta.js"></script>
 <script src="https://kit.fontawesome.com/020bd0ee85.js" crossorigin="anonymous"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

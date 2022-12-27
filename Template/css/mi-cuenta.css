@@ -151,7 +151,7 @@ body {
   margin: 3.125rem auto 1.25rem;
   border-radius: 0 0 1.25rem 1.25rem;
   display: grid;
-  grid-template-rows: 1.5fr auto auto auto;
+  grid-template-rows: 1.5fr auto auto auto auto;
   justify-items: center;
   gap: 1.25rem;
 }
@@ -180,6 +180,10 @@ body {
   cursor: pointer;
 }
 .form__label--input {
+  position: relative;
+  z-index: 1;
+}
+.form__label--entrada {
   width: 82%;
   background-color: #fff;
   border: 0.1875rem solid transparent;
@@ -189,10 +193,63 @@ body {
   padding: 0 2.5rem 0 0.625rem;
   transition: 0.3s ease all;
 }
-.form__label--input:focus {
+.form__label--entrada:focus {
   border-bottom: 0.1875rem solid #2877ED;
   outline: none;
   box-shadow: 0.1875rem 0 1.875rem rgba(163, 163, 163, 0.4);
+}
+.form__label--error {
+  font-size: 0.75rem;
+  margin: 0.3125rem auto 0;
+  display: none;
+}
+.form__label--error-activo {
+  display: block;
+}
+.form__label--estado {
+  position: absolute;
+  right: 0.625rem;
+  bottom: 0.9375rem;
+  z-index: 10;
+  font-size: 1rem;
+  opacity: 0;
+}
+.form__label--grupo-correcto .form__label--estado {
+  color: green;
+  opacity: 1;
+}
+.form__label--grupo-incorrecto .form__label--subtitulo {
+  color: red;
+}
+.form__label--grupo-incorrecto .form__label--estado {
+  color: red;
+  opacity: 1;
+}
+.form__label--grupo-incorrecto .form__label--entrada {
+  border-bottom: 0.1875rem solid red;
+}
+.form__label--checkbox {
+  margin-right: 0.625rem;
+}
+.form__mensaje {
+  width: 85%;
+  height: 2.8125rem;
+  background-color: orangered;
+  padding: 0.3125rem 0.9375rem;
+  border-radius: 0.1875rem;
+  display: none;
+}
+.form__mensaje--exito {
+  font-size: 0.875rem;
+  color: green;
+  margin-top: 1.25rem;
+  display: none;
+}
+.form__mensaje--exito-activo {
+  display: block;
+}
+.form__mensaje-activo {
+  display: block;
 }
 .form__grupo--terminos {
   margin: 0 auto;
@@ -217,39 +274,5 @@ body {
 .form__grupo--enviar:hover {
   background-color: #4693FF;
 }
-.form__cuenta {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.form__cuenta--olvidar {
-  font-size: 1rem;
-  text-decoration: none;
-  color: #2877ED;
-  margin-bottom: 0.625rem;
-  transition: 0.3s ease all;
-}
-.form__cuenta--olvidar:hover {
-  color: #6FAEFE;
-  text-decoration: underline;
-  transition: 0.3s ease all;
-}
-.form__cuenta--texto {
-  font-size: 0.875rem;
-  font-weight: 400;
-  margin-bottom: 0.625rem;
-}
-.form__cuenta--link {
-  font-size: 1rem;
-  text-decoration: none;
-  color: #2877ED;
-  margin-bottom: 1.25rem;
-  transition: 0.3s ease all;
-}
-.form__cuenta--link:hover {
-  color: #6FAEFE;
-  text-decoration: underline;
-  transition: 0.3s ease all;
-}
 
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=mi-cuenta.css.map */
