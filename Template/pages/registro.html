@@ -8,6 +8,31 @@
   <title>Registrarse - Arte Realista</title>
 </head>
 <body>
+<!--MENU-->
+  <div class="menu">
+    <div class="menu__toggle"><ion-icon name="grid-outline"></ion-icon></div>
+    <li class="menu__list" style="--i:0;--clr:#1877f2;">
+      <a class="menu__list--link" href="../index.html"><ion-icon name="home-outline"></ion-icon></a>
+    </li>
+    <li class="menu__list" style="--i:1;--clr:#25d366;">
+      <a class="menu__list--link" href="galeria.html"><ion-icon name="images-outline"></ion-icon></a>
+    </li>
+    <li class="menu__list" style="--i:2;--clr:#1da1f2;">
+      <a class="menu__list--link" href="tutoriales.html"><ion-icon name="library-outline"></ion-icon></a>
+    </li>
+    <li class="menu__list" style="--i:3;--clr:#ea4c89;">
+      <a class="menu__list--link" href="registro.html"><ion-icon name="person-add-outline"></ion-icon></a>
+    </li>
+    <li class="menu__list" style="--i:4;--clr:#0a56c2;">
+      <a class="menu__list--link" href="login.html"><ion-icon name="log-in-outline"></ion-icon></a>
+    </li>
+    <li class="menu__list" style="--i:5;--clr:#c32aa3;">
+      <a class="menu__list--link" href="#"><ion-icon name="person-outline"></ion-icon></a>
+    </li>
+  </div>
+
+<!--FORMULARIO-->
+
   <form class="form" method="POST" action="" id="form">
     <div class="form__container">  
 
@@ -68,7 +93,18 @@
 
     </div>
   </form>
-  <script src="../js/formulario.js"></script>
-  <script src="https://kit.fontawesome.com/020bd0ee85.js" crossorigin="anonymous"></script>  
+
+<!--SCRIPTS-->
+<script src="../js/formulario.js"></script>
+<script src="https://kit.fontawesome.com/020bd0ee85.js" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+  let toggle = document.querySelector('.menu__toggle');
+  let menu = document.querySelector('.menu');
+  toggle.onclick = function(){
+    menu.classList.toggle('active')
+  }
+</script>  
 </body>
 </html>

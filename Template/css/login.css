@@ -51,6 +51,84 @@ q:before, q:after {
   font-family: fuente4;
   src: url("/Template/fuentes/BebasNeue-Regular.ttf");
 }
+.menu {
+  position: relative;
+  margin: 2.5rem 0 0 2.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.menu__toggle {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  background: #2877ED;
+  border-radius: 50%;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: 1.25s;
+  z-index: 100;
+}
+.menu__list {
+  position: absolute;
+  top: 60px;
+  left: 3px;
+  list-style: none;
+  transition: 0.5s;
+  transform: translateY(calc(50px * var(--i)));
+  transform-origin: 20px;
+  scale: 0;
+  transition-delay: calc(0.05s * var(--i));
+  z-index: 100;
+}
+.menu__list--link {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.25em;
+  color: var(--clr);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+.menu__list:hover .menu__list--link {
+  font-size: 1.75em;
+  box-shadow: 0 0 0 2px var(--clr), 0 0 0 6px #333;
+}
+
+.menu.active .menu__list {
+  scale: 1;
+}
+
+.menu.active .menu__toggle {
+  transform: rotate(360deg);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 0 0 2px #fff, 0 0 0 8px #2877ED;
+}
+
+.menu__list b {
+  position: relative;
+  left: 3.125rem;
+  bottom: 1.875rem;
+  color: #000;
+  text-shadow: 0 4px 6px var(--clr);
+  opacity: 0;
+  transition: 0.5s ease all;
+}
+
+.menu__list:hover b {
+  opacity: 1;
+}
+
 body {
   background-image: url(../../Imagenes/fondo-version-1.png);
   background-size: cover;

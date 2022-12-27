@@ -333,17 +333,7 @@ footer #descripcion_footer img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
@@ -460,8 +450,6 @@ section #tutoriales_seccion .tutoriales_item .portada_tutoriales {
 }
 section #tutoriales_seccion .tutoriales_item .portada_tutoriales img {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
 }
 section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales {
@@ -655,4 +643,6 @@ section #tutoriales_seccion .tutoriales_item:hover .descripcion_tutoriales .titu
     grid-template-rows: 175px 30px auto 300px;
     height: 300vh;
   }
-}/*# sourceMappingURL=tutoriales.css.map */
+}
+
+/*# sourceMappingURL=tutoriales.css.map */

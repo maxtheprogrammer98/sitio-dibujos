@@ -1,4 +1,5 @@
 @use 'partials/' as p;
+@use 'basicos/menu-dspgbl';
 
 body{
   background-image:url(../../Imagenes/fondo-version-1.png);
@@ -55,6 +56,7 @@ body{
 
     &--input{
       position: relative;
+      z-index: 1;
     }
 
     &--entrada{
@@ -88,29 +90,29 @@ body{
       position: absolute;
       right: p.rem(10);
       bottom: p.rem(15);
-      z-index: 100;
+      z-index: 10;
       font-size: p.rem(16);
       opacity: 0;
     }
 
     &--grupo-correcto{
       .form__label--estado{
-        color:p.$correcto;
+        color:green;
         opacity: 1;
       } 
     }
 
     &--grupo-incorrecto{
       .form__label--subtitulo{
-        color:p.$incorrecto;
+        color:red;
       }
       .form__label--estado{
-        color: p.$incorrecto;
+        color: red;
         opacity: 1;
       } 
 
       .form__label--entrada{
-        border-bottom: p.rem(3) solid p.$incorrecto;
+        border-bottom: p.rem(3) solid red;
       }
     }
 
@@ -123,14 +125,14 @@ body{
     width: 85%;
     height: p.rem(45);
     // line-height: p.rem(45);
-    background-color: p.$warning;
+    background-color: orangered;
     padding:p.rem(5) p.rem(15);
     border-radius: p.rem(3);
     display: none;
 
     &--exito{
       font-size:p.rem(14);
-      color: p.$exito;
+      color: green;
       margin-top: p.rem(20);
       display: none;
     }
