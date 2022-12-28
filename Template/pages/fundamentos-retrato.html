@@ -51,26 +51,73 @@
 
             <div id="portada">
                 <h3>Fundamentos Retratos</h3>
-                <img src="../Imagenes/tutorial-3.jpg" alt="retrato" id="main_img">
+                <img src="../Imagenes/tutorial-3.jpg" alt="retrato" id="imagen_main">
             </div>
 
-            <div id="materiales">
-                <img src="../Imagenes/icono-galeria.png" alt="icono_galeria" id="icono_galeria">
+            <div id="materiales" class="seccion">
+                <img src="../Imagenes/icono-tutoriales-alt-2.png" alt="icono_galeria" id="icono_galeria">
                 <h4> Lista de materiales</h4>
                 <ul>
-                    <li>Material</li>
-                    <li>Material</li>
-                    <li>Material</li>
-                    <li>Material</li>
-                    <li>Material</li>
+                    <li><b>Papel:</b>hojas de gramaje alto o medio para que pueda resistir varias capas de carboncillo.</li>
+                    <li><b>Carboncillo en barra:</b> para realizar fondos y capas bases.</li>
+                    <li><b>Lapiz de carboncillo:</b> para realizar detalles.</li>
+                    <li><b>Borrador:</b> se utilizara para crear brillos y texturas (puede ser uno comun o moldeable).</li>
+                    <li><b>Servilleta:</b> para difuminar el carboncillo con mayor facilidad. (tambien es recomendable usar un difuminador para detalles mas pequeños)</li>
                 </ul>
             </div>
 
+            <div id="paso1" class="seccion">
+                <img src="../Imagenes/icono-1.png" alt="1">
+                <h4>PASO 1: boceto</h4>
+                <p>En esta etapa lo que se busca lograr es la estructura base de la figura,
+                    para ello lo primero que se hace es trazar figuras simples como referencia tal como se puede observar en 
+                    la imagen superior.
+                    El circulo representa la mitad superior del craneo y la cuadricula dividida en 3 partes representa la 
+                    ubicacion de los rasgos del rostro.
+                    Lo importante en este paso es definir las proporciones correctas, esto es como los cimientos de nuestra obra.
+                    Es decir es una etapa fundamental en la que no deben haber errores, no dudes en tomarte un tiempo extra para verificar
+                    que todas las proporciones sean correctas.
+                </p>
+            </div>
+
+            <div id="paso2" class="seccion">
+                <img src="../Imagenes/icono-2.png" alt="2">
+                <h4>PASO 2: Capas bases & rasgos faciales</h4>
+                <p>En esta etapa se comienza a aplicar el carboncillo, yo generalmente prefiero empezar definiendo
+                    el rostro y dejo la parte del cabello y el fondo para después.
+                    lo importante en este paso es lograr las tonalidades correctas, para esto puedes ayudarte haciendo
+                    una paleta de colores.
+                    Una vez que hayas carboncillo en una area puedes difuminarlo con la servilleta o el difuminador.
+                    Como puedes ver en la imange de referencia todavia no se logra un gran nivel de detalle, nos enfocaremos 
+                    en ese aspecto en la siguiente etapa.
+                    (ten en cuenta que siempre se recomienda empezar por las capas mas oscuras, luego sobre las mismas puedes agregar brillos o tonos mas claros).
+                </p>
+            </div>
+
+            <div id="paso3" class="seccion">
+                <img src="../Imagenes/icono-3.png" alt="3">
+                <h4>PASO 3: Detalles y textura</h4>
+                <p>Finalmente comenzamos a trabajar en los detalles y la textura.
+                    En esta etapa vamos a emplezar casi exclusivamente el lapiz de carboncillo ya que nos 
+                    permite crear trazos mas finos y precisos.
+                    Este es un proceso bastante repetitivo donde basicamente se agrega capas tras capa de detalles.
+                    En el caso del cabello, una vez que se haya hecho el fondo se comienza a trazar los mechones mas claros con el borrador.
+                    <img src="../Imagenes/cabello-proceso.jpg" alt="cabello_proceso" id="cabello">
+                    <br>
+                    <b>Nota: en la sección siguiente puedes ver un video con todo el proceso, para que puedas ver todos estos conceptos teoricos en practica</b>
+                </p>
+            </div>
+
+            <div id="video" class="seccion">
+                <h4>Video proceso</h4>
+            </div>
+
             <div id="cambiar_pagina">
-                <p id="materiales">&#9899;</p>
-                <p id="paso1">&#9899;</p>
-                <p id="paso2">&#9899;</p>
-                <p id="paso3">&#9899;</p>
+                <p id="materiales_boton">&#9899;</p>
+                <p id="paso1_boton">&#9899;</p>
+                <p id="paso2_boton">&#9899;</p>
+                <p id="paso3_boton">&#9899;</p>
+                <p id="video_boton">&#9899;</p>
             </div>
 
         </div>
@@ -109,9 +156,10 @@
         </div>
     </footer>
 
-    <script src="../js/tutorial-portada.js"></script>
+    <!-- <script src="../js/tutorial-portada.js"></script> -->
     <script src="../js/tutorial-modal.js"></script>
     <script src="../js/nav.js"></script>
     <script src="../js/loader.js"></script>
+    <script src="../js/tutorial-cambiar-seccion.js"></script>
 </body>
 </html>

@@ -695,7 +695,7 @@ section {
 section #contenido {
   display: grid;
   grid-template-columns: 100%;
-  grid-auto-rows: 40% 50% 10%;
+  grid-auto-rows: 40% 55% 5%;
   height: 85%;
   width: 90%;
   background: white;
@@ -728,7 +728,10 @@ section #contenido #portada img {
   width: 85%;
   box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
 }
-section #contenido #materiales {
+section #contenido #paso1, section #contenido #paso2, section #contenido #paso3, section #contenido #video {
+  display: none;
+}
+section #contenido .seccion {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -736,11 +739,51 @@ section #contenido #materiales {
   grid-column: 1/2;
   grid-row: 2/3;
 }
-section #contenido #materiales img {
-  width: 200px;
+section #contenido .seccion img {
+  width: 125px;
+}
+section #contenido .seccion #cabello {
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+section #contenido .seccion h4 {
+  text-decoration: underline;
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 10px;
+}
+section #contenido .seccion ul {
+  width: 90%;
+}
+section #contenido .seccion ul li {
+  margin-bottom: 10px;
+}
+section #contenido .seccion ul li b {
+  text-decoration: underline;
+}
+section #contenido .seccion p {
+  width: 90%;
+}
+section #contenido #cambiar_pagina {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 5px;
+}
+section #contenido #cambiar_pagina p {
+  cursor: pointer;
+  filter: opacity(70%);
+}
+section #contenido #cambiar_pagina p:hover {
+  filter: opacity(100%);
+  transition: 0.5s;
 }
 section #botones {
   display: flex;
   height: 15%;
   justify-self: end;
+  padding-bottom: 50px;
 }/*# sourceMappingURL=fundamentos-retrato.css.map */
