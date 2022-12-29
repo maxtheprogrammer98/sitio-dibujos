@@ -8,6 +8,7 @@
 @use "basicos/loader";
 @use "basicos/lightbox";
 @use "tutorialesElem/botones";
+@use "tutorialesElem/secciones";
 
 // -------------------- LAYOUT -------------------------// 
 // (vista movil por default)
@@ -35,98 +36,6 @@ section{
     justify-content: center;
     padding-top: 50px;
 
-    #contenido{
-        display:grid;
-        grid-template-columns: 100%;
-        grid-auto-rows: 40% 55% 5%;
-        height: 85%;
-        width: 90%;
-        background: white;
-        justify-self: flex-start;
-        align-self: center;
-        border-radius: 10px;
-        box-shadow: 3px 3px 5px 5px v.$transparente;
-        overflow: hidden;
-        background-image: url("../Imagenes/fondo-alt-7.jpg");
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size:cover;
-        font-family: fuente1;
-        
-        #portada{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            grid-column: 1/2;
-            grid-row: 1/2;
-            margin-top: 30px;
-
-            h3{
-                font-size: 1.75rem;
-                text-decoration: underline;
-                text-align: center;
-            }
-
-            img{
-                width: 85%;
-                box-shadow: 1px 1px 10px 5px v.$transparente;
-            }
-        }
-
-        #paso1,#paso2,#paso3,#video{display: none;}
-
-        .seccion{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            grid-column: 1/2;
-            grid-row: 2/3;
-            img{width: 125px;}
-            #cabello{
-                display: block;
-                margin: auto;
-                padding: 10px;
-            }
-            h4{
-                text-decoration: underline;
-                font-size: 1.7rem;
-                text-align: center;
-                margin: 10px;
-            }
-            ul{
-                width: 90%;
-                li{
-                    margin-bottom: 10px;
-                    b{text-decoration: underline;}
-                }
-
-            }
-            p{
-                width: 90%;
-            }
-        }
-
-        #cambiar_pagina{
-            display: flex;
-            grid-column: 1/2;
-            grid-row: 3/4;
-            justify-content: center;
-            align-items: center;
-            letter-spacing: 5px;
-            p{
-                cursor: pointer;
-                filter: opacity(70%);
-            }
-            p:hover{
-                filter: opacity(100%);
-                transition: 0.5s;
-            }
-        }
-
-    }
-
     #botones{
         display: flex;
         height: 15%;
@@ -134,3 +43,4 @@ section{
         padding-bottom: 50px;
     }
 }
+

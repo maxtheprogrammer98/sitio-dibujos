@@ -1,5 +1,7 @@
 // ELEMENTOS DOM:
 const botonesSecciones = document.querySelectorAll("#cambiar_pagina p");
+const botonMateriales = document.querySelector("#materiales_boton");
+botonMateriales.style.filter = "opacity(100%)";
 const secciones = document.querySelectorAll(".secciones");
 const imagenPortada = document.querySelector("#imagen_main");
 const seccionMateriales = document.querySelector("#materiales");
@@ -32,7 +34,7 @@ function cambiarDisplay(boton){
 
     switch (botonSeleccionado){
         case "materiales_boton":
-                imagenPortada.src == "../Imagenes/tutorial-3.jpg";
+                imagenPortada.src = "../Imagenes/tutorial-3.jpg";
                 seccionMateriales.style.display = "flex";
                 seccionPaso1.style.display = "none";
                 seccionPaso2.style.display = "none";
@@ -68,7 +70,7 @@ function cambiarDisplay(boton){
             break;
 
         case "video_boton":
-            imagenPortada.src = "../Imagenes/tutorial-3.jpg";
+            //imagenPortada.style.display = "none";
             seccionMateriales.style.display = "none";
             seccionPaso1.style.display = "none";
             seccionPaso2.style.display = "none";

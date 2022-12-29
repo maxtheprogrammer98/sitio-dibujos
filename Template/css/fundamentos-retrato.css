@@ -669,6 +669,118 @@ footer #descripcion_footer img {
   color: orange;
 }
 
+#contenido {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: 40% 55% 5%;
+  height: 85%;
+  width: 90%;
+  background: white;
+  justify-self: flex-start;
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-image: url("../Imagenes/fondo-alt-7.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: fuente1;
+}
+#contenido #portada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-top: 30px;
+}
+#contenido #portada h3 {
+  font-size: 1.75rem;
+  text-decoration: underline;
+  text-align: center;
+}
+#contenido #portada img {
+  width: 85%;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+#contenido #paso1, #contenido #paso2, #contenido #paso3, #contenido #video {
+  display: none;
+}
+#contenido .seccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  -webkit-animation-name: efecto_seccion;
+          animation-name: efecto_seccion;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+#contenido .seccion img {
+  width: 125px;
+}
+#contenido .seccion #cabello {
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+#contenido .seccion h4 {
+  text-decoration: underline;
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 10px;
+}
+#contenido .seccion ul {
+  width: 90%;
+}
+#contenido .seccion ul li {
+  margin-bottom: 10px;
+}
+#contenido .seccion ul li b {
+  text-decoration: underline;
+}
+#contenido .seccion p {
+  width: 90%;
+}
+#contenido #cambiar_pagina {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 5px;
+}
+#contenido #cambiar_pagina p {
+  cursor: pointer;
+  filter: opacity(70%);
+}
+#contenido #cambiar_pagina p:hover {
+  filter: opacity(100%);
+  transition: 0.5s;
+}
+
+@-webkit-keyframes efecto_seccion {
+  0% {
+    filter: opacity(0%);
+  }
+  100% {
+    filter: opacity(100%);
+  }
+}
+
+@keyframes efecto_seccion {
+  0% {
+    filter: opacity(0%);
+  }
+  100% {
+    filter: opacity(100%);
+  }
+}
 body {
   display: grid;
   grid-template-columns: 100%;
@@ -691,95 +803,6 @@ section {
   width: 100%;
   justify-content: center;
   padding-top: 50px;
-}
-section #contenido {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-auto-rows: 40% 55% 5%;
-  height: 85%;
-  width: 90%;
-  background: white;
-  justify-self: flex-start;
-  align-self: center;
-  border-radius: 10px;
-  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  background-image: url("../Imagenes/fondo-alt-7.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: fuente1;
-}
-section #contenido #portada {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  margin-top: 30px;
-}
-section #contenido #portada h3 {
-  font-size: 1.75rem;
-  text-decoration: underline;
-  text-align: center;
-}
-section #contenido #portada img {
-  width: 85%;
-  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
-}
-section #contenido #paso1, section #contenido #paso2, section #contenido #paso3, section #contenido #video {
-  display: none;
-}
-section #contenido .seccion {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-section #contenido .seccion img {
-  width: 125px;
-}
-section #contenido .seccion #cabello {
-  display: block;
-  margin: auto;
-  padding: 10px;
-}
-section #contenido .seccion h4 {
-  text-decoration: underline;
-  font-size: 1.7rem;
-  text-align: center;
-  margin: 10px;
-}
-section #contenido .seccion ul {
-  width: 90%;
-}
-section #contenido .seccion ul li {
-  margin-bottom: 10px;
-}
-section #contenido .seccion ul li b {
-  text-decoration: underline;
-}
-section #contenido .seccion p {
-  width: 90%;
-}
-section #contenido #cambiar_pagina {
-  display: flex;
-  grid-column: 1/2;
-  grid-row: 3/4;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 5px;
-}
-section #contenido #cambiar_pagina p {
-  cursor: pointer;
-  filter: opacity(70%);
-}
-section #contenido #cambiar_pagina p:hover {
-  filter: opacity(100%);
-  transition: 0.5s;
 }
 section #botones {
   display: flex;
