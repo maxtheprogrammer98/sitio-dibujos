@@ -1,6 +1,7 @@
 // ELEMENTOS DOM:
 const body = document.querySelector("body");
 const imagen = document.querySelector("#imagen_main");
+let scrollDistance = null;
 let lightbox = null;
 let modal = null;
 let iconoCerrar = null;
@@ -8,12 +9,14 @@ let iconoCerrar = null;
 // FUNCIONALIDADES (para crear modal):
 function agregandoEvento(){
     imagen.addEventListener("click", crearModal);
+    scrollDistance = imagen.getBoundingClientRect();
 }
 
 function crearModal(){
     // 1ro se crea el "fondo" (lightbox)
-    body.appendChild(document.createElement("div")).setAttribute("id","modal");
+    body.appendChild(document.createElement("div")).setAttribute("id","lightbox");
     lightbox = document.querySelector("#lightbox");
+    lightbox.style.paddingTop = `${scrollDistance.top + 75}px`;
     
     // 2do se crea la ventana modal
     lightbox.appendChild(document.createElement("div")).setAttribute("id","modal");
@@ -38,4 +41,4 @@ function crearModal(){
     })
 }
 
-//agregandoEvento();
+agregandoEvento();
