@@ -552,8 +552,8 @@ footer #descripcion_footer img {
   font-family: fuente1;
 }
 #botones #completado {
-  height: 60px;
-  width: 220px;
+  height: 50px;
+  width: 200px;
   border-radius: 10px;
   border: none;
   font-family: fuente1;
@@ -572,13 +572,13 @@ footer #descripcion_footer img {
   align-items: center;
   width: 70%;
   margin: 0 auto;
-  height: 60px;
+  height: 50px;
 }
 #botones form p {
   text-align: center;
 }
 #botones form label {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 #botones input[type=radio] {
   display: none;
@@ -599,6 +599,178 @@ footer #descripcion_footer img {
   color: orange;
 }
 
+#contenido {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: 40% 55% 5%;
+  height: 90%;
+  width: 90%;
+  background: white;
+  justify-self: flex-start;
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-image: url("../Imagenes/fondo-alt-7.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: fuente1;
+}
+#contenido #portada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding-top: 30px;
+  background: lightgrey;
+}
+#contenido #portada h3 {
+  font-size: 1.75rem;
+  text-decoration: underline;
+  text-align: center;
+}
+#contenido #portada img {
+  width: 85%;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+#contenido #paso1, #contenido #paso2, #contenido #paso3, #contenido #video {
+  display: none;
+}
+#contenido .seccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  -webkit-animation-name: efecto_seccion;
+          animation-name: efecto_seccion;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+#contenido .seccion img {
+  width: 100px;
+}
+#contenido .seccion #cabello {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  width: 200px;
+}
+#contenido .seccion h4 {
+  text-decoration: underline;
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 10px;
+}
+#contenido .seccion ol {
+  width: 90%;
+}
+#contenido .seccion ol li {
+  margin-bottom: 10px;
+}
+#contenido .seccion ol li b {
+  text-decoration: underline;
+}
+#contenido .seccion p {
+  width: 90%;
+}
+#contenido #cambiar_pagina {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 5px;
+}
+#contenido #cambiar_pagina p {
+  cursor: pointer;
+  filter: opacity(70%);
+}
+#contenido #cambiar_pagina p:hover {
+  filter: opacity(100%);
+  transition: 0.5s;
+}
+
+@-webkit-keyframes efecto_seccion {
+  0% {
+    filter: opacity(0%);
+  }
+  100% {
+    filter: opacity(100%);
+  }
+}
+
+@keyframes efecto_seccion {
+  0% {
+    filter: opacity(0%);
+  }
+  100% {
+    filter: opacity(100%);
+  }
+}
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  #contenido {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 90% 10%;
+  }
+  #contenido #portada {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background: grey;
+    margin: 0;
+  }
+  #contenido #portada h3 {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+  }
+  #contenido .seccion {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  #contenido #video video {
+    height: 300px;
+  }
+  #contenido #cambiar_pagina {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+/* Medium devices (portrait tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #contenido {
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 55% 10%;
+  }
+  #contenido #portada {
+    padding-top: 20px;
+  }
+  #contenido #portada img {
+    margin-top: 20px;
+    width: 350px;
+  }
+  #contenido #portada h3 {
+    font-size: 2.5rem;
+  }
+  #contenido .seccion img {
+    width: 200px;
+  }
+  #contenido .seccion h4 {
+    font-size: 3rem;
+  }
+  #contenido .seccion p, #contenido .seccion ol {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  #contenido #cambiar_pagina p {
+    font-size: 1.5rem;
+  }
+}
 body {
   display: grid;
   grid-template-columns: 100%;
@@ -622,57 +794,27 @@ section {
   justify-content: center;
   padding-top: 50px;
 }
-section #contenido {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-auto-rows: 40% 50% 10%;
-  height: 85%;
-  width: 90%;
-  background: white;
-  justify-self: flex-start;
-  align-self: center;
-  border-radius: 10px;
-  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  background-image: url("../Imagenes/fondo-alt-7.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: fuente1;
-}
-section #contenido #portada {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  margin-top: 30px;
-}
-section #contenido #portada h3 {
-  font-size: 1.75rem;
-  text-decoration: underline;
-  text-align: center;
-}
-section #contenido #portada img {
-  width: 85%;
-  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
-}
-section #contenido #materiales {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-section #contenido #materiales img {
-  width: 200px;
-}
 section #botones {
   display: flex;
-  height: 15%;
+  height: 10%;
   justify-self: end;
+  padding-bottom: 50px;
 }
 
-/*# sourceMappingURL=fundamentos-retrato.css.map */
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  body {
+    grid-template-rows: 110px 45px auto 180px !important;
+    height: 350vh;
+  }
+  #botones {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+/* Medium devices (portrait tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    grid-template-rows: 175px 30px auto 350px;
+    height: 220vh;
+  }
+}/*# sourceMappingURL=fundamentos-retrato.css.map */

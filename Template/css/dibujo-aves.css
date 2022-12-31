@@ -552,8 +552,8 @@ footer #descripcion_footer img {
   font-family: fuente1;
 }
 #botones #completado {
-  height: 60px;
-  width: 220px;
+  height: 50px;
+  width: 200px;
   border-radius: 10px;
   border: none;
   font-family: fuente1;
@@ -572,13 +572,13 @@ footer #descripcion_footer img {
   align-items: center;
   width: 70%;
   margin: 0 auto;
-  height: 60px;
+  height: 50px;
 }
 #botones form p {
   text-align: center;
 }
 #botones form label {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 #botones input[type=radio] {
   display: none;
