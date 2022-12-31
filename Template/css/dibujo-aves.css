@@ -333,17 +333,7 @@ footer #descripcion_footer img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
@@ -385,10 +375,8 @@ footer #descripcion_footer img {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.6);
-  -webkit-animation-name: modal_mobile;
-          animation-name: modal_mobile;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  animation-name: modal_mobile;
+  animation-duration: 0.5s;
 }
 #modal #wrapper_cerrar {
   display: flex;
@@ -421,8 +409,6 @@ footer #descripcion_footer img {
 }
 #modal #contenedor_modal img {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   align-self: center;
 }
@@ -447,17 +433,6 @@ footer #descripcion_footer img {
   transition: 0.5s ease-in-out;
 }
 
-@-webkit-keyframes modal_mobile {
-  0% {
-    width: 42.5%;
-    height: 250px;
-  }
-  100% {
-    width: 85%;
-    height: 500px;
-  }
-}
-
 @keyframes modal_mobile {
   0% {
     width: 42.5%;
@@ -466,16 +441,6 @@ footer #descripcion_footer img {
   100% {
     width: 85%;
     height: 500px;
-  }
-}
-@-webkit-keyframes modal_mobile_horizontal {
-  0% {
-    width: 42.5%;
-    height: 125px;
-  }
-  100% {
-    width: 85%;
-    height: 250px;
   }
 }
 @keyframes modal_mobile_horizontal {
@@ -488,16 +453,6 @@ footer #descripcion_footer img {
     height: 250px;
   }
 }
-@-webkit-keyframes modal_medium {
-  0% {
-    width: 42.5%;
-    height: 500px;
-  }
-  100% {
-    width: 85%;
-    height: 1000px;
-  }
-}
 @keyframes modal_medium {
   0% {
     width: 42.5%;
@@ -508,16 +463,6 @@ footer #descripcion_footer img {
     height: 1000px;
   }
 }
-@-webkit-keyframes modal_large {
-  0% {
-    width: 42.5%;
-    height: 300px;
-  }
-  100% {
-    width: 85%;
-    height: 600px;
-  }
-}
 @keyframes modal_large {
   0% {
     width: 42.5%;
@@ -526,16 +471,6 @@ footer #descripcion_footer img {
   100% {
     width: 85%;
     height: 600px;
-  }
-}
-@-webkit-keyframes modal_extra_large {
-  0% {
-    width: 42.5%;
-    height: 400px;
-  }
-  100% {
-    width: 85%;
-    height: 800px;
   }
 }
 @keyframes modal_extra_large {
@@ -551,8 +486,7 @@ footer #descripcion_footer img {
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
   body #lightbox #modal {
     height: 250px;
-    -webkit-animation-name: modal_mobile_horizontal;
-            animation-name: modal_mobile_horizontal;
+    animation-name: modal_mobile_horizontal;
   }
   body #lightbox #modal #wrapper_cerrar img {
     margin-top: 15px;
@@ -567,8 +501,7 @@ footer #descripcion_footer img {
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   body #lightbox #modal {
     height: 1000px;
-    -webkit-animation-name: modal_medium;
-            animation-name: modal_medium;
+    animation-name: modal_medium;
   }
   body #lightbox #modal #wrapper_cerrar {
     align-items: flex-start;
@@ -582,8 +515,7 @@ footer #descripcion_footer img {
 @media only screen and (min-width: 992px) {
   body #lightbox #modal {
     height: 600px;
-    -webkit-animation-name: modal_large;
-            animation-name: modal_large;
+    animation-name: modal_large;
   }
   body #lightbox #modal #botones_modal {
     width: 95% !important;
@@ -597,16 +529,14 @@ footer #descripcion_footer img {
 @media only screen and (min-width: 1200px) {
   body #lightbox #modal {
     height: 700px;
-    -webkit-animation-name: modal_large;
-            animation-name: modal_large;
+    animation-name: modal_large;
   }
 }
 /* hyper large monitors (large laptops and desktops, 1920px and up) */
 @media only screen and (min-width: 1366px) {
   body #lightbox #modal {
     height: 800px !important;
-    -webkit-animation-name: modal_extra_large;
-            animation-name: modal_extra_large;
+    animation-name: modal_extra_large;
   }
 }
 #botones {
@@ -808,18 +738,6 @@ section #informacion #nota {
   padding-top: 20px;
 }
 
-@-webkit-keyframes fondo {
-  0% {
-    background-image: url("../Imagenes/aguila-proceso.jpg");
-  }
-  50% {
-    background-image: url("../Imagenes/imagen-12.jpg");
-  }
-  100% {
-    background-image: url("../Imagenes/imagen-17-alt.jpg");
-  }
-}
-
 @keyframes fondo {
   0% {
     background-image: url("../Imagenes/aguila-proceso.jpg");
@@ -829,23 +747,6 @@ section #informacion #nota {
   }
   100% {
     background-image: url("../Imagenes/imagen-17-alt.jpg");
-  }
-}
-@-webkit-keyframes movimiento {
-  0% {
-    background-position: left center;
-  }
-  25% {
-    background-position: center center;
-  }
-  50% {
-    background-position: right center;
-  }
-  75% {
-    background-position: center center;
-  }
-  100% {
-    background-position: left center;
   }
 }
 @keyframes movimiento {
@@ -1003,4 +904,6 @@ section #informacion #nota {
   body section #informacion #paso3 {
     margin-bottom: 30px !important;
   }
-}/*# sourceMappingURL=dibujo-aves.css.map */
+}
+
+/*# sourceMappingURL=dibujo-aves.css.map */
