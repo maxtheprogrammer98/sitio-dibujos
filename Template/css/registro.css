@@ -53,7 +53,8 @@ q:before, q:after {
 }
 .menu {
   position: relative;
-  margin: 2.5rem 0 0 2.5rem;
+  top: 2.5rem;
+  left: 2.5rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -129,6 +130,12 @@ q:before, q:after {
   opacity: 1;
 }
 
+@media only screen and (min-width: 768px) {
+  .menu {
+    top: 1.25rem;
+    left: 2.5rem;
+  }
+}
 body {
   background-image: url(../../Imagenes/fondo-version-1.png);
   background-size: cover;
@@ -137,6 +144,8 @@ body {
 }
 
 .form {
+  position: relative;
+  top: 0;
   width: 21.875rem;
   height: auto;
   background-color: #2877ED;
@@ -294,6 +303,34 @@ body {
   color: #6FAEFE;
   text-decoration: underline;
   transition: 0.3s ease all;
+}
+
+@media only screen and (min-width: 768px) {
+  .form {
+    width: 90%;
+    max-width: 53.125rem;
+    margin: 2.5rem auto;
+  }
+  .form__container {
+    width: 95%;
+    margin: 1.5625rem;
+    border-radius: 1.25rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  .form__imagen {
+    width: 12.5rem;
+    display: block;
+    margin: 3.125rem auto 0;
+  }
+  .form__label {
+    width: 95%;
+    margin: 1.25rem auto;
+  }
+  .form__grupo--enviar {
+    position: relative;
+    bottom: 5rem;
+  }
 }
 
 /*# sourceMappingURL=registro.css.map */

@@ -143,3 +143,39 @@ body{
     }
   }
 }
+
+
+@media only screen and (min-width: 768px){
+  .form{
+    width: 90%;
+    max-width: p.rem(850);
+    margin:p.rem(40) auto;
+
+
+    &__container{
+      width:95%;
+      margin:p.rem(25);
+      border-radius: p.rem(20);
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
+    }
+
+    &__imagen{
+      width: p.rem(200);
+      display: block;
+      margin:p.rem(20) auto ;
+    }
+
+    &__label{
+      width: 95%;
+      margin:p.rem(20) auto;
+    }
+
+    &__grupo{
+      &--enviar{
+        position: relative;
+        top: p.rem(20);
+      }
+    }
+  }
+}
