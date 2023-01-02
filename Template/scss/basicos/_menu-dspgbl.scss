@@ -2,7 +2,9 @@
 
 .menu{
   position: relative;
-  margin: p.rem(40) 0 0 p.rem(40);
+  top: p.rem(40);
+  left: p.rem(40);
+  // margin: p.rem(40) 0 0 p.rem(40);
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -86,4 +88,12 @@
 
 .menu__list:hover b{
   opacity: 1;
+}
+
+
+@media only screen and (min-width: 768px){
+  .menu{
+    top: p.rem(20);
+    left: p.rem(40);
+  }
 }
