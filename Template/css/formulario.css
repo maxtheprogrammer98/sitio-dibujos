@@ -51,6 +51,10 @@ q:before, q:after {
   font-family: fuente4;
   src: url("/Template/fuentes/BebasNeue-Regular.ttf");
 }
+@font-face {
+  font-family: fuente5;
+  src: url("/Template/fuentes/LEMONMILK-Medium.otf");
+}
 body {
   background-image: url(../../Imagenes/fondo-version-1.png);
   background-size: cover;

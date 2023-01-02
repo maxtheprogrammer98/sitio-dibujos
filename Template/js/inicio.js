@@ -2,32 +2,22 @@
 let botonAnterior = document.querySelector("#presentacion #img_anterior");
 let botonSiguiente = document.querySelector("#presentacion #img_siguiente");
 let portada = document.querySelector("#presentacion");
-let contador = 0;
+let contador = 50; //valor por default (posicion central)
 
 // FUNCIONES PORTADA:
-botonAnterior.addEventListener("click",function(){
-    if (contador == 0){
-        portada.style.backgroundPosition = "left center";
+botonAnterior.addEventListener("click",()=>{
+    if (contador > 10) {
+        contador -= 20;
+        portada.style.backgroundPosition = `${contador}%`;
         portada.style.transition = "0.5s";
-        contador -= 1;
-    
-    } else if(contador > 0){
-        portada.style.backgroundPosition = "center center";
-        portada.style.transition = "0.5s";
-        contador -= 1;
     }
 })
 
-botonSiguiente.addEventListener("click",function(){
-    if (contador == 0){
-        portada.style.backgroundPosition = "right center";
+botonSiguiente.addEventListener("click",()=>{
+    if (contador < 90) {
+        contador += 20;
+        portada.style.backgroundPosition = `${contador}%`;
         portada.style.transition = "0.5s";
-        contador += 1;
-    
-    } else if(contador < 0){
-        portada.style.backgroundPosition = "center center";
-        portada.style.transition = "0.5s";
-        contador += 1;
     }
 })
 

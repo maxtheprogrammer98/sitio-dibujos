@@ -51,6 +51,10 @@ q:before, q:after {
   font-family: fuente4;
   src: url("/Template/fuentes/BebasNeue-Regular.ttf");
 }
+@font-face {
+  font-family: fuente5;
+  src: url("/Template/fuentes/LEMONMILK-Medium.otf");
+}
 header {
   display: grid;
   grid-column: 1/2;
@@ -456,9 +460,8 @@ section #tutoriales_seccion .tutoriales_item {
   overflow: hidden;
   border-radius: 10px;
   box-sizing: border-box;
-  border: 8px solid #0071CD;
   color: #497262;
-  box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.5);
   background: white;
   background-image: url("../Imagenes/acuarela-izq.png"), url("../Imagenes/acuarela-der.png");
   background-position: bottom left, bottom right;
@@ -492,7 +495,7 @@ section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tut
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: #0071CD;
+  background: linear-gradient(to right top, #008be3, #0092e2, #0098e0, #009edd, #06a3da);
   height: 70px;
   width: 100%;
   color: white;
@@ -508,6 +511,9 @@ section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tut
 section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tuto h4 a {
   color: white;
   text-decoration: none;
+}
+section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .titulo_tuto h4 a:hover {
+  text-decoration: underline;
 }
 section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales ul {
   list-style: none;
@@ -539,14 +545,6 @@ section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_w
 }
 section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales .promedio_wrapper .promedio {
   font-family: fuente2 !important;
-}
-section #tutoriales_seccion .tutoriales_item:hover {
-  transition: 0.5s ease-in-out;
-  border: 8px solid #4693FF;
-}
-section #tutoriales_seccion .tutoriales_item:hover .descripcion_tutoriales .titulo_tuto {
-  transition: 0.5s ease-in-out;
-  background: #4693FF;
 }
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {

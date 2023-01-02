@@ -51,6 +51,10 @@ q:before, q:after {
   font-family: fuente4;
   src: url("/Template/fuentes/BebasNeue-Regular.ttf");
 }
+@font-face {
+  font-family: fuente5;
+  src: url("/Template/fuentes/LEMONMILK-Medium.otf");
+}
 header {
   display: grid;
   grid-column: 1/2;
@@ -694,13 +698,17 @@ footer #descripcion_footer img {
   justify-content: space-evenly;
   grid-column: 1/2;
   grid-row: 1/2;
-  padding-top: 30px;
   background: lightgrey;
+  background-image: url("/Template/Imagenes/mancha-marcador-2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
 }
 #contenido #portada h3 {
+  margin-top: -25px;
   font-size: 1.75rem;
-  text-decoration: underline;
   text-align: center;
+  color: white;
 }
 #contenido #portada img {
   width: 85%;
