@@ -11,9 +11,19 @@
     justify-content: space-evenly;
     align-items: center;
 
-    #mensaje{
+    #mensaje1, #mensaje2{
+        text-align: center;
+        font-size: 0.9rem;
         color: v.$fuente3;
         font-family: fuente1;
+    }
+
+    #completado_label{
+        color:v.$gris3;
+        font-family: fuente1;
+        text-align: center;
+        font-size: 0.9rem;
+        width: 80%;
     }
 
     #completado{

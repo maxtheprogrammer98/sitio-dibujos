@@ -606,13 +606,6 @@ footer #descripcion_footer img {
   }
 }
 /* hyper large monitors (large laptops and desktops, 1920px and up) */
-@media only screen and (min-width: 1366px) {
-  body #lightbox #modal {
-    height: 800px !important;
-    -webkit-animation-name: modal_extra_large;
-            animation-name: modal_extra_large;
-  }
-}
 body {
   display: grid;
   grid-template-columns: 100%;
