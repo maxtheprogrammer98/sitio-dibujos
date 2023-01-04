@@ -51,6 +51,10 @@ q:before, q:after {
   font-family: fuente4;
   src: url("/Template/fuentes/BebasNeue-Regular.ttf");
 }
+@font-face {
+  font-family: fuente5;
+  src: url("/Template/fuentes/LEMONMILK-Medium.otf");
+}
 .menu {
   position: relative;
   top: 2.5rem;
@@ -320,6 +324,4 @@ body {
     position: relative;
     bottom: 5.3125rem;
   }
-}
-
-/*# sourceMappingURL=mi-cuenta.css.map */
+}/*# sourceMappingURL=mi-cuenta.css.map */

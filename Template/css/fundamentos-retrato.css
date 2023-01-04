@@ -51,6 +51,10 @@ q:before, q:after {
   font-family: fuente4;
   src: url("/Template/fuentes/BebasNeue-Regular.ttf");
 }
+@font-face {
+  font-family: fuente5;
+  src: url("/Template/fuentes/LEMONMILK-Medium.otf");
+}
 header {
   display: grid;
   grid-column: 1/2;
@@ -333,7 +337,17 @@ footer #descripcion_footer img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
@@ -375,8 +389,10 @@ footer #descripcion_footer img {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.6);
-  animation-name: modal_mobile;
-  animation-duration: 0.5s;
+  -webkit-animation-name: modal_mobile;
+          animation-name: modal_mobile;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 #modal #wrapper_cerrar {
   display: flex;
@@ -409,6 +425,8 @@ footer #descripcion_footer img {
 }
 #modal #contenedor_modal img {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   align-self: center;
 }
@@ -433,6 +451,17 @@ footer #descripcion_footer img {
   transition: 0.5s ease-in-out;
 }
 
+@-webkit-keyframes modal_mobile {
+  0% {
+    width: 42.5%;
+    height: 250px;
+  }
+  100% {
+    width: 85%;
+    height: 500px;
+  }
+}
+
 @keyframes modal_mobile {
   0% {
     width: 42.5%;
@@ -441,6 +470,16 @@ footer #descripcion_footer img {
   100% {
     width: 85%;
     height: 500px;
+  }
+}
+@-webkit-keyframes modal_mobile_horizontal {
+  0% {
+    width: 42.5%;
+    height: 125px;
+  }
+  100% {
+    width: 85%;
+    height: 250px;
   }
 }
 @keyframes modal_mobile_horizontal {
@@ -453,6 +492,16 @@ footer #descripcion_footer img {
     height: 250px;
   }
 }
+@-webkit-keyframes modal_medium {
+  0% {
+    width: 42.5%;
+    height: 500px;
+  }
+  100% {
+    width: 85%;
+    height: 1000px;
+  }
+}
 @keyframes modal_medium {
   0% {
     width: 42.5%;
@@ -463,6 +512,16 @@ footer #descripcion_footer img {
     height: 1000px;
   }
 }
+@-webkit-keyframes modal_large {
+  0% {
+    width: 42.5%;
+    height: 300px;
+  }
+  100% {
+    width: 85%;
+    height: 600px;
+  }
+}
 @keyframes modal_large {
   0% {
     width: 42.5%;
@@ -471,6 +530,16 @@ footer #descripcion_footer img {
   100% {
     width: 85%;
     height: 600px;
+  }
+}
+@-webkit-keyframes modal_extra_large {
+  0% {
+    width: 42.5%;
+    height: 400px;
+  }
+  100% {
+    width: 85%;
+    height: 800px;
   }
 }
 @keyframes modal_extra_large {
@@ -486,7 +555,8 @@ footer #descripcion_footer img {
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
   body #lightbox #modal {
     height: 250px;
-    animation-name: modal_mobile_horizontal;
+    -webkit-animation-name: modal_mobile_horizontal;
+            animation-name: modal_mobile_horizontal;
   }
   body #lightbox #modal #wrapper_cerrar img {
     margin-top: 15px;
@@ -501,7 +571,8 @@ footer #descripcion_footer img {
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   body #lightbox #modal {
     height: 1000px;
-    animation-name: modal_medium;
+    -webkit-animation-name: modal_medium;
+            animation-name: modal_medium;
   }
   body #lightbox #modal #wrapper_cerrar {
     align-items: flex-start;
@@ -515,7 +586,8 @@ footer #descripcion_footer img {
 @media only screen and (min-width: 992px) {
   body #lightbox #modal {
     height: 600px;
-    animation-name: modal_large;
+    -webkit-animation-name: modal_large;
+            animation-name: modal_large;
   }
   body #lightbox #modal #botones_modal {
     width: 95% !important;
@@ -529,16 +601,11 @@ footer #descripcion_footer img {
 @media only screen and (min-width: 1200px) {
   body #lightbox #modal {
     height: 700px;
-    animation-name: modal_large;
+    -webkit-animation-name: modal_large;
+            animation-name: modal_large;
   }
 }
 /* hyper large monitors (large laptops and desktops, 1920px and up) */
-@media only screen and (min-width: 1366px) {
-  body #lightbox #modal {
-    height: 800px !important;
-    animation-name: modal_extra_large;
-  }
-}
 #botones {
   display: flex;
   flex-direction: column;
@@ -547,9 +614,18 @@ footer #descripcion_footer img {
   justify-content: space-evenly;
   align-items: center;
 }
-#botones #mensaje {
+#botones #mensaje1, #botones #mensaje2 {
+  text-align: center;
+  font-size: 0.9rem;
   color: white;
   font-family: fuente1;
+}
+#botones #completado_label {
+  color: lightgrey;
+  font-family: fuente1;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 80%;
 }
 #botones #completado {
   height: 50px;
@@ -624,13 +700,17 @@ footer #descripcion_footer img {
   justify-content: space-evenly;
   grid-column: 1/2;
   grid-row: 1/2;
-  padding-top: 30px;
   background: lightgrey;
+  background-image: url("/Template/Imagenes/mancha-marcador-2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
 }
 #contenido #portada h3 {
+  margin-top: -25px;
   font-size: 1.75rem;
-  text-decoration: underline;
   text-align: center;
+  color: white;
 }
 #contenido #portada img {
   width: 85%;
@@ -760,6 +840,51 @@ footer #descripcion_footer img {
     font-size: 1.5rem;
   }
 }
+/* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #contenido {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 85% 15%;
+    height: 75%;
+    width: 95%;
+  }
+  #contenido #portada {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #contenido #portada h3 {
+    font-size: 2rem;
+  }
+  #contenido .seccion {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  #contenido .seccion img {
+    width: 140px;
+  }
+  #contenido .seccion h4 {
+    font-size: 1.75rem;
+  }
+  #contenido .seccion p, #contenido .seccion ol {
+    font-size: 1.1rem;
+  }
+  #contenido .seccion video {
+    height: 300px !important;
+    width: 80% !important;
+  }
+  #contenido #cambiar_pagina {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  #contenido #cambiar_pagina p {
+    font-size: 1.2rem;
+  }
+  #botones {
+    height: 25% !important;
+  }
+}
 body {
   display: grid;
   grid-template-columns: 100%;
@@ -785,7 +910,7 @@ section {
 }
 section #botones {
   display: flex;
-  height: 10%;
+  height: 15%;
   justify-self: end;
   padding-bottom: 50px;
 }
@@ -807,5 +932,10 @@ section #botones {
     height: 220vh;
   }
 }
-
-/*# sourceMappingURL=fundamentos-retrato.css.map */
+/* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    grid-template-rows: 150px 45px auto 350px !important;
+    height: 250vh;
+  }
+}/*# sourceMappingURL=fundamentos-retrato.css.map */

@@ -26,7 +26,7 @@ section{
     grid-column: 1/2;
     grid-row: 2/4;
     grid-column: 100%;
-    grid-template-rows: 25% 75%;
+    grid-template-rows: 35% 65%;
     height: 100%;
     width: 100%;
     padding-top: 25px;
@@ -44,12 +44,13 @@ section{
         align-items: center;
         font-family: fuente1;
         color: white;
-        background-position: center;
+        background-position: 50%;
         background-color: rgba($color: #000000, $alpha: .5);
         background-image: url("../Imagenes/portada.jpg");
         background-size: cover;
         background-blend-mode: darken;
         background-repeat: no-repeat;
+        overflow: hidden;
 
         #texto_presentacion{
             display: flex;
@@ -62,14 +63,18 @@ section{
             align-self: center;
 
             #titulo_presentacion{
-                width: 100%;
+                width: 150%;
                 filter: none !important;
                 cursor: auto;
             }
     
             p{
                 text-align: center;
-                width: 90%;
+                width: 95%;
+                font-size: 1.2rem;
+                line-height: 2rem;
+                font-family: fuente1;
+                font-weight: lighter;
             }
     
             #ver_tuto{
@@ -85,8 +90,9 @@ section{
             }
     
             #ver_tuto:hover{
-                font-size: 1.15rem;
-                background: v.$verde1;
+                //font-size: 1.15rem;
+                //background: v.$verde1;
+                filter:brightness(120%);
                 transition: 0.5s;
             }
         }
@@ -130,7 +136,7 @@ section{
             background-position: center;
     
             img{
-                width: 170px;
+                width: 140px;
             }
     
             h4{
@@ -150,10 +156,10 @@ section{
             }
     
         }
-    
+
         .descripciones:hover{
             img{
-                width: 180px;
+                width: 150px;
                 transition: 0.5s ease-in-out;
             }
         }
@@ -191,14 +197,19 @@ section{
 // horizontal phones
 @media only screen and (max-height: 575.98px) and (orientation: landscape){
     body{
-        grid-template-rows: 110px 30px auto 180px !important;
+        grid-template-rows: 110px 45px auto 180px !important;
         height: 500vh !important;
     }
 
     section{
         #presentacion{
             #texto_presentacion{
-                width: 50%;
+                width: 90%;
+                p{font-size: 1rem !important;}
+
+                #titulo_presentacion{
+                    width: 80%;
+                }
             }
         }
     }
@@ -214,8 +225,18 @@ section{
 /* Medium devices (portrait tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     body{
-        grid-template-rows: 175px 30px auto 350px;
+        grid-template-rows: 175px 45px auto 350px;
         height: 200vh;
+
+        section #presentacion{
+            #titulo_presentacion{
+                width: 80% !important;
+            }
+            #texto_presentacion p{
+                font-size: 1.8rem !important;
+                line-height: 2.5rem;
+            }
+        }
     }
 
 }
@@ -223,7 +244,7 @@ section{
 /* Large devices (horizontal tablets / laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     body{
-        grid-template-rows: 150px 30px auto 350px;
+        grid-template-rows: 150px 45px auto 350px;
         height: 300vh;
 
         section{
@@ -239,10 +260,6 @@ section{
 
                     #ver_tuto{
                         font-size: 1.5rem;
-                    }
-
-                    #ver_tuto:hover{
-                        font-size: 1.6rem;
                     }
                 }
 
@@ -267,6 +284,9 @@ section{
             grid-template-rows: 45% 55%;
 
             #presentacion{
+                #titulo_presentacion{
+                    width: 70% !important;
+                }
                 h3{
                     font-size: 3rem;
                 }
@@ -280,10 +300,6 @@ section{
                 #ver_tuto{
                     font-size: 1.5rem;
                 }
-
-                #ver_tuto:hover{
-                    font-size: 1.6rem;
-                }
             }
 
             #contenedor{
@@ -293,6 +309,10 @@ section{
                 height: 100%;
                 width: 100%;
                 background: v.$gris3;
+                // background-image: url("../Imagenes/fondo-alt-7.jpg");
+                // background-size: 100% auto;
+                // background-repeat: no-repeat;
+                // background-blend-mode: multiply;
 
                 .descripciones{
                     width: 30%;

@@ -1,4 +1,5 @@
 // ELEMENTOS DOM:
+const cuerpo = document.querySelector("body");
 const botonesSecciones = document.querySelectorAll("#cambiar_pagina p");
 const botonMateriales = document.querySelector("#materiales_boton");
 botonMateriales.style.filter = "opacity(100%)";
@@ -19,6 +20,11 @@ function crearEventos(){
 }
 
 function cambiarDisplay(boton){
+    //regresa al tope superior de la pagina
+    window.scrollTo({
+        top: 50,
+        behavior: "smooth"
+    });
     // muestra la seccion seleccionada ocultando las otras
     // (cambiando la prop. display):
     botonSeleccionado = boton.target.id;

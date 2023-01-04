@@ -51,6 +51,10 @@ q:before, q:after {
   font-family: fuente4;
   src: url("/Template/fuentes/BebasNeue-Regular.ttf");
 }
+@font-face {
+  font-family: fuente5;
+  src: url("/Template/fuentes/LEMONMILK-Medium.otf");
+}
 header {
   display: grid;
   grid-column: 1/2;
@@ -533,12 +537,6 @@ footer #descripcion_footer img {
   }
 }
 /* hyper large monitors (large laptops and desktops, 1920px and up) */
-@media only screen and (min-width: 1366px) {
-  body #lightbox #modal {
-    height: 800px !important;
-    animation-name: modal_extra_large;
-  }
-}
 body {
   display: grid;
   grid-template-columns: 100%;

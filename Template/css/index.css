@@ -51,6 +51,10 @@ q:before, q:after {
   font-family: fuente4;
   src: url("/Template/fuentes/BebasNeue-Regular.ttf");
 }
+@font-face {
+  font-family: fuente5;
+  src: url("/Template/fuentes/LEMONMILK-Medium.otf");
+}
 header {
   display: grid;
   grid-column: 1/2;
@@ -366,7 +370,7 @@ section {
   grid-column: 1/2;
   grid-row: 2/4;
   grid-column: 100%;
-  grid-template-rows: 25% 75%;
+  grid-template-rows: 35% 65%;
   height: 100%;
   width: 100%;
   padding-top: 25px;
@@ -382,12 +386,13 @@ section #presentacion {
   align-items: center;
   font-family: fuente1;
   color: white;
-  background-position: center;
+  background-position: 50%;
   background-color: rgba(0, 0, 0, 0.5);
   background-image: url("../Imagenes/portada.jpg");
   background-size: cover;
   background-blend-mode: darken;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 section #presentacion #texto_presentacion {
   display: flex;
@@ -400,13 +405,17 @@ section #presentacion #texto_presentacion {
   align-self: center;
 }
 section #presentacion #texto_presentacion #titulo_presentacion {
-  width: 100%;
+  width: 150%;
   filter: none !important;
   cursor: auto;
 }
 section #presentacion #texto_presentacion p {
   text-align: center;
-  width: 90%;
+  width: 95%;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-family: fuente1;
+  font-weight: lighter;
 }
 section #presentacion #texto_presentacion #ver_tuto {
   font-family: fuente1;
@@ -420,8 +429,7 @@ section #presentacion #texto_presentacion #ver_tuto {
   color: white;
 }
 section #presentacion #texto_presentacion #ver_tuto:hover {
-  font-size: 1.15rem;
-  background: #01BBBE;
+  filter: brightness(120%);
   transition: 0.5s;
 }
 section #presentacion img {
@@ -455,7 +463,7 @@ section #contenedor .descripciones {
   background-position: center;
 }
 section #contenedor .descripciones img {
-  width: 170px;
+  width: 140px;
 }
 section #contenedor .descripciones h4 {
   font-size: 1.5rem;
@@ -472,7 +480,7 @@ section #contenedor .descripciones p {
   color: grey;
 }
 section #contenedor .descripciones:hover img {
-  width: 180px;
+  width: 150px;
   transition: 0.5s ease-in-out;
 }
 section #contenedor #tutoriales_inicio {
@@ -498,11 +506,17 @@ section #contenedor #tutoriales_inicio p {
 }
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
   body {
-    grid-template-rows: 110px 30px auto 180px !important;
+    grid-template-rows: 110px 45px auto 180px !important;
     height: 500vh !important;
   }
   section #presentacion #texto_presentacion {
-    width: 50%;
+    width: 90%;
+  }
+  section #presentacion #texto_presentacion p {
+    font-size: 1rem !important;
+  }
+  section #presentacion #texto_presentacion #titulo_presentacion {
+    width: 80%;
   }
   .descripciones img {
     width: 125px !important;
@@ -511,14 +525,21 @@ section #contenedor #tutoriales_inicio p {
 /* Medium devices (portrait tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   body {
-    grid-template-rows: 175px 30px auto 350px;
+    grid-template-rows: 175px 45px auto 350px;
     height: 200vh;
+  }
+  body section #presentacion #titulo_presentacion {
+    width: 80% !important;
+  }
+  body section #presentacion #texto_presentacion p {
+    font-size: 1.8rem !important;
+    line-height: 2.5rem;
   }
 }
 /* Large devices (horizontal tablets / laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   body {
-    grid-template-rows: 150px 30px auto 350px;
+    grid-template-rows: 150px 45px auto 350px;
     height: 300vh;
   }
   body section #presentacion #texto_presentacion #titulo_presentacion {
@@ -529,9 +550,6 @@ section #contenedor #tutoriales_inicio p {
   }
   body section #presentacion #texto_presentacion #ver_tuto {
     font-size: 1.5rem;
-  }
-  body section #presentacion #texto_presentacion #ver_tuto:hover {
-    font-size: 1.6rem;
   }
   body section #presentacion img {
     margin: 0 !important;
@@ -546,6 +564,9 @@ section #contenedor #tutoriales_inicio p {
   body section {
     grid-template-rows: 45% 55%;
   }
+  body section #presentacion #titulo_presentacion {
+    width: 70% !important;
+  }
   body section #presentacion h3 {
     font-size: 3rem;
   }
@@ -556,9 +577,6 @@ section #contenedor #tutoriales_inicio p {
   }
   body section #presentacion #ver_tuto {
     font-size: 1.5rem;
-  }
-  body section #presentacion #ver_tuto:hover {
-    font-size: 1.6rem;
   }
   body section #contenedor {
     flex-direction: row;
