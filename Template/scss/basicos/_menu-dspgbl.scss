@@ -13,13 +13,13 @@
     position: relative;
     width: 45px;
     height: 45px;
-    background: p.$celeste2;
+    background: rgba(0,0,0,0.15);
     border-radius: 50%;
     box-shadow: 0 3px 4px rgba(0,0,0,0.15);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: p.$celeste2;
     cursor: pointer;
     font-size: 1.5em;
     transition: 1.25s ;
@@ -45,7 +45,7 @@
       // transform: rotate(calc(300deg + 130deg + 90deg/2 * var(--i)));
       width: 40px;
       height: 40px;
-      background:#333;
+      background:rgba(0,0,0,0.15);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -61,7 +61,7 @@
 
   &__list:hover &__list--link{
     font-size: 1.75em;
-    box-shadow: 0 0 0 2px var(--clr), 0 0 0 6px #333;
+    box-shadow: 0 0 0 2px var(--clr), 0 0 0 6px rgba(0,0,0,0.15);
 
   }
   
@@ -71,17 +71,18 @@
   scale: 1;
 }
 
+
 .menu.active .menu__toggle{
   transform: rotate(360deg);
-  box-shadow: 0 6px 8px rgba(0,0,0,0.15), 0 0 0 2px #fff, 0 0 0 8px p.$celeste2;
+  box-shadow: 0 6px 8px rgba(0,0,0,0.15), 0 0 0 2px p.$azul1, 0 0 0 8px rgba(0,0,0,0.15);
 }
 
 .menu__list b{
   position: relative;
   left:p.rem(50);
   bottom:p.rem(30);
-  color: #000;
-  text-shadow: 0 4px 6px var(--clr);
+  color: #fff;
+  text-shadow: 0 0 15px var(--clr);
   opacity: 0;
   transition: 0.5s ease all;
 }

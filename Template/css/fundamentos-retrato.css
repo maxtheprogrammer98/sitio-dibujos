@@ -647,10 +647,8 @@ footer #descripcion_footer img {
   align-items: center;
   grid-column: 1/2;
   grid-row: 2/3;
-  -webkit-animation-name: efecto_seccion;
-          animation-name: efecto_seccion;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  animation-name: efecto_seccion;
+  animation-duration: 0.5s;
 }
 #contenido .seccion img {
   width: 100px;
@@ -694,15 +692,6 @@ footer #descripcion_footer img {
 #contenido #cambiar_pagina p:hover {
   filter: opacity(100%);
   transition: 0.5s;
-}
-
-@-webkit-keyframes efecto_seccion {
-  0% {
-    filter: opacity(0%);
-  }
-  100% {
-    filter: opacity(100%);
-  }
 }
 
 @keyframes efecto_seccion {
@@ -817,4 +806,6 @@ section #botones {
     grid-template-rows: 175px 30px auto 350px;
     height: 220vh;
   }
-}/*# sourceMappingURL=fundamentos-retrato.css.map */
+}
+
+/*# sourceMappingURL=fundamentos-retrato.css.map */

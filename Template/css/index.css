@@ -333,17 +333,7 @@ footer #descripcion_footer img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
@@ -495,18 +485,6 @@ section #contenedor #tutoriales_inicio p {
   color: white;
 }
 
-@-webkit-keyframes fondo {
-  0% {
-    background-image: url("../Imagenes/imagen-12.jpg");
-  }
-  50% {
-    background-image: url("../Imagenes/imagen-17.jpg");
-  }
-  100% {
-    background-image: url("../Imagenes/aguila-proceso.jpg");
-  }
-}
-
 @keyframes fondo {
   0% {
     background-image: url("../Imagenes/imagen-12.jpg");
@@ -609,4 +587,6 @@ section #contenedor #tutoriales_inicio p {
   body section #contenedor #tutoriales_inicio img {
     content: url("../Imagenes/icono-tutoriales-alt.png");
   }
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
