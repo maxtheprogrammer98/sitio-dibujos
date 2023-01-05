@@ -1,6 +1,6 @@
 // ELEMENTOS DOM:
 const cuerpo = document.querySelector("body");
-const botonesSecciones = document.querySelectorAll("#cambiar_pagina p");
+const botonesSecciones = document.querySelectorAll("#cambiar_pagina img");
 const botonMateriales = document.querySelector("#materiales_boton");
 botonMateriales.style.filter = "opacity(100%)";
 const secciones = document.querySelectorAll(".secciones");
@@ -20,11 +20,13 @@ function crearEventos(){
 }
 
 function cambiarDisplay(boton){
-    //regresa al tope superior de la pagina
-    window.scrollTo({
-        top: 50,
-        behavior: "smooth"
-    });
+    //regresa al tope superior de la pagina (solo en disp. moviles)
+    if(window.matchMedia("max-width(768px)").matches){
+        window.scrollTo({
+            top: 50,
+            behavior: "smooth"
+        });
+    }
     // muestra la seccion seleccionada ocultando las otras
     // (cambiando la prop. display):
     botonSeleccionado = boton.target.id;
@@ -32,9 +34,9 @@ function cambiarDisplay(boton){
     // resalta el boton de la seccion seleccionada:
     botonesSecciones.forEach(element => {
         if (element == botonSeleccionadoDOM){
-            element.style.filter = "opacity(100%)";
+            element.style.filter = "grayscale(0%) opacity(100%)";
         } else {
-            element.style.filter = "opacity(70%)";
+            element.style.filter = "grayscale(100%) opacity(70%)";
         }
     });
 

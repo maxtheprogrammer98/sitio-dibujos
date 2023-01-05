@@ -727,8 +727,10 @@ footer #descripcion_footer img {
   align-items: center;
   grid-column: 1/2;
   grid-row: 2/3;
-  animation-name: efecto_seccion;
-  animation-duration: 0.5s;
+  -webkit-animation-name: efecto_seccion;
+          animation-name: efecto_seccion;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 #contenido .seccion img {
   width: 100px;
@@ -765,13 +767,23 @@ footer #descripcion_footer img {
   align-items: center;
   letter-spacing: 5px;
 }
-#contenido #cambiar_pagina p {
+#contenido #cambiar_pagina img {
+  width: 30px;
   cursor: pointer;
-  filter: opacity(70%);
+  filter: opacity(70%) grayscale(100%);
 }
-#contenido #cambiar_pagina p:hover {
+#contenido #cambiar_pagina img:hover {
   filter: opacity(100%);
   transition: 0.5s;
+}
+
+@-webkit-keyframes efecto_seccion {
+  0% {
+    filter: opacity(0%);
+  }
+  100% {
+    filter: opacity(100%);
+  }
 }
 
 @keyframes efecto_seccion {
@@ -846,7 +858,7 @@ footer #descripcion_footer img {
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 85% 15%;
-    height: 75%;
+    height: 70%;
     width: 95%;
   }
   #contenido #portada {
@@ -862,27 +874,36 @@ footer #descripcion_footer img {
     grid-row: 1/2;
   }
   #contenido .seccion img {
-    width: 140px;
+    width: 120px;
   }
   #contenido .seccion h4 {
     font-size: 1.75rem;
   }
   #contenido .seccion p, #contenido .seccion ol {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
   }
   #contenido .seccion video {
-    height: 300px !important;
-    width: 80% !important;
+    height: 200px !important;
+    width: 70% !important;
+    margin-bottom: 20px;
+  }
+  #contenido #video img {
+    width: 90px !important;
+  }
+  #contenido #video b i {
+    margin-top: 10px !important;
+    color: red;
   }
   #contenido #cambiar_pagina {
     grid-column: 2/3;
     grid-row: 2/3;
   }
-  #contenido #cambiar_pagina p {
-    font-size: 1.2rem;
+  #contenido #cambiar_pagina img {
+    width: 25px;
   }
   #botones {
-    height: 25% !important;
+    height: 30% !important;
   }
 }
 body {
@@ -902,7 +923,10 @@ section {
   flex-direction: column;
   grid-column: 1/2;
   grid-row: 3/4;
-  background: #333333;
+  background-image: url("../Imagenes/background03.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100%;
   width: 100%;
   justify-content: center;
@@ -936,6 +960,6 @@ section #botones {
 @media only screen and (min-width: 992px) {
   body {
     grid-template-rows: 150px 45px auto 350px !important;
-    height: 250vh;
+    height: 200vh;
   }
 }/*# sourceMappingURL=fundamentos-retrato.css.map */
