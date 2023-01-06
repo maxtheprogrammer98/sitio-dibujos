@@ -20,7 +20,8 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size:cover;
-    font-family: fuente1;
+    font-family: quicksand;
+    font-weight: bold;
     
     #portada{
         display: flex;
@@ -40,6 +41,7 @@
             font-size: 1.75rem;
             text-align: center;
             color: white;
+            font-family: fuente1;
         }
 
         img{
@@ -73,6 +75,7 @@
             font-size: 1.7rem;
             text-align: center;
             margin: 10px;
+            font-family: fuente1;
         }
         ol{
             width: 90%;

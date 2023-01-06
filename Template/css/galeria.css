@@ -57,55 +57,55 @@ q:before, q:after {
 }
 @font-face {
   font-family: quicksand;
-  src: url("../../fuentes/quicksand/Quicksand-Regular.otf");
+  src: url("/Template/fuentes/quicksand/Quicksand-Regular.otf");
 }
 @font-face {
   font-family: hattori;
-  src: url("../../fuentes/Hattori-Hanzo/Hattori_Hanzo.otf");
+  src: url("/Template/fuentes/Hattori-Hanzo/Hattori_Hanzo.otf");
 }
 @font-face {
   font-family: walkway;
-  src: url("../../fuentes/Walkway/Walkway_Black.ttf");
+  src: url("/Template/fuentes/Walkway/Walkway_Black.ttf");
 }
 @font-face {
   font-family: tulia;
-  src: url("../../fuentes/tulia/Tulia_regular.otf");
+  src: url("/Template/fuentes/tulia/Tulia_regular.otf");
 }
 @font-face {
   font-family: bodonitown;
-  src: url("../../fuentes/Bodonitown/Bodonitown.ttf");
+  src: url("/Template/fuentes/Bodonitown/Bodonitown.ttf");
 }
 @font-face {
   font-family: bebas;
-  src: url("../../fuentes/Bebas_Neue/BebasNeue-Regular.ttf");
+  src: url("/Template/fuentes/Bebas_Neue/BebasNeue-Regular.ttf");
 }
 @font-face {
   font-family: lora;
-  src: url("../../fuentes/Lora/Lora-VariableFont_wght.ttf");
+  src: url("/Template/fuentes/Lora/Lora-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: spectral;
-  src: url("../../fuentes/Spectral_SC/SpectralSC-Light.ttf");
+  src: url("/Template/fuentes/Spectral_SC/SpectralSC-Light.ttf");
 }
 @font-face {
   font-family: stoke;
-  src: url("../../fuentes/Stoke/Stoke-Light.ttf");
+  src: url("/Template/fuentes/Stoke/Stoke-Light.ttf");
 }
 @font-face {
   font-family: mate;
-  src: url("../../fuentes/Mate_SC/MateSC-Regular.ttf");
+  src: url("/Template/fuentes/Mate_SC/MateSC-Regular.ttf");
 }
 @font-face {
   font-family: port;
-  src: url("../../fuentes/Port_Lligat_Slab/PortLligatSlab-Regular.ttf");
+  src: url("/Template/fuentes/Port_Lligat_Slab/PortLligatSlab-Regular.ttf");
 }
 @font-face {
   font-family: goudy;
-  src: url("../../fuentes/Goudy_Bookletter_1911/GoudyBookletter1911-Regular.ttf");
+  src: url("/Template/fuentes/Goudy_Bookletter_1911/GoudyBookletter1911-Regular.ttf");
 }
 @font-face {
   font-family: della;
-  src: url("../../fuentes/Della_Respira/DellaRespira-Regular.ttf");
+  src: url("/Template/fuentes/Della_Respira/DellaRespira-Regular.ttf");
 }
 header {
   display: grid;
@@ -319,14 +319,16 @@ footer #descripcion_footer {
   justify-content: center;
   align-items: center;
   align-self: flex-end;
-  font-family: fuente1;
+  font-family: quicksand;
   text-align: center;
   color: white;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 footer #descripcion_footer img {
   width: 40px;
   margin-left: 10px;
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
 }
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
@@ -389,7 +391,17 @@ footer #descripcion_footer img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
@@ -431,8 +443,10 @@ footer #descripcion_footer img {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.6);
-  animation-name: modal_mobile;
-  animation-duration: 0.5s;
+  -webkit-animation-name: modal_mobile;
+          animation-name: modal_mobile;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 #modal #wrapper_cerrar {
   display: flex;
@@ -465,6 +479,8 @@ footer #descripcion_footer img {
 }
 #modal #contenedor_modal img {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   align-self: center;
 }
@@ -489,6 +505,17 @@ footer #descripcion_footer img {
   transition: 0.5s ease-in-out;
 }
 
+@-webkit-keyframes modal_mobile {
+  0% {
+    width: 42.5%;
+    height: 250px;
+  }
+  100% {
+    width: 85%;
+    height: 500px;
+  }
+}
+
 @keyframes modal_mobile {
   0% {
     width: 42.5%;
@@ -497,6 +524,16 @@ footer #descripcion_footer img {
   100% {
     width: 85%;
     height: 500px;
+  }
+}
+@-webkit-keyframes modal_mobile_horizontal {
+  0% {
+    width: 42.5%;
+    height: 125px;
+  }
+  100% {
+    width: 85%;
+    height: 250px;
   }
 }
 @keyframes modal_mobile_horizontal {
@@ -509,6 +546,16 @@ footer #descripcion_footer img {
     height: 250px;
   }
 }
+@-webkit-keyframes modal_medium {
+  0% {
+    width: 42.5%;
+    height: 500px;
+  }
+  100% {
+    width: 85%;
+    height: 1000px;
+  }
+}
 @keyframes modal_medium {
   0% {
     width: 42.5%;
@@ -519,6 +566,16 @@ footer #descripcion_footer img {
     height: 1000px;
   }
 }
+@-webkit-keyframes modal_large {
+  0% {
+    width: 42.5%;
+    height: 300px;
+  }
+  100% {
+    width: 85%;
+    height: 600px;
+  }
+}
 @keyframes modal_large {
   0% {
     width: 42.5%;
@@ -527,6 +584,16 @@ footer #descripcion_footer img {
   100% {
     width: 85%;
     height: 600px;
+  }
+}
+@-webkit-keyframes modal_extra_large {
+  0% {
+    width: 42.5%;
+    height: 400px;
+  }
+  100% {
+    width: 85%;
+    height: 800px;
   }
 }
 @keyframes modal_extra_large {
@@ -542,7 +609,8 @@ footer #descripcion_footer img {
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
   body #lightbox #modal {
     height: 250px;
-    animation-name: modal_mobile_horizontal;
+    -webkit-animation-name: modal_mobile_horizontal;
+            animation-name: modal_mobile_horizontal;
   }
   body #lightbox #modal #wrapper_cerrar img {
     margin-top: 15px;
@@ -557,7 +625,8 @@ footer #descripcion_footer img {
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   body #lightbox #modal {
     height: 1000px;
-    animation-name: modal_medium;
+    -webkit-animation-name: modal_medium;
+            animation-name: modal_medium;
   }
   body #lightbox #modal #wrapper_cerrar {
     align-items: flex-start;
@@ -571,7 +640,8 @@ footer #descripcion_footer img {
 @media only screen and (min-width: 992px) {
   body #lightbox #modal {
     height: 600px;
-    animation-name: modal_large;
+    -webkit-animation-name: modal_large;
+            animation-name: modal_large;
   }
   body #lightbox #modal #botones_modal {
     width: 95% !important;
@@ -585,7 +655,8 @@ footer #descripcion_footer img {
 @media only screen and (min-width: 1200px) {
   body #lightbox #modal {
     height: 700px;
-    animation-name: modal_large;
+    -webkit-animation-name: modal_large;
+            animation-name: modal_large;
   }
 }
 /* hyper large monitors (large laptops and desktops, 1920px and up) */
@@ -655,7 +726,8 @@ section .item_galeria:hover {
   }
   body #lightbox #modal {
     height: 600px;
-    animation-name: modal_large;
+    -webkit-animation-name: modal_large;
+            animation-name: modal_large;
   }
   body #lightbox #modal #botones_modal {
     width: 95% !important;
@@ -670,6 +742,4 @@ section .item_galeria:hover {
   body {
     height: 250vh;
   }
-}
-
-/*# sourceMappingURL=galeria.css.map */
+}/*# sourceMappingURL=galeria.css.map */

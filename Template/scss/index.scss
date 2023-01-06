@@ -73,12 +73,12 @@ section{
                 width: 95%;
                 font-size: 1.2rem;
                 line-height: 2rem;
-                font-family: fuente1;
+                font-family: quicksand;
                 font-weight: lighter;
             }
     
             #ver_tuto{
-                font-family: fuente1;
+                font-family: quicksand;
                 font-size: 1.1rem;
                 padding: 10px;
                 border-radius: 10px;
@@ -144,7 +144,7 @@ section{
                 margin-bottom: 10px;
                 text-decoration: underline;
                 a{
-                    color: v.$gris1;
+                    color:#454444;
                     text-decoration: none;
                 }
             }
@@ -153,6 +153,7 @@ section{
                 text-align: center;
                 width: 90%;
                 color: v.$gris2;
+                font-family: quicksand;
             }
     
         }
@@ -169,7 +170,7 @@ section{
             background-image: url("../Imagenes/fondo-alt-3.jpg");
 
             h4 a{
-                color: v.$fuente3;    
+                color:v.$fuente3;   
             }
 
             p{
@@ -285,7 +286,7 @@ section{
 
             #presentacion{
                 #titulo_presentacion{
-                    width: 70% !important;
+                    width: 60% !important;
                 }
                 h3{
                     font-size: 3rem;
@@ -326,7 +327,7 @@ section{
                     background-image: url("../Imagenes/fondo-alt-4.jpg");
                     
                     h4 a{
-                        color: v.$gris1 !important;
+                        color:#454444 !important;
                     }
 
                     p{

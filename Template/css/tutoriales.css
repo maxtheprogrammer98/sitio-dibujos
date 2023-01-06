@@ -57,55 +57,55 @@ q:before, q:after {
 }
 @font-face {
   font-family: quicksand;
-  src: url("../../fuentes/quicksand/Quicksand-Regular.otf");
+  src: url("/Template/fuentes/quicksand/Quicksand-Regular.otf");
 }
 @font-face {
   font-family: hattori;
-  src: url("../../fuentes/Hattori-Hanzo/Hattori_Hanzo.otf");
+  src: url("/Template/fuentes/Hattori-Hanzo/Hattori_Hanzo.otf");
 }
 @font-face {
   font-family: walkway;
-  src: url("../../fuentes/Walkway/Walkway_Black.ttf");
+  src: url("/Template/fuentes/Walkway/Walkway_Black.ttf");
 }
 @font-face {
   font-family: tulia;
-  src: url("../../fuentes/tulia/Tulia_regular.otf");
+  src: url("/Template/fuentes/tulia/Tulia_regular.otf");
 }
 @font-face {
   font-family: bodonitown;
-  src: url("../../fuentes/Bodonitown/Bodonitown.ttf");
+  src: url("/Template/fuentes/Bodonitown/Bodonitown.ttf");
 }
 @font-face {
   font-family: bebas;
-  src: url("../../fuentes/Bebas_Neue/BebasNeue-Regular.ttf");
+  src: url("/Template/fuentes/Bebas_Neue/BebasNeue-Regular.ttf");
 }
 @font-face {
   font-family: lora;
-  src: url("../../fuentes/Lora/Lora-VariableFont_wght.ttf");
+  src: url("/Template/fuentes/Lora/Lora-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: spectral;
-  src: url("../../fuentes/Spectral_SC/SpectralSC-Light.ttf");
+  src: url("/Template/fuentes/Spectral_SC/SpectralSC-Light.ttf");
 }
 @font-face {
   font-family: stoke;
-  src: url("../../fuentes/Stoke/Stoke-Light.ttf");
+  src: url("/Template/fuentes/Stoke/Stoke-Light.ttf");
 }
 @font-face {
   font-family: mate;
-  src: url("../../fuentes/Mate_SC/MateSC-Regular.ttf");
+  src: url("/Template/fuentes/Mate_SC/MateSC-Regular.ttf");
 }
 @font-face {
   font-family: port;
-  src: url("../../fuentes/Port_Lligat_Slab/PortLligatSlab-Regular.ttf");
+  src: url("/Template/fuentes/Port_Lligat_Slab/PortLligatSlab-Regular.ttf");
 }
 @font-face {
   font-family: goudy;
-  src: url("../../fuentes/Goudy_Bookletter_1911/GoudyBookletter1911-Regular.ttf");
+  src: url("/Template/fuentes/Goudy_Bookletter_1911/GoudyBookletter1911-Regular.ttf");
 }
 @font-face {
   font-family: della;
-  src: url("../../fuentes/Della_Respira/DellaRespira-Regular.ttf");
+  src: url("/Template/fuentes/Della_Respira/DellaRespira-Regular.ttf");
 }
 header {
   display: grid;
@@ -319,14 +319,16 @@ footer #descripcion_footer {
   justify-content: center;
   align-items: center;
   align-self: flex-end;
-  font-family: fuente1;
+  font-family: quicksand;
   text-align: center;
   color: white;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 footer #descripcion_footer img {
   width: 40px;
   margin-left: 10px;
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
 }
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
@@ -389,7 +391,17 @@ footer #descripcion_footer img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
@@ -515,6 +527,8 @@ section #tutoriales_seccion .tutoriales_item .portada_tutoriales {
 }
 section #tutoriales_seccion .tutoriales_item .portada_tutoriales img {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales {
@@ -705,6 +719,4 @@ section #tutoriales_seccion .tutoriales_item:hover {
   body {
     height: 300vh;
   }
-}
-
-/*# sourceMappingURL=tutoriales.css.map */
+}/*# sourceMappingURL=tutoriales.css.map */
