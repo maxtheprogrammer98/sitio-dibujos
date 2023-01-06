@@ -1,10 +1,12 @@
 @use 'partials/' as p;
 @use 'basicos/menu-dspgbl';
+@use 'partials/fuentes';
 
 body{
   overflow-x: hidden;
   background-image:url(../Imagenes/background03.jpg);
   @include p.ajustar-imagen;
+  font-family: della;
 }
 
 .form{
