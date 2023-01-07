@@ -52,7 +52,7 @@ section{
 @media only screen and (max-height: 575.98px) and (orientation: landscape){
     body{
         grid-template-rows: 110px 45px auto 180px !important;
-        height: 350vh;
+        height: 600vh !important;
     }
 
     #botones{

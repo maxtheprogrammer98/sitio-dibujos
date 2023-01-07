@@ -21,7 +21,6 @@
     background-repeat: no-repeat;
     background-size:cover;
     font-family: quicksand;
-    font-weight: bold;
     
     #portada{
         display: flex;
@@ -78,6 +77,7 @@
             font-family: fuente1;
         }
         ol{
+            font-size: 1.2rem;
             width: 90%;
             li{
                 margin-bottom: 10px;
@@ -87,16 +87,30 @@
         }
         p{
             width: 90%;
+            font-size: 1.2rem;
         }
+        b i{color: rgb(235, 2, 2);}
     }
 
     #cambiar_pagina{
         display: flex;
         grid-column: 1/2;
         grid-row: 3/4;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         letter-spacing: 5px;
+
+        #paginas{
+            display: flex;
+        }
+
+        #next_seccion, #prev_seccion{
+            width: 40px;
+        }
+
+        #next_seccion{margin-right: 20px;}
+        #prev_seccion{margin-left: 20px;}
+
         img{
             width: 30px;
             cursor: pointer;
@@ -119,39 +133,22 @@
 //--------------------- MEDIA QUERIES -----------------------//
 // horizontal phones
 @media only screen and (max-height: 575.98px) and (orientation: landscape){
-    // en esta vista se modifica el grid
     #contenido{
-        grid-template-columns: 30% 70%;
-        grid-template-rows: 90% 10%;
+        //orden: portada / seccion / cambiar_pagina
+        grid-template-rows: 40% 55% 5%;
 
         #portada{
-            grid-column: 1/2;
-            grid-row: 1/3;
-            background: v.$gris2;
-            //height: 100%;
-            //width: 100%;
-            margin: 0;
-            h3{
-                font-size: 1.5rem;
-                text-decoration: none;
-                color: v.$fuente3;
-            }
+            overflow: hidden !important;
+            background-size: 100% 30%;
+            h3{font-size: 2rem !important;}
+            img{max-width: 275px !important;}
         }
 
         .seccion{
-            grid-column: 2/3;
-            grid-row: 1/2;
-        }
-
-        #video{
-            video{
-                height: 300px;
-            }
-        }
-
-        #cambiar_pagina{
-            grid-column: 2/3;
-            grid-row: 2/3;
+            img{max-width: 125px !important;}
+            h4{font-size: 2rem !important;}
+            p,ol{font-size: 1rem;}
+            video{max-height: 200px !important;}
         }
     }
 }
@@ -163,6 +160,7 @@
         grid-template-rows: 35% 55% 10%;
 
         #portada{
+            background-size: 100% 30%;
             padding-top: 20px;
             img{
                 margin-top: 20px;
@@ -205,7 +203,7 @@
             img{width: 120px;}
             h4{font-size: 1.75rem;}
             p,ol{
-                font-size: 1rem;
+                font-size: 1.1rem;
                 line-height:1.4rem;}
             video{
                 height: 200px !important;

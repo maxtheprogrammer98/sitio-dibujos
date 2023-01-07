@@ -458,7 +458,7 @@ footer #descripcion_footer img {
   align-items: center;
 }
 #modal #wrapper_cerrar img {
-  width: 60px;
+  width: 40px;
   margin-right: 10px;
   z-index: 500;
   cursor: pointer;
@@ -495,7 +495,7 @@ footer #descripcion_footer img {
   align-items: center;
 }
 #modal #botones_modal img {
-  width: 50px;
+  width: 40px;
   z-index: 600;
   filter: opacity(50%);
   cursor: pointer;

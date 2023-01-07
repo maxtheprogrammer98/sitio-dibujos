@@ -5,6 +5,8 @@ let scrollDistance = null;
 let lightbox = null;
 let modal = null;
 let iconoCerrar = null;
+const resolucionMovil = window.matchMedia("(max-width: 768px)");
+const resolucionGrande = window.matchMedia("(min-width: 768px)");
 
 // FUNCIONALIDADES (para crear modal):
 function agregandoEvento(){
@@ -16,7 +18,11 @@ function crearModal(){
     // 1ro se crea el "fondo" (lightbox)
     body.appendChild(document.createElement("div")).setAttribute("id","lightbox");
     lightbox = document.querySelector("#lightbox");
-    lightbox.style.paddingTop = `${scrollDistance.top + 75}px`;
+    if (resolucionMovil.matches) {
+        lightbox.style.paddingTop = `${scrollDistance.top + 75}px`;
+    } else if(resolucionGrande.matches){
+        lightbox.style.paddingTop = `${scrollDistance.top - 200}px`;
+    }
     
     // 2do se crea la ventana modal
     lightbox.appendChild(document.createElement("div")).setAttribute("id","modal");
