@@ -197,10 +197,6 @@ header #header_opciones {
   z-index: 100;
 }
 
-#nav li {
-  list-style: none;
-}
-
 #nav li:hover {
   text-decoration: underline;
 }
@@ -208,6 +204,16 @@ header #header_opciones {
 #nav li a {
   text-decoration: none;
   color: white;
+}
+
+#nav #inicio {
+  list-style: url("../../Imagenes/menu/home_menu.png") !important;
+}
+#nav #galeria {
+  list-style: url("../../Imagenes/menu/galeria_menu.png") !important;
+}
+#nav #tutoriales {
+  list-style: url("../../Imagenes/menu/tutoriales_menu.png") !important;
 }
 
 .nav_vertical_hidden {

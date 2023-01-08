@@ -6,7 +6,7 @@
 // -------------------- CONTENIDO SECCIONES -------------------------// 
 #contenido{
     display:grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 5% 90% 5%;
     grid-auto-rows: 40% 55% 5%;
     height: 90%;
     width: 90%;
@@ -27,7 +27,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        grid-column: 1/2;
+        grid-column: 1/4;
         grid-row: 1/2;
         background: v.$gris3;
         background-image: url("/Template/Imagenes/mancha-marcador-2.png");
@@ -58,7 +58,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        grid-column: 1/2;
+        grid-column: 1/4;
         grid-row: 2/3;
         animation-name: efecto_seccion;
         animation-duration: 0.5s;
@@ -94,22 +94,15 @@
 
     #cambiar_pagina{
         display: flex;
-        grid-column: 1/2;
+        grid-column: 2/3;
         grid-row: 3/4;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         letter-spacing: 5px;
 
         #paginas{
             display: flex;
         }
-
-        #next_seccion, #prev_seccion{
-            width: 40px;
-        }
-
-        #next_seccion{margin-right: 20px;}
-        #prev_seccion{margin-left: 20px;}
 
         img{
             width: 30px;
@@ -120,6 +113,32 @@
             filter: opacity(100%);
             transition: 0.5s;
         }
+    }
+
+    .cont_flecha{
+        display: flex;
+        align-items: center;
+        img{width: 40px; z-index: 100;}
+        filter: grayscale(100%) opacity(30%);
+        cursor: pointer;
+        
+    }
+
+    .cont_flecha:hover{
+        filter: grayscale(0%) opacity(100%);
+        transition: 0.5s;
+    }
+
+    #cont_flecha_prev{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        justify-self: flex-start;
+    }
+
+    #cont_flecha_next{
+        grid-column: 3/4;
+        grid-row: 2/3;
+        justify-self: flex-end;
     }
 
 }
@@ -134,8 +153,8 @@
 // horizontal phones
 @media only screen and (max-height: 575.98px) and (orientation: landscape){
     #contenido{
-        //orden: portada / seccion / cambiar_pagina
-        grid-template-rows: 40% 55% 5%;
+        grid-template-columns: 5% 90% 5% !important;
+        grid-template-rows: 40% 55% 5% !important;
 
         #portada{
             overflow: hidden !important;
@@ -147,7 +166,7 @@
         .seccion{
             img{max-width: 125px !important;}
             h4{font-size: 2rem !important;}
-            p,ol{font-size: 1rem;}
+            p,ol{font-size: 1rem !important;}
             video{max-height: 200px !important;}
         }
     }
@@ -156,7 +175,7 @@
 /* Medium devices (portrait tablets, 768px and up) */
 @media only screen and (min-width: 768px){
     #contenido{
-        grid-template-columns: 100%;
+        grid-template-columns: 5% 90% 5%;
         grid-template-rows: 35% 55% 10%;
 
         #portada{
@@ -185,7 +204,7 @@
 @media only screen and (min-width: 992px){
     #contenido{
         display: grid;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 40% 2.5% 55% 2.5%;
         grid-template-rows: 85% 15%;
         height: 70%;
         width: 95%;
@@ -197,8 +216,25 @@
             h3{font-size: 2rem;}
         }
 
-        .seccion{
+        .cont_flecha{
+            img{width: 40px};
+            filter: grayscale(100%) opacity(50%);
+        }
+
+        #cont_flecha_prev{
             grid-column: 2/3;
+            grid-row: 1/3;
+            padding-left: 10px;
+        }
+
+        #cont_flecha_next{
+            grid-column: 4/5;
+            grid-row: 1/3;
+            padding-right: 10px;
+        }
+
+        .seccion{
+            grid-column: 3/4;
             grid-row: 1/2;
             img{width: 120px;}
             h4{font-size: 1.75rem;}
@@ -219,7 +255,7 @@
         }
 
         #cambiar_pagina{
-            grid-column: 2/3;
+            grid-column: 3/4;
             grid-row: 2/3;
             img{width: 25px;}
         }

@@ -7,10 +7,6 @@
     z-index: 100;
 }
 
-#nav li{
-    list-style: none;
-}
-
 #nav li:hover{
     text-decoration: underline;
 }
@@ -18,6 +14,13 @@
 #nav li a {
     text-decoration: none;
     color: v.$fuente3;
+}
+
+//añadiendo iconos
+#nav{
+    #inicio{list-style: url("../../Imagenes/menu/home_menu.png") !important;}
+    #galeria{list-style: url("../../Imagenes/menu/galeria_menu.png") !important;}
+    #tutoriales{list-style: url("../../Imagenes/menu/tutoriales_menu.png") !important;}
 }
 
 // estas clase se utiliza se accede desde un dispositivo movil
