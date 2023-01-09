@@ -1,12 +1,11 @@
 @use 'partials/' as p;
 @use 'basicos/menu-dspgbl';
-@use 'partials/fuentes';
+@use 'partials/fuente2';
 
 body{
   overflow-x: hidden;
   background-image:url(../Imagenes/background03.jpg);
   @include p.ajustar-imagen;
-  font-family: della;
 }
 
 .form{
@@ -46,6 +45,7 @@ body{
     font-weight: 700;
     text-align: center;
     margin-top: p.rem(20);
+    font-family: fuente1;
   }
 
   &__label{
@@ -56,10 +56,12 @@ body{
     gap: p.rem(20);
 
     &--subtitulo{
+      font-size: p.rem(16);
       display: block;
       color: #fff;
       font-weight: 700;
       padding: p.rem(10);
+      font-family: fuente1;
       cursor: pointer;
     }
 
@@ -78,6 +80,7 @@ body{
       line-height: p.rem(45);
       padding: 0 p.rem(40) 0 p.rem(10);
       transition: .3s ease all;
+      font-family: quicksand;
     }
 
     &--entrada:focus{
@@ -91,6 +94,7 @@ body{
       color: #fff;
       margin:p.rem(5) auto 0;
       display: none;
+      font-family: quicksand;
     }
 
     &--error-activo{
@@ -146,6 +150,7 @@ body{
       color: p.$exito;
       margin-top: p.rem(20);
       display: none;
+      font-family: quicksand;
     }
 
     &--exito-activo{
@@ -161,6 +166,8 @@ body{
 
     &--terminos{
       margin: 0 auto;
+      font-size: p.rem(14);
+      font-family: quicksand;
     }
     
     &--btn{
@@ -180,6 +187,7 @@ body{
       border-radius: p.rem(3);
       cursor: pointer;
       transition: .3s ease all;
+      font-family: fuente1;
     }
 
     &--enviar:hover{
@@ -197,12 +205,14 @@ body{
       color: white;
       font-weight: 400;
       margin-bottom: p.rem(10);
+      font-family: quicksand;
     }
 
     &--link{
       font-size: p.rem(16);
       text-decoration: none;
       color: p.$celeste2;
+      font-family: quicksand;
       transition: .3s ease all;
     }
 

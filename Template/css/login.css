@@ -107,6 +107,14 @@ q:before, q:after {
   font-family: della;
   src: url("/Template/fuentes/Della_Respira/DellaRespira-Regular.ttf");
 }
+@font-face {
+  font-family: fuente1;
+  src: url("../../fuentes/Astronomus.ttf");
+}
+@font-face {
+  font-family: quicksand;
+  src: url("../../fuentes/quicksand/Quicksand-Regular.otf");
+}
 .menu {
   position: relative;
   top: 2.5rem;
@@ -180,6 +188,7 @@ q:before, q:after {
   text-shadow: 0 0 15px var(--clr);
   opacity: 0;
   transition: 0.5s ease all;
+  font-family: fuente1;
 }
 
 .menu__list:hover b {
@@ -234,6 +243,7 @@ body {
   font-weight: 700;
   text-align: center;
   margin-top: 1.25rem;
+  font-family: fuente1;
 }
 .form__label {
   width: 95%;
@@ -247,6 +257,7 @@ body {
   color: #fff;
   font-weight: 700;
   padding: 0.625rem;
+  font-family: fuente1;
   cursor: pointer;
 }
 .form__label--input {
@@ -259,6 +270,7 @@ body {
   line-height: 2.8125rem;
   padding: 0 2.5rem 0 0.625rem;
   transition: 0.3s ease all;
+  font-family: quicksand;
 }
 .form__label--input:focus {
   border-bottom: 0.1875rem solid #2877ED;
@@ -284,6 +296,7 @@ body {
   border-radius: 0.1875rem;
   cursor: pointer;
   transition: 0.3s ease all;
+  font-family: fuente1;
 }
 .form__grupo--enviar:hover {
   background-color: #4693FF;
@@ -299,6 +312,7 @@ body {
   color: #2877ED;
   margin-bottom: 0.625rem;
   transition: 0.3s ease all;
+  font-family: quicksand;
 }
 .form__cuenta--olvidar:hover {
   color: #6FAEFE;
@@ -310,6 +324,7 @@ body {
   color: #fff;
   font-weight: 400;
   margin-bottom: 0.625rem;
+  font-family: quicksand;
 }
 .form__cuenta--link {
   font-size: 1rem;
@@ -317,6 +332,7 @@ body {
   color: #2877ED;
   margin-bottom: 1.25rem;
   transition: 0.3s ease all;
+  font-family: quicksand;
 }
 .form__cuenta--link:hover {
   color: #6FAEFE;
@@ -354,4 +370,6 @@ body {
     position: relative;
     top: 1.25rem;
   }
-}/*# sourceMappingURL=login.css.map */
+}
+
+/*# sourceMappingURL=login.css.map */

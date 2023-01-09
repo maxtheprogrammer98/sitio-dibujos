@@ -1,5 +1,7 @@
 @use 'partials/' as p;
 @use 'basicos/menu-dspgbl';
+@use 'partials/fuente2';
+
 
 body{
   overflow-x: hidden;
@@ -44,6 +46,7 @@ body{
     font-weight: 700;
     text-align: center;
     margin-top: p.rem(20);
+    font-family: fuente1;
   }
 
   &__label{
@@ -59,6 +62,7 @@ body{
       font-weight: 700;
       padding: p.rem(10);
       cursor: pointer;
+      font-family: fuente1;
     }
 
     &--input{
@@ -76,6 +80,7 @@ body{
       line-height: p.rem(45);
       padding: 0 p.rem(40) 0 p.rem(10);
       transition: .3s ease all;
+      font-family: quicksand;
     }
 
     &--entrada:focus{
@@ -88,6 +93,7 @@ body{
       font-size: p.rem(12);
       margin:p.rem(5) auto 0;
       display: none;
+      font-family: quicksand;
     }
 
     &--error-activo{
@@ -177,6 +183,7 @@ body{
       border-radius: p.rem(3);
       cursor: pointer;
       transition: .3s ease all;
+      font-family: fuente1;
     }
 
     &--enviar:hover{
