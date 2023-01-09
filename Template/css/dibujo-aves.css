@@ -735,11 +735,293 @@ footer #descripcion_footer img {
   color: orange;
 }
 
+#contenido {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-auto-rows: 40% 55% 5%;
+  height: 90%;
+  width: 90%;
+  background: white;
+  justify-self: flex-start;
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-image: url("../Imagenes/fondo-alt-7.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: quicksand;
+}
+#contenido #portada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-column: 1/4;
+  grid-row: 1/2;
+  background: lightgrey;
+  background-image: url("/Template/Imagenes/mancha-marcador-2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+#contenido #portada h3 {
+  margin-top: -25px;
+  font-size: 1.75rem;
+  text-align: center;
+  color: white;
+  font-family: fuente1;
+}
+#contenido #portada img {
+  width: 85%;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+#contenido #paso1, #contenido #paso2, #contenido #paso3, #contenido #video {
+  display: none;
+}
+#contenido .seccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-column: 1/4;
+  grid-row: 2/3;
+  -webkit-animation-name: efecto_seccion;
+          animation-name: efecto_seccion;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+#contenido .seccion img {
+  width: 100px;
+}
+#contenido .seccion #cabello {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  width: 200px;
+}
+#contenido .seccion h4 {
+  text-decoration: underline;
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 10px;
+  font-family: fuente1;
+}
+#contenido .seccion ol {
+  font-size: 1.2rem;
+  width: 90%;
+}
+#contenido .seccion ol li {
+  margin-bottom: 10px;
+}
+#contenido .seccion ol li b {
+  text-decoration: underline;
+}
+#contenido .seccion p {
+  width: 90%;
+  font-size: 1.2rem;
+}
+#contenido .seccion b i {
+  color: rgb(235, 2, 2);
+}
+#contenido #cambiar_pagina {
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 5px;
+}
+#contenido #cambiar_pagina #paginas {
+  display: flex;
+}
+#contenido #cambiar_pagina img {
+  width: 30px;
+  cursor: pointer;
+  filter: opacity(70%) grayscale(100%);
+}
+#contenido #cambiar_pagina img:hover {
+  filter: opacity(100%);
+  transition: 0.5s;
+}
+#contenido .cont_flecha {
+  display: flex;
+  align-items: center;
+  filter: grayscale(100%) opacity(30%);
+  cursor: pointer;
+}
+#contenido .cont_flecha img {
+  width: 40px;
+  z-index: 100;
+}
+#contenido .cont_flecha:hover {
+  filter: grayscale(0%) opacity(100%);
+  transition: 0.5s;
+}
+#contenido #cont_flecha_prev {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  justify-self: flex-start;
+}
+#contenido #cont_flecha_next {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  justify-self: flex-end;
+}
+
+@-webkit-keyframes efecto_seccion {
+  0% {
+    filter: opacity(0%);
+  }
+  100% {
+    filter: opacity(100%);
+  }
+}
+
+@keyframes efecto_seccion {
+  0% {
+    filter: opacity(0%);
+  }
+  100% {
+    filter: opacity(100%);
+  }
+}
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  #contenido {
+    grid-template-columns: 5% 90% 5% !important;
+    grid-template-rows: 40% 55% 5% !important;
+  }
+  #contenido #portada {
+    overflow: hidden !important;
+    background-size: 100% 30%;
+  }
+  #contenido #portada h3 {
+    font-size: 2rem !important;
+  }
+  #contenido #portada img {
+    max-width: 275px !important;
+  }
+  #contenido .seccion img {
+    max-width: 125px !important;
+  }
+  #contenido .seccion h4 {
+    font-size: 2rem !important;
+  }
+  #contenido .seccion p, #contenido .seccion ol {
+    font-size: 1rem !important;
+  }
+  #contenido .seccion video {
+    max-height: 200px !important;
+  }
+}
+/* Medium devices (portrait tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #contenido {
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 35% 55% 10%;
+  }
+  #contenido #portada {
+    background-size: 100% 30%;
+    padding-top: 20px;
+  }
+  #contenido #portada img {
+    margin-top: 20px;
+    width: 350px;
+  }
+  #contenido #portada h3 {
+    font-size: 2.5rem;
+  }
+  #contenido .seccion img {
+    width: 200px;
+  }
+  #contenido .seccion h4 {
+    font-size: 3rem;
+  }
+  #contenido .seccion p, #contenido .seccion ol {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  #contenido #cambiar_pagina p {
+    font-size: 1.5rem;
+  }
+}
+/* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #contenido {
+    display: grid;
+    grid-template-columns: 40% 2.5% 55% 2.5%;
+    grid-template-rows: 85% 15%;
+    height: 70%;
+    width: 95%;
+  }
+  #contenido #portada {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #contenido #portada h3 {
+    font-size: 2rem;
+  }
+  #contenido .cont_flecha {
+    filter: grayscale(100%) opacity(50%);
+  }
+  #contenido .cont_flecha img {
+    width: 40px;
+  }
+  #contenido #cont_flecha_prev {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    padding-left: 10px;
+  }
+  #contenido #cont_flecha_next {
+    grid-column: 4/5;
+    grid-row: 1/3;
+    padding-right: 10px;
+  }
+  #contenido .seccion {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  #contenido .seccion img {
+    width: 120px;
+  }
+  #contenido .seccion h4 {
+    font-size: 1.75rem;
+  }
+  #contenido .seccion p, #contenido .seccion ol {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+  #contenido .seccion video {
+    height: 200px !important;
+    width: 70% !important;
+    margin-bottom: 20px;
+  }
+  #contenido #video img {
+    width: 90px !important;
+  }
+  #contenido #video b i {
+    margin-top: 10px !important;
+    color: red;
+  }
+  #contenido #cambiar_pagina {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  #contenido #cambiar_pagina img {
+    width: 25px;
+  }
+  #botones {
+    height: 30% !important;
+  }
+}
 body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 160px 30px auto 300px;
-  height: 750vh;
+  height: 300vh;
   transition: all 0.5s;
 }
 
@@ -748,325 +1030,51 @@ body {
 }
 
 section {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 9% auto 5%;
-  grid-column: 1/2;
-  grid-row: 3/4;
-  background: #333333;
-}
-section #portada {
-  display: flex;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  justify-content: space-between;
-  align-items: center;
-  background-image: url("../Imagenes/banner-1.jpg");
-  background-color: rgba(0, 0, 0, 0.5);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
-  background-position: center center;
-  font-family: fuente1;
-  color: white;
-  font-size: 3.5rem;
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-section #portada img {
-  width: 50px;
-  cursor: pointer;
-}
-section #informacion {
   display: flex;
   flex-direction: column;
-  justify-self: center;
-  overflow: hidden;
   grid-column: 1/2;
-  grid-row: 2/3;
-  width: 90%;
-  margin-top: 20px;
-  border-radius: 20px;
-  background: white;
-  font-family: fuente1;
-  line-height: 1.5rem;
-  color: #333333;
-  box-shadow: 2px 2px 10px 1px black;
-}
-section #informacion h3 {
-  font-size: 1.75rem;
-  text-align: center;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  line-height: 2rem;
-  text-decoration: underline;
-}
-section #informacion #indice {
-  margin-top: 20px;
-}
-section #informacion #indice ul {
-  margin-bottom: 20px;
-}
-section #informacion #indice ul li:hover {
-  transition: 0.5s;
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-}
-section #informacion #materiales {
-  padding-top: 30px;
-}
-section #informacion #materiales ul {
-  padding-bottom: 30px;
-  font-size: 0.9rem;
-}
-section #informacion #materiales ul li b {
-  text-decoration: underline;
-}
-section #informacion div {
-  padding-left: 20px;
-  padding-right: 20px;
-  border-width: 90%;
-}
-section #informacion div figure {
-  display: flex;
+  grid-row: 3/4;
+  background-image: url("../Imagenes/background03.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
   justify-content: center;
+  padding-top: 50px;
 }
-section #informacion div figure img {
-  width: 100px;
-}
-section #informacion div .contenedor_refe {
+section #botones {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-section #informacion div .contenedor_refe .referencia {
-  width: 250px;
-  box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-section #informacion div p {
-  font-size: 0.9rem;
-  margin-bottom: 40px;
-}
-section #informacion div hr {
-  border-radius: 10px;
-  border: 3px solid lightgrey;
-}
-section #informacion #paso3 {
-  border-bottom: none;
-  margin-bottom: -30px;
-}
-section #informacion #nota {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 70%;
-  background: lightgrey;
-  border-radius: 10px;
-  color: #333333;
-  margin-bottom: 50px;
-  margin-top: 20px;
-  padding-top: 20px;
+  height: 15%;
+  justify-self: end;
+  padding-bottom: 50px;
 }
 
-@-webkit-keyframes fondo {
-  0% {
-    background-image: url("../Imagenes/aguila-proceso.jpg");
-  }
-  50% {
-    background-image: url("../Imagenes/imagen-12.jpg");
-  }
-  100% {
-    background-image: url("../Imagenes/imagen-17-alt.jpg");
-  }
+section #portada img {
+  width: 300px;
 }
 
-@keyframes fondo {
-  0% {
-    background-image: url("../Imagenes/aguila-proceso.jpg");
-  }
-  50% {
-    background-image: url("../Imagenes/imagen-12.jpg");
-  }
-  100% {
-    background-image: url("../Imagenes/imagen-17-alt.jpg");
-  }
-}
-@-webkit-keyframes movimiento {
-  0% {
-    background-position: left center;
-  }
-  25% {
-    background-position: center center;
-  }
-  50% {
-    background-position: right center;
-  }
-  75% {
-    background-position: center center;
-  }
-  100% {
-    background-position: left center;
-  }
-}
-@keyframes movimiento {
-  0% {
-    background-position: left center;
-  }
-  25% {
-    background-position: center center;
-  }
-  50% {
-    background-position: right center;
-  }
-  75% {
-    background-position: center center;
-  }
-  100% {
-    background-position: left center;
-  }
-}
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
   body {
-    grid-template-rows: 110px 30px auto 180px;
-    height: 1150vh;
+    grid-template-rows: 110px 45px auto 180px !important;
+    height: 600vh !important;
   }
-  body section {
-    grid-template-rows: 9% auto 7%;
+  #botones {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 /* Medium devices (portrait tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) {
   body {
     grid-template-rows: 175px 30px auto 350px;
-    height: 600vh;
-  }
-  body #informacion div {
-    margin-top: 40px;
-  }
-  body #informacion div figure .iconos {
-    width: 150px;
-  }
-  body #informacion div ul {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-  }
-  body #informacion div p {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  body #informacion div .contenedor_refe .referencia {
-    width: 525px;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    height: 220vh;
   }
 }
 /* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   body {
-    grid-template-rows: 150px 30px auto 350px;
-    height: 850vh;
-  }
-  body #portada {
-    font-size: 5rem;
-  }
-  body #informacion div h3 {
-    font-size: 2.5rem;
-  }
-  body #informacion div figure .iconos {
-    width: 150px;
-  }
-  body #informacion div .contenedor_refe .referencia {
-    width: 600px;
-    margin-bottom: 50px;
-    margin-top: 50px;
-  }
-  body #informacion div p, body #informacion div ul {
-    font-size: 1.5rem;
-    line-height: 2.7rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  body {
-    height: 500vh !important;
-  }
-  body section #informacion #indice {
-    width: 100%;
-  }
-  body section #informacion #indice ul {
-    display: block;
-    width: 500px;
-    margin: auto;
-  }
-  body section #informacion #materiales {
-    margin-bottom: 100px;
-  }
-  body section #informacion #materiales ul {
-    margin-top: 50px;
-    font-size: 1.25rem;
-  }
-  body section #informacion .pasos {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 20% 80%;
-    justify-self: center;
-    align-self: center;
-    width: 90%;
-    max-height: 650px;
-    overflow: hidden;
-    border: 5px solid #0071CD;
-    border-radius: 15px;
-    padding: 0 !important;
-    margin-bottom: 75px;
-    box-sizing: border-box;
-    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
-    background-image: url("../Imagenes/fondo-alt-4.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-  body section #informacion .pasos .pasos_header {
-    display: flex;
-    grid-column: 1/3;
-    grid-row: 1/2;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    background: #0071CD;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    color: white;
-  }
-  body section #informacion .pasos .pasos_header figure img {
-    width: 110px;
-  }
-  body section #informacion .pasos .pasos_contenido {
-    display: flex;
-    flex-direction: row;
-    grid-column: 1/3;
-    grid-row: 2/3;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow: hidden;
-  }
-  body section #informacion .pasos .pasos_contenido p {
-    font-size: 1.2rem;
-    line-height: 2.5rem;
-  }
-  body section #informacion .pasos .pasos_contenido img {
-    width: 400px;
-  }
-  body section #informacion #paso3 {
-    margin-bottom: 30px !important;
+    grid-template-rows: 150px 45px auto 350px !important;
+    height: 200vh !important;
   }
 }/*# sourceMappingURL=dibujo-aves.css.map */
