@@ -18,9 +18,18 @@
 
 //añadiendo iconos
 #nav{
-    #inicio{list-style: url("../../Imagenes/menu/home_menu.png") !important;}
-    #galeria{list-style: url("../../Imagenes/menu/galeria_menu.png") !important;}
-    #tutoriales{list-style: url("../../Imagenes/menu/tutoriales_menu.png") !important;}
+    li{
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position-x: 1rem;
+        background-position-y: center;
+    }
+    #menu{background-image: url("/Template/Imagenes/menu/menu_icon.png");}
+    #inicio{background-image: url("/Template/Imagenes/menu/home_menu.png");}
+    #galeria{background-image: url("/Template/Imagenes/menu/galeria_menu.png");}
+    #tutoriales{background-image: url("/Template/Imagenes/menu/tutoriales_menu.png");}
+    #mi_cuenta{background-image: url("/Template/Imagenes/menu/user_menu.png");}
+    #login{background-image: url("/Template/Imagenes/menu/login_menu.png");}
 }
 
 // estas clase se utiliza se accede desde un dispositivo movil
@@ -40,6 +49,14 @@
     .menu{
         display: flex;
         cursor: pointer;
+    }
+    // ajustes visualizacion icono
+    #menu{
+        height: 100%;
+        width: 100%;
+        background-position-x: 1rem;
+        justify-content: center;
+        align-items: center;
     }
 
     .item{
@@ -98,6 +115,12 @@
 
         #login{
             display: none;
+        }
+
+        // ajuste visualizacion iconos (vistas medianas & grandes)
+        li{
+            background-position-x: 0;
+            padding-left: 30px;
         }
 
     }

@@ -151,7 +151,17 @@ header #header_opciones {
     width: 150px !important;
   }
   header #header_opciones li {
+    display: flex;
     margin-right: 10px !important;
+    padding-left: 20px !important;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  header #header_opciones #header_login {
+    background-image: url("/Template/Imagenes/menu/login_menu.png");
+  }
+  header #header_opciones #header_cuenta {
+    background-image: url("/Template/Imagenes/menu/user_menu.png");
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -206,14 +216,29 @@ header #header_opciones {
   color: white;
 }
 
+#nav li {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: 1rem;
+  background-position-y: center;
+}
+#nav #menu {
+  background-image: url("/Template/Imagenes/menu/menu_icon.png");
+}
 #nav #inicio {
-  list-style: url("../../Imagenes/menu/home_menu.png") !important;
+  background-image: url("/Template/Imagenes/menu/home_menu.png");
 }
 #nav #galeria {
-  list-style: url("../../Imagenes/menu/galeria_menu.png") !important;
+  background-image: url("/Template/Imagenes/menu/galeria_menu.png");
 }
 #nav #tutoriales {
-  list-style: url("../../Imagenes/menu/tutoriales_menu.png") !important;
+  background-image: url("/Template/Imagenes/menu/tutoriales_menu.png");
+}
+#nav #mi_cuenta {
+  background-image: url("/Template/Imagenes/menu/user_menu.png");
+}
+#nav #login {
+  background-image: url("/Template/Imagenes/menu/login_menu.png");
 }
 
 .nav_vertical_hidden {
@@ -232,6 +257,13 @@ header #header_opciones {
 .nav_vertical_hidden .menu {
   display: flex;
   cursor: pointer;
+}
+.nav_vertical_hidden #menu {
+  height: 100%;
+  width: 100%;
+  background-position-x: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 .nav_vertical_hidden .item {
   display: none;
@@ -283,6 +315,10 @@ header #header_opciones {
   }
   #nav #login {
     display: none;
+  }
+  #nav li {
+    background-position-x: 0;
+    padding-left: 30px;
   }
   .nav_vertical_hidden {
     display: none;
@@ -397,7 +433,17 @@ footer #descripcion_footer img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
@@ -523,6 +569,8 @@ section #tutoriales_seccion .tutoriales_item .portada_tutoriales {
 }
 section #tutoriales_seccion .tutoriales_item .portada_tutoriales img {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 section #tutoriales_seccion .tutoriales_item .descripcion_tutoriales {
@@ -713,6 +761,4 @@ section #tutoriales_seccion .tutoriales_item:hover {
   body {
     height: 300vh;
   }
-}
-
-/*# sourceMappingURL=tutoriales.css.map */
+}/*# sourceMappingURL=tutoriales.css.map */
