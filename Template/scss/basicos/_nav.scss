@@ -21,8 +21,10 @@
     li{
         background-size: 20px;
         background-repeat: no-repeat;
-        background-position-x: 1rem;
+        background-position-x: 25%;
         background-position-y: center;
+        justify-content: flex-start !important;
+        padding-left: 35%;
     }
     #menu{background-image: url("/Template/Imagenes/menu/menu_icon.png");}
     #inicio{background-image: url("/Template/Imagenes/menu/home_menu.png");}
@@ -54,9 +56,10 @@
     #menu{
         height: 100%;
         width: 100%;
-        background-position-x: 1rem;
+        background-position-x: 30%;
         justify-content: center;
         align-items: center;
+        padding-left: 37%;
     }
 
     .item{
@@ -70,7 +73,7 @@
     grid-column: 1/2;
     grid-row: 2/3;
     width: 100%;
-    height: 400px;
+    height: 450px;
     justify-content: space-evenly;
     align-items: center;
     background: v.$degradado;
@@ -81,7 +84,7 @@
     li{
         display: flex;
         align-items: center;
-        justify-content: center;
+        //justify-content: center;
         border-bottom: 2px solid rgba(0,0,0,.2);
         height: 100%;
         width: 100%;

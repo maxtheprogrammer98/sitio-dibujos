@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos paisajes - Dibujo realista</title>
+    <link rel="stylesheet" href="../css/fundamentos-paisajes.css">
+</head>
+
+<body onload='metod.finLoader()'>
+    <header>
+        <div id="header_logo">
+            <img src="../imagenes/logo-principal.svg" alt="logo">
+        </div>
+        <ul id="header_opciones">
+            <li> <a href="pages/registro.html" id="header_login"> Login / registro </a></li> <li>
+            <li> <a href="#" id="header_cuenta">  &#129489; Mi Cuenta </a></li> <li>
+        </ul>
+    </header>
+
+    <nav id="nav" class="nav_vertical_hidden">
+        <li id="menu" class="menu">
+            <a> Abrir Menu</a>
+        </li> 
+
+        <li id="inicio" class="item">
+            <a href="../index.html"> Inicio </a>
+        </li> 
+
+        <li id="galeria" class="item">
+            <a href="galeria.html">Galeria </a>
+        </li>
+
+        <li id="tutoriales" class="item">
+            <a href="tutoriales.html"> Tutoriales </a>
+        </li>
+
+        <li id="login" class="item">
+            <a href="registro.html"> Login / registro</a>
+        </li>
+
+        <li id="mi_cuenta" class="item">
+            <a href="mi-cuenta.html"> Mi Cuenta </a> 
+        </li>
+    </nav>
+    
+    <section>
+        <div id="contenido">
+
+            <div id="portada">
+                <h3>Fundamentos paisajes</h3>
+                <img src="../Imagenes/tutorial-4.jpg" alt="retrato" id="imagen_main">
+            </div>
+
+            <div id="materiales"class="seccion">
+                <img src="../Imagenes/icono-tutoriales-alt-2.png" alt="icono_materiales">
+                <h4>Lista de materiales</h4>
+                <ol>
+                    <li><b>Tizas pastel:</b> para realizar las capas bases y 
+                    figuras de mayor tamaño.</li>
+                    <li><b>Lapices pastel:</b> estos se utilizaran para realizar detalles y texturas, ya que
+                    brinda mayor precision que las tizas.</li>
+                    <li><b>Servilleta:</b> basicamente para difuminar el material.</li>
+                    <li><b>Papel grueso:</b> es necesario utilizar un papel grueso y de alto gramaje
+                    para que el mismo tolere la aplicacion de muchas capas de pasteles.</li>
+                    <li><b>Borrador:</b> Para realizar algunas correciones en el boceto en caso de ser necesario.</li>
+                    <i>Nota: los borradores comunes no pueden borrar las capas de pasteles, asi que hay que ser 
+                    especialmente cuidadoso a la hora de aplicar el material.
+                    </i>
+                    <li><b>Spray fijador:</b> Si tienes la posibilidad de gastar algo mas de dinero
+                    te recomiendo que compres un <i>spray fijador</i> para que el material quede bien adherido
+                    al papel y evitar inconvenientes en un futuro.</li>
+                </ol>
+            </div>
+
+            <div id="paso1" class="seccion">
+                <img src="../Imagenes/icono-1.png" alt="paso1">
+                <h4>Paso 1 : Boceto</h4>
+                <p>En esta etapa se comienza a estructurar nuestra obra, lo importante en este
+                    paso es lograr las proporciones correctas, no te preocupes por los detalles, abordaremos
+                    ese tema en las proximas secciones.
+                    si no estas familiarizado con las bases de la <i>perspectiva</i> te recomiendo que le des un 
+                    vistazo a nuestro tutorial 'fundamentos de la perspectiva' de todos modos aqui haré un breve repaso del tema.
+                    primero se comienza definiendo el horizonte (esta linea se usara como referencia para establecer puntos de fugas y ubicar distintas figuras).
+                    luego hay que analiar que "planos" componen la imagen, en este caso el "plano 1" es el que esta en una ubicacion mas proxima, el "plano 2" esta 
+                    en una ubicacion intermedia y el "plano 3" es el que se encuentra mas apartado.
+                    Es recomendable empezar con los planos que estan mas alejados y gradualmente ir pasando a los que estan mas cerca del "observador".
+                    Una vez que realicemos este procedimiento ya tendremos una buena base sobre la cual trabajar, 
+                    esta etapa es comparable a los cimientos de un edificio, si las bases no estan bien realizadas
+                    lo que se construya por encima no va a quedar bien, asi que es elemental prestar mucha atención en esta etapa.
+
+                </p>
+            </div>
+
+            <div id="cont_flecha_prev" class="cont_flecha">
+                <img src="../Imagenes/prev-button.png" alt="prev" id="prev_seccion" class="flechas">
+            </div>
+
+            <div id="cont_flecha_next" class="cont_flecha">
+                <img src="../Imagenes/next-button.png" alt="next" id="next_seccion" class="flechas">
+            </div>
+
+            <div id="cambiar_pagina">
+                <div id="paginas">
+                    <img id="materiales_boton" src="../Imagenes/boton-tutos.png" alt="boton">
+                    <img id="paso1_boton" src="../Imagenes/boton-tutos.png" alt="boton">
+                    <img id="paso2_boton" src="../Imagenes/boton-tutos.png" alt="boton">
+                    <img id="paso3_boton" src="../Imagenes/boton-tutos.png" alt="boton">
+                    <img id="video_boton" src="../Imagenes/boton-tutos.png" alt="boton">
+                </div>
+            </div>
+        </div>
+
+        <div id="botones">
+            <label id="completado_label">clickea al terminar para guardar tu progreso</label>
+            <button type="button" id="completado">completado &#9989; </button>
+
+            <form>
+                <p class="clasificacion">
+                   <input id="radio1" type="radio" name="estrellas" value="5" class="estrellas"><!--
+                --><label for="radio1">★</label><!--
+                --><input id="radio2" type="radio" name="estrellas" value="4" class="estrellas"><!--
+                --><label for="radio2">★</label><!--
+                --><input id="radio3" type="radio" name="estrellas" value="3" class="estrellas"><!--
+                --><label for="radio3">★</label><!--
+                --><input id="radio4" type="radio" name="estrellas" value="2" class="estrellas"><!--
+                --><label for="radio4">★</label><!--
+                --><input id="radio5" type="radio" name="estrellas" value="1" class="estrellas"><!--
+                --><label for="radio5">★</label>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div id="logo_footer">
+            <img src="../imagenes/logo-principal-blanco.svg" alt="logo">
+        </div>
+        <div id="descripcion_footer">
+            <p>si deseas contactarte conmigo puedes hacerlo a traves de mis redes</p>
+            <br>
+            <a href="https://www.instagram.com/mnnastrai_art/"><img src="../imagenes/insta-icon.svg" alt="logo instagram"></a>
+            <a href="#"><img src="../imagenes/face-icon.svg" alt="logo facebook"></a>
+            <a href="mailto:mnnastrai24@gmail.com"><img src="../imagenes/mail-icon.svg" alt="logo mail"></a>
+            <a href="https://github.com/maxtheprogrammer98"><img src="../imagenes/github-icon.svg" alt="logo github"></a>
+        </div>
+    </footer>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/tutoriales-cambiar-seccion-paisajes-fundamentos.js"></script>
+    <script src="../js/img-modal-tutorial.js"></script>
+    <script src="../js/botones-clasificacion-tutoriales.js"></script>
+</body>
+</html>

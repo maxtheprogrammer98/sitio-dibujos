@@ -1,0 +1,85 @@
+// -------------------- IMPORTS -------------------------// 
+@use "partials/variables" as v;
+@use "partials/reset";
+@use "partials/fuentes";
+@use "basicos/header";
+@use "basicos/nav";
+@use "basicos/footer";
+@use "basicos/loader";
+@use "basicos/lightbox";
+@use "tutorialesElem/botones";
+@use "tutorialesElem/secciones";
+
+// -------------------- LAYOUT -------------------------// 
+// (vista movil por default)
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 160px 30px auto 300px;
+    height: 350vh;
+    transition: all 0.5s;
+}
+
+#tutoriales{
+    text-decoration: underline;
+}
+
+// -------------------- SECTION -------------------------// 
+section{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-image:url("../Imagenes/background03.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    padding-top: 50px;
+
+    #contenido{
+        grid-template-rows: 25% 70% 5%;
+        #materiales ol li{
+            margin-top: 25px;
+        }
+    }
+
+    #botones{
+        display: flex;
+        height: 15%;
+        justify-self: end;
+        padding-bottom: 50px;
+    }
+}
+
+//--------------------- MEDIA QUERIES -----------------------//
+// horizontal phones
+@media only screen and (max-height: 575.98px) and (orientation: landscape){
+    body{
+        grid-template-rows: 110px 45px auto 180px !important;
+        height: 600vh !important;
+    }
+
+    #botones{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Medium devices (portrait tablets, 768px and up) */
+@media only screen and (min-width: 768px){
+    body{
+        grid-template-rows: 175px 30px auto 350px;
+        height: 220vh;
+    }
+}
+
+/* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+    body{
+        grid-template-rows: 150px 45px auto 350px !important;
+        height: 200vh !important;
+    }
+}
