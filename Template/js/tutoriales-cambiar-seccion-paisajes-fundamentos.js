@@ -69,7 +69,7 @@ function cambiarContador(boton){
             break;
         // paso 2
         case 3:
-            imagenPortada.src = "../Imagenes/paso2-retratos.jpg";
+            imagenPortada.src = "../Imagenes/paso2-fundamentos-paisaje.jpg";
             seccionMateriales.style.display = "none";
             seccionPaso1.style.display = "none";
             seccionPaso2.style.display = "flex";
@@ -79,7 +79,7 @@ function cambiarContador(boton){
             break;
         // paso 3
         case 4:
-            imagenPortada.src = "../Imagenes/tutorial-3.jpg";
+            imagenPortada.src = "../Imagenes/tutorial-4.jpg";
             seccionMateriales.style.display = "none";
             seccionPaso1.style.display = "none";
             seccionPaso2.style.display = "none";
@@ -153,7 +153,7 @@ function cambiarDisplay(boton){
             break;
 
         case "paso2_boton":
-            imagenPortada.src = "../Imagenes/paso2-retratos.jpg";
+            imagenPortada.src = "../Imagenes/paso2-fundamentos-paisaje.jpg";
             seccionMateriales.style.display = "none";
             seccionPaso1.style.display = "none";
             seccionPaso2.style.display = "flex";
@@ -163,7 +163,7 @@ function cambiarDisplay(boton){
             break;
 
         case "paso3_boton":
-            imagenPortada.src = "../Imagenes/tutorial-3.jpg";
+            imagenPortada.src = "../Imagenes/tutorial-4.jpg";
             seccionMateriales.style.display = "none";
             seccionPaso1.style.display = "none";
             seccionPaso2.style.display = "none";

@@ -150,19 +150,6 @@ header #header_opciones {
   header #header_logo img {
     width: 150px !important;
   }
-  header #header_opciones li {
-    display: flex;
-    margin-right: 10px !important;
-    padding-left: 20px !important;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  header #header_opciones #header_login {
-    background-image: url("/Template/Imagenes/menu/login_menu.png");
-  }
-  header #header_opciones #header_cuenta {
-    background-image: url("/Template/Imagenes/menu/user_menu.png");
-  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
