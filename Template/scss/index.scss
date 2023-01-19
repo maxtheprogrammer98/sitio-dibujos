@@ -245,7 +245,7 @@ section{
 /* Large devices (horizontal tablets / laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     body{
-        grid-template-rows: 150px 45px auto 350px;
+        grid-template-rows: 150px 45px auto 300px;
         height: 300vh;
 
         section{
@@ -301,6 +301,8 @@ section{
                 #ver_tuto{
                     font-size: 1.5rem;
                 }
+
+                box-shadow: 3px 3px 10px 5px black !important;
             }
 
             #contenedor{
@@ -309,19 +311,24 @@ section{
                 align-items: center;
                 height: 100%;
                 width: 100%;
-                background: v.$gris3;
+                background:#1c1c1c;
+                border-top: 10px solid v.$gris1;
 
-                .descripciones{
+                .descripciones, #tutoriales_inicio{
                     width: 30%;
                     height: 75%;
                     border-radius: 10px;
-                    background-image: url("../Imagenes/fondo-alt-4.jpg");
                     box-shadow: 3px 3px 10px 5px rgba($color: #000000, $alpha: .3);
+                    background: white;
+                    background-image: none;
+                    background-image: url("../Imagenes/acuarela-izq.png"), url("../Imagenes/acuarela-der.png"), url("../Imagenes/acuarela-izq-sup.png"), url("../Imagenes/acuarela-der-sup.png");
+                    background-position: bottom left, bottom right, top left, top right;
+                    background-size: 120px;
+                    background-repeat: no-repeat;
+
                 }
 
                 #tutoriales_inicio{
-                    background-image: url("../Imagenes/fondo-alt-4.jpg");
-                    
                     h4 a{
                         color:#454444 !important;
                     }
@@ -333,6 +340,7 @@ section{
                     img{
                         content: url("../Imagenes/icono-tutoriales-alt.png");
                     }
+
                 }
             }
 

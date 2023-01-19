@@ -150,6 +150,19 @@ header #header_opciones {
   header #header_logo img {
     width: 150px !important;
   }
+  header #header_opciones {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end !important;
+    align-items: flex-start;
+    list-style: none;
+  }
+  header #header_opciones li {
+    margin-right: 10px !important;
+  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -162,7 +175,7 @@ header #header_opciones {
     grid-row: 2/3;
     height: 100%;
     width: 100%;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: flex-start;
     list-style: none;
   }
@@ -180,6 +193,18 @@ header #header_opciones {
   }
   header #header_opciones li:hover {
     text-decoration: underline;
+  }
+  header #header_opciones #header_login, header #header_opciones #header_cuenta {
+    background-size: 15px !important;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    background-position: 2px center;
+  }
+  header #header_opciones #header_cuenta {
+    background-image: url("/Template/Imagenes/menu/user_menu.png");
+  }
+  header #header_opciones #header_login {
+    background-image: url("/Template/Imagenes/menu/login_menu.png");
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
@@ -325,10 +350,11 @@ footer {
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
-  background-color: #4693FF;
+  background-color: rgba(0, 0, 0, 0.1);
   background-image: url("/Template/Imagenes/fondo-alt-2b.jpg");
   background-position: center;
   background-size: cover;
+  background-blend-mode: darken;
   padding-bottom: 10px;
 }
 footer #logo_footer {
@@ -647,7 +673,7 @@ section #contenedor #tutoriales_inicio p {
 /* Large devices (horizontal tablets / laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   body {
-    grid-template-rows: 150px 45px auto 350px;
+    grid-template-rows: 150px 45px auto 300px;
     height: 300vh;
   }
   body section #presentacion #texto_presentacion #titulo_presentacion {
@@ -672,6 +698,9 @@ section #contenedor #tutoriales_inicio p {
   body section {
     grid-template-rows: 45% 55%;
   }
+  body section #presentacion {
+    box-shadow: 3px 3px 10px 5px black !important;
+  }
   body section #presentacion #titulo_presentacion {
     width: 55% !important;
   }
@@ -692,17 +721,20 @@ section #contenedor #tutoriales_inicio p {
     align-items: center;
     height: 100%;
     width: 100%;
-    background: lightgrey;
+    background: #1c1c1c;
+    border-top: 10px solid #333333;
   }
-  body section #contenedor .descripciones {
+  body section #contenedor .descripciones, body section #contenedor #tutoriales_inicio {
     width: 30%;
     height: 75%;
     border-radius: 10px;
-    background-image: url("../Imagenes/fondo-alt-4.jpg");
     box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.3);
-  }
-  body section #contenedor #tutoriales_inicio {
-    background-image: url("../Imagenes/fondo-alt-4.jpg");
+    background: white;
+    background-image: none;
+    background-image: url("../Imagenes/acuarela-izq.png"), url("../Imagenes/acuarela-der.png"), url("../Imagenes/acuarela-izq-sup.png"), url("../Imagenes/acuarela-der-sup.png");
+    background-position: bottom left, bottom right, top left, top right;
+    background-size: 120px;
+    background-repeat: no-repeat;
   }
   body section #contenedor #tutoriales_inicio h4 a {
     color: #454444 !important;

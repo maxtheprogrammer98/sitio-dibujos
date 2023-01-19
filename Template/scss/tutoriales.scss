@@ -321,7 +321,7 @@ section{
 /* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
 @media only screen and (min-width: 992px){
     body{
-        grid-template-rows: 150px 30px auto 350px !important;
+        grid-template-rows: 150px 30px auto 300px !important;
         height: 300vh;
 
         section{

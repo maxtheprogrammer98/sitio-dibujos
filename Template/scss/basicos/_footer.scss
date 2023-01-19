@@ -10,11 +10,11 @@ footer{
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
-    background-color: v.$celeste1;
+    background-color: rgba(0, 0, 0, 0.1);
     background-image: url("/Template/Imagenes/fondo-alt-2b.jpg");
     background-position: center;
     background-size: cover;
-    //background-blend-mode:soft-light;
+    background-blend-mode:darken;
     padding-bottom: 10px;
 
     #logo_footer{

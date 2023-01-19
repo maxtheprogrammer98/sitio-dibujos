@@ -40,24 +40,9 @@ section{
     padding-top: 50px;
 
     #contenido{
-        //grid-template-rows: 25% 70% 5%;
+        grid-template-rows: 27% 70% 3%;
         #materiales ol li{
             margin-top: 25px;
-        }
-        .seccion figure{
-            background: v.$gris3;
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            box-shadow: 3px 3px 10px 5px v.$transparente;
-            img{width: 90%}
-            figcaption{
-                font-style: italic;
-                padding-top: 10px;
-            }
         }
     }
 
@@ -75,6 +60,11 @@ section{
     body{
         grid-template-rows: 110px 45px auto 180px !important;
         height: 600vh !important;
+
+        // ajuste particular
+        section #contenido{
+            grid-template-rows: 25% 70% 5% !important;
+        }
     }
 
     #botones{
@@ -88,13 +78,32 @@ section{
     body{
         grid-template-rows: 175px 30px auto 350px;
         height: 220vh;
+        
+        //ajustes particulares: 
+        section #contenido{
+            grid-template-rows: 25% 70% 5% !important;
+        }
     }
 }
 
 /* Large devices (horizontal tablets / small laptops/ desktops, 992px and up) */
 @media only screen and (min-width: 992px){
     body{
-        grid-template-rows: 150px 45px auto 350px !important;
+        grid-template-rows: 150px 45px auto 300px !important;
         height: 200vh !important;
+
+        //ajustes particulares
+        section #contenido{
+            grid-template-columns: 40% 2.5% 55% 2.5% !important;
+            grid-template-rows: 90% 10% !important;
+            .seccion{
+                p{line-height: 1.4rem;}
+                ol li{
+                    font-size: 1rem;
+                    margin-bottom: 10px !important;
+                    margin-top: 0 !important;
+                }
+            }
+        }
     }
 }
