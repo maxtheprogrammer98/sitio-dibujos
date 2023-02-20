@@ -116,7 +116,7 @@ header {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-image: url("/Template/Imagenes/fondo-lado-izq.png"), url("/Template/Imagenes/fondo-lado-der.png");
+  background-image: url("../../Imagenes/fondo-lado-izq.png"), url("../../Imagenes/fondo-lado-der.png");
   background-position: left, right;
   background-repeat: no-repeat;
   background-size: 50% 100%;
@@ -448,17 +448,7 @@ footer #descripcion_footer img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
@@ -613,18 +603,6 @@ section #contenedor #tutoriales_inicio h4 a {
 }
 section #contenedor #tutoriales_inicio p {
   color: white;
-}
-
-@-webkit-keyframes fondo {
-  0% {
-    background-image: url("../Imagenes/imagen-12.jpg");
-  }
-  50% {
-    background-image: url("../Imagenes/imagen-17.jpg");
-  }
-  100% {
-    background-image: url("../Imagenes/aguila-proceso.jpg");
-  }
 }
 
 @keyframes fondo {
